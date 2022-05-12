@@ -1,0 +1,35 @@
+.text-icon{
+    -fx-font-size: 15px;
+    -fx-font-family: "Avenir Book";
+    -fx-font-weight: bold;
+}
+
+.set-background-color {
+    -fx-background-color: #ec8282;
+}
+
+.border-cart {
+    -fx-background-color: #ADD8E6;
+    -fx-border-width: 5px;
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+
+.border-loggedIn {
+    -fx-background-color: #90EE90;
+    -fx-border-width: 5px;
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+.border-loggedOut {
+    -fx-background-color: #ffcccb;
+    -fx-border-width: 5px;
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+.set-border-bottom {
+    -fx-border-bottom-width: 5px;
+}

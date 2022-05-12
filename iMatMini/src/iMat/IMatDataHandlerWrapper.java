@@ -17,7 +17,7 @@ public class IMatDataHandlerWrapper {
     }
 
     // Singleton pattern
-    public IMatDataHandlerWrapper getInstance() {
+    public static IMatDataHandlerWrapper getInstance() {
         if (instance == null) {
             instance = new IMatDataHandlerWrapper();
         }
