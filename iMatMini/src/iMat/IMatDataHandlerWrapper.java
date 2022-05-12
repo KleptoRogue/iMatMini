@@ -10,7 +10,7 @@ public class IMatDataHandlerWrapper {
 
     private static IMatDataHandlerWrapper instance = null;
 
-    private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
+    private final IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
     private IMatDataHandlerWrapper() {
         // No instantiation
@@ -151,28 +151,4 @@ public class IMatDataHandlerWrapper {
     public void setProductImage(Product p, File filename) {
         iMatDataHandler.setProductImage(p, filename);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
