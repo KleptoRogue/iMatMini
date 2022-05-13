@@ -13,12 +13,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.CreditCard;
 import se.chalmers.cse.dat216.project.Product;
@@ -188,6 +192,12 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
         card.setVerificationCode(Integer.parseInt(cvcField.getText()));
 
+    }
+
+
+    public void loadWizard (ActionEvent event) throws IOException {
+        AnchorPane newLoadedPane =  FXMLLoader.load(getClass().getResource("/RegisterWizard.fxml"));
+        loaderPane.getChildren().add(newLoadedPane);
     }
 
     private void setupAccountPane() {

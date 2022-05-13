@@ -54,7 +54,7 @@ public class Model {
 
     private void init() {
 
-        iMatDataHandler = IMatDataHandler.getInstance();
+       // iMatDataHandler = IMatDataHandler.getInstance();
 
     }
 
