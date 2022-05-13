@@ -16,9 +16,12 @@ public class IMatController implements Initializable {
     @FXML
     private AnchorPane loaderPane;
 
+
+
     public void loadWizard (ActionEvent event) throws IOException {
         AnchorPane newLoadedPane =  FXMLLoader.load(getClass().getResource("RegisterWizard.fxml"));
         loaderPane.getChildren().add(newLoadedPane);
+
     }
 
     @Override
