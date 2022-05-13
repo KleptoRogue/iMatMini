@@ -16,6 +16,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.CartEvent;
@@ -197,5 +198,9 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
 
         yearCombo.getItems().addAll(model.getYears());
 
+    }
+
+    public void mouseTrap(MouseEvent mouseEvent) {
+        //att göra
     }
 }
