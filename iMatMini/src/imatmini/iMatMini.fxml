@@ -8,9 +8,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
+<AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
     <children>
       <StackPane prefHeight="560.0" prefWidth="720.0">
          <children>
@@ -45,7 +46,7 @@
                <children>
                   <AnchorPane prefHeight="102.0" prefWidth="720.0" style="-fx-background-color: #ff6600;">
                      <children>
-                        <TextField fx:id="searchField" layoutX="150.0" layoutY="34.0" prefHeight="35.0" prefWidth="476.0" promptText="Sök vara">
+                        <TextField fx:id="searchField" layoutX="150.0" layoutY="34.0" prefHeight="39.0" prefWidth="328.0" promptText="Sök vara">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -75,5 +76,12 @@
             </AnchorPane>
          </children>
       </StackPane>
+      <AnchorPane prefHeight="80.0" prefWidth="720.0" style="-fx-background-color: #EC8282;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Line endY="80.0" startX="724.0" startY="80.0" strokeWidth="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <Button layoutX="644.0" layoutY="30.0" mnemonicParsing="false" onAction="#loadFxml" text="Wizard" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="31.999984741210938" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="loaderPane" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="720.0" style="-fx-background-color: #FFA6A6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
     </children>
 </AnchorPane>
