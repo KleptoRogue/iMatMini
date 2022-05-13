@@ -79,7 +79,7 @@
       <AnchorPane prefHeight="80.0" prefWidth="720.0" style="-fx-background-color: #EC8282;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Line endY="80.0" startX="724.0" startY="80.0" strokeWidth="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-            <Button layoutX="644.0" layoutY="30.0" mnemonicParsing="false" onAction="#lo" text="Wizard" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="31.999984741210938" />
+            <Button layoutX="644.0" layoutY="30.0" mnemonicParsing="false" onAction="#loadWizard" text="Wizard" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="31.999984741210938" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="loaderPane" layoutY="80.0" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#loadWizard" prefHeight="580.0" prefWidth="720.0" style="-fx-background-color: #FFA6A6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
