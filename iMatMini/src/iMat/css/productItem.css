@@ -1,0 +1,44 @@
+.text-normal {
+    -fx-font-size: 13px;
+    -fx-font-family: "Avenir Book";
+}
+
+
+.text-product-title {
+    -fx-font-size: 15px;
+    -fx-font-family: "Avenir Book";
+    -fx-font-weight: bold;
+}
+
+.whiteGreyBackGround {
+    -fx-background-color: #F6F9F8;
+}
+
+
+.whiteBackGround {
+    -fx-background-color: #ffffff;
+}
+
+
+
+
+.add-product-styling {
+    -fx-background-color: #81D762;
+    -fx-font-size: 16px;
+    -fx-font-family: "Avenir Book";
+    -fx-font-weight: bold;
+    -fx-border-width: 5px;
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+.image-shadow-effect {
+    -fx-effect: dropshadow(three-pass-box, rgba(128,128,128,0.8), 2, 1, 0, 0);
+}
+
+
+.product-border {
+    -fx-border-color: #1A6763;
+    -fx-border-width: 3px;
+
+}
