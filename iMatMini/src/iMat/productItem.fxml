@@ -10,40 +10,8 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@css/productItem.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="productNameLabel" alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
-      <Label fx:id="priceLabel" layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="61.0" styleClass="text-normal" text="xx kr" />
-      <Label fx:id="otherInfoLabel" alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-normal" text="Övrig info" wrapText="true" />
-      <StackPane layoutX="7.0" layoutY="238.0" prefHeight="48.0" prefWidth="174.0" styleClass="whiteGreyBackground">
-         <children>
-            <AnchorPane fx:id="addRemoveProductAnchorPane" prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
-               <children>
-                  <Button layoutX="16.0" layoutY="8.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="35.0" styleClass="red-button">
-                     <font>
-                        <Font size="10.0" />
-                     </font>
-                  </Button>
-                  <TextField alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
-                     <font>
-                        <Font size="13.0" />
-                     </font>
-                  </TextField>
-                  <Button layoutX="129.0" layoutY="8.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="35.0" styleClass="green-button">
-                     <font>
-                        <Font size="10.0" />
-                     </font>
-                  </Button>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="addProductAnchorPane" prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
-               <children>
-                  <Button fx:id="addButton" layoutX="13.0" layoutY="7.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" styleClass="add-product-styling" text="Lägg till" />
-               </children>
-            </AnchorPane>
-         </children>
-      </StackPane>
       <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
          <children>
             <ImageView fx:id="productImageView" fitHeight="122.0" fitWidth="126.0" layoutX="37.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
@@ -63,6 +31,37 @@
             <String fx:value="image-shadow-effect" />
          </styleClass>
       </AnchorPane>
+      <Label fx:id="productNameLabel" alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
+      <Label fx:id="priceLabel" layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="61.0" styleClass="text-normal" text="xx kr" />
+      <Label fx:id="otherInfoLabel" alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-normal" text="Övrig info" wrapText="true" />
+      <StackPane layoutX="7.0" layoutY="238.0" prefHeight="48.0" prefWidth="174.0" styleClass="whiteGreyBackground">
+         <children>
+            <AnchorPane fx:id="addProductAnchorPane" prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+               <children>
+                  <Button fx:id="addButton" layoutX="13.0" layoutY="7.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" styleClass="add-product-styling" text="Lägg till" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="addRemoveProductAnchorPane" prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+               <children>
+                  <TextField alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@resources/MinusButton.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="129.0" layoutY="8.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@resources/PlusButton.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
    </children>
    <styleClass>
       <String fx:value="whiteGreyBackGround" />
