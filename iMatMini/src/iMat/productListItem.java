@@ -29,14 +29,7 @@ public class ProductListItem {
     @FXML
     private Label otherInfoLabel;
 
-    @FXML
-    private Button addButton;
 
-    @FXML
-    private AnchorPane addRemoveProductAnchorPane;
-
-    @FXML
-    private AnchorPane addProductAnchorPane;
 
 
     public ProductListItem(Product product, IMatDataHandlerWrapper controller) {
@@ -67,13 +60,7 @@ public class ProductListItem {
     }
 
 
-    public AnchorPane getAddRemoveProductAnchorPane() {
-        return addRemoveProductAnchorPane;
-    }
 
-    public AnchorPane getAddProductAnchorPane() {
-        return addProductAnchorPane;
-    }
 
     public Product getProduct() {
         return product;
