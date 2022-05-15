@@ -93,7 +93,7 @@
             <String fx:value="set-text-color-white" />
          </styleClass>
       </AnchorPane>
-      <AnchorPane fx:id="loaderPane" layoutX="-1.0" layoutY="124.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="1095.0" style="-fx-background-color: #FFA6A6;" stylesheets="@css/startpage.css">
+      <AnchorPane fx:id="loaderPane" layoutX="-1.0" layoutY="124.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="1095.0" style="-fx-background-color: #F2F5F3;" stylesheets="@css/startpage.css">
          <children>
             <Accordion layoutY="128.0">
               <panes>
