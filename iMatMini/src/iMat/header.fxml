@@ -13,17 +13,17 @@
    <children>
       <AnchorPane fx:id="cartAnchorPane" layoutX="951.0" layoutY="2.0" prefHeight="120.0" prefWidth="130.0" AnchorPane.leftAnchor="951.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="2.0">
          <children>
-            <Label alignment="CENTER" layoutX="8.0" layoutY="82.0" prefHeight="31.0" prefWidth="110.0" text="Varukorg">
+            <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="43.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/cart_icon.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="10.0" layoutY="75.0" prefHeight="31.0" prefWidth="110.0" text="Varukorg">
                <styleClass>
                   <String fx:value="text-icon" />
                   <String fx:value="text-border" />
                </styleClass>
             </Label>
-            <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="31.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@resources/cart_icon.png" />
-               </image>
-            </ImageView>
          </children>
       </AnchorPane>
       <StackPane layoutX="791.0" layoutY="1.0" prefHeight="120.0" prefWidth="160.0" AnchorPane.topAnchor="1.0">
@@ -45,12 +45,12 @@
             </AnchorPane>
             <AnchorPane fx:id="profileAnchorPane" prefHeight="107.0" prefWidth="116.0" styleClass="set-background-color">
                <children>
-                  <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="52.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="43.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@resources/profile_loggedin_icon.png" />
                      </image>
                   </ImageView>
-                  <MenuButton fx:id="profileMenuButton" alignment="CENTER" layoutX="14.0" layoutY="82.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="130.0" text="Ditt konto" textFill="WHITE">
+                  <MenuButton fx:id="profileMenuButton" alignment="CENTER" layoutX="6.0" layoutY="77.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="130.0" text="Ditt konto" textFill="WHITE">
                      <items>
                         <MenuItem mnemonicParsing="false" text="Användaruppgifter" />
                         <MenuItem mnemonicParsing="false" text="Orderhistorik" />
