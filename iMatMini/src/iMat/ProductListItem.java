@@ -1,18 +1,19 @@
 package iMat;
 
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
 
-public class ProductListItem {
+import java.io.IOException;
 
-    private IMatDataHandlerWrapper parentController;
+public class ProductListItem extends AnchorPane {
+
+    private IMatController parentcontroller;
     private Product product;
     @FXML
     private ImageView productImageView;
@@ -27,42 +28,72 @@ public class ProductListItem {
     private Label priceLabel;
 
     @FXML
-    private Label otherInfoLabel;
+    private Label ecoLabel;
+
+    @FXML
+    private AnchorPane addRemoveProductAnchorPane;
+
+    @FXML
+    private AnchorPane addProductAnchorPane;
+
+    // Count products added to cart
+    private int productCounter = 0;
 
 
-
-
-    public ProductListItem(Product product, IMatDataHandlerWrapper controller) {
+    public ProductListItem(Product product, IMatController controller) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("productItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
+
+        try {
+            fxmlLoader.load();
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
+
         // Add information about product.
-        this.parentController = controller;
+        this.product = product;
+        this.parentcontroller = controller;
 
-        this.productNameLabel.setText(product.getName());
+        productNameLabel.setText(product.getName());
 
-        this.priceLabel.setText(product.getPrice() + " " + product.getUnitSuffix());
+        priceLabel.setText(product.getPrice() + " kr / " + product.getUnitSuffix());
 
-        this.productImageView.setImage(controller.getFXImage(product,
+        productImageView.setImage(parentcontroller.getFXImage(product,
                                                              productImageView.getFitWidth(),
                                                              productImageView.getFitHeight()));
 
 
         if (product.isEcological()) {
-            Image ecoImage = new Image("iMat/resources/ecological_icon");
-            this.ecoFriendlyImageView.setImage(ecoImage);
-            this.otherInfoLabel.setText("Denna vara är ekologisk.\n" + "ProduktID: " + product.getProductId());
-        } else {
-            this.otherInfoLabel.setText("ProduktID: " + product.getProductId());
+          //  Image ecoImage = new Image("ecological_icon.png");
+       //     ecoFriendlyImageView.setImage(image);
+            ecoLabel.setText("Ekologisk");
         }
 
     }
 
 
 
+    @FXML
+    public void onAddClickEvent(Event event) {
+        parentcontroller.addProduct(product, addRemoveProductAnchorPane);
+    }
 
+    @FXML
+    public void onRemoveClickEvent(Event event) {
+        parentcontroller.removeProduct(product, addProductAnchorPane);
+    }
     public Product getProduct() {
         return product;
+    }
+
+
+    public int getProductCounter() {
+        return productCounter;
+    }
+
+    public void setProductCounter(int productCounter) {
+        this.productCounter = productCounter;
     }
 }
