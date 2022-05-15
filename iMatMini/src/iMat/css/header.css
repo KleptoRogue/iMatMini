@@ -31,6 +31,12 @@
     -fx-text-fill: white;
 }
 
+.transparentbutton {
+    -fx-background-color:  #00000000;
+    -fx-border-color: #000000
+}
+
+
 .menu-item {
     -fx-background-color: #000000;
     -fx-border-width: 5px;
