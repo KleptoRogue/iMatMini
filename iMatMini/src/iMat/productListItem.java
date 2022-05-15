@@ -3,16 +3,17 @@ package iMat;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
 
-public class ProductListItem {
+import java.io.IOException;
 
-    private IMatDataHandlerWrapper parentController;
+public class ProductListItem extends AnchorPane {
+
+    private final IMatDataHandlerWrapper backend = IMatDataHandlerWrapper.getInstance();
     private Product product;
     @FXML
     private ImageView productImageView;
@@ -32,29 +33,35 @@ public class ProductListItem {
 
 
 
-    public ProductListItem(Product product, IMatDataHandlerWrapper controller) {
+    public ProductListItem(Product product) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("productItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
         // Add information about product.
-        this.parentController = controller;
+        this.product = product;
 
-        this.productNameLabel.setText(product.getName());
+        try {
+            fxmlLoader.load();
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
 
-        this.priceLabel.setText(product.getPrice() + " " + product.getUnitSuffix());
+        productNameLabel.setText(product.getName());
 
-        this.productImageView.setImage(controller.getFXImage(product,
+        priceLabel.setText(product.getPrice() + " kr / " + product.getUnitSuffix());
+
+        productImageView.setImage(backend.getFXImage(product,
                                                              productImageView.getFitWidth(),
                                                              productImageView.getFitHeight()));
 
 
         if (product.isEcological()) {
-            Image ecoImage = new Image("iMat/resources/ecological_icon");
-            this.ecoFriendlyImageView.setImage(ecoImage);
-            this.otherInfoLabel.setText("Denna vara är ekologisk.\n" + "ProduktID: " + product.getProductId());
+         //   Image ecoImage = new Image("imat/resources/ecological_icon");
+           // ecoFriendlyImageView.setImage(ecoImage);
+            otherInfoLabel.setText("Denna vara är ekologisk.\n" + "ProduktID: " + product.getProductId());
         } else {
-            this.otherInfoLabel.setText("ProduktID: " + product.getProductId());
+            otherInfoLabel.setText("ProduktID: " + product.getProductId());
         }
 
     }

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@css/productItem.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@css/productItem.css" type="AnchorPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
          <children>
@@ -19,9 +19,9 @@
                   <Image url="@resources/empty_image.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="34.0" fitWidth="35.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="starImageView" fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@resources/star_icon.png" />
+                  <Image url="@resources/star_unmarked.jpg" />
                </image>
             </ImageView>
             <ImageView fx:id="ecoFriendlyImageView" fitHeight="34.0" fitWidth="35.0" layoutX="-1.0" layoutY="34.0" pickOnBounds="true" />
@@ -32,7 +32,7 @@
          </styleClass>
       </AnchorPane>
       <Label fx:id="productNameLabel" alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
-      <Label fx:id="priceLabel" layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="61.0" styleClass="text-normal" text="xx kr" />
+      <Label fx:id="priceLabel" layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="148.0" styleClass="text-normal" text="xx kr" />
       <Label fx:id="otherInfoLabel" alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-normal" text="Övrig info" wrapText="true" />
       <StackPane layoutX="7.0" layoutY="238.0" prefHeight="48.0" prefWidth="174.0" styleClass="whiteGreyBackground">
          <children>
@@ -43,12 +43,12 @@
             </AnchorPane>
             <AnchorPane fx:id="addRemoveProductAnchorPane" prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
                <children>
-                  <TextField alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
+                  <TextField fx:id="productCounterTextField" alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
                      <font>
                         <Font size="13.0" />
                      </font>
                   </TextField>
-                  <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true">
+                  <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true" styleClass="button">
                      <image>
                         <Image url="@resources/MinusButton.png" />
                      </image>
@@ -67,4 +67,4 @@
       <String fx:value="whiteGreyBackGround" />
       <String fx:value="product-border" />
    </styleClass>
-</AnchorPane>
+</fx:root>

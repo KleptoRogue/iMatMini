@@ -3,6 +3,7 @@ package iMat;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 
@@ -13,13 +14,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.Product;
 
 import javax.swing.text.html.ImageView;
 
 public class IMatController implements Initializable {
 
-    private final IMatDataHandlerWrapper  controller = IMatDataHandlerWrapper.getInstance();
+    private final IMatDataHandlerWrapper backend = IMatDataHandlerWrapper.getInstance();
 
     // Needed for listeners when clicking on product buttons
     @FXML
@@ -36,6 +38,9 @@ public class IMatController implements Initializable {
 
     @FXML
     private TextField productCounterTextField;
+
+    @FXML
+    private FlowPane productFlowPane;
 
     private final Map<String, Product> productItemMap = new HashMap<>();
 
@@ -54,6 +59,14 @@ public class IMatController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        updateProductList(backend.getProducts());
+    }
+
+    private void updateProductList(List<Product> products) {
+
+        productFlowPane.getChildren().clear();
+        for (Product product : products) {
+            productFlowPane.getChildren().add(new ProductListItem(product));
+        }
     }
 }
