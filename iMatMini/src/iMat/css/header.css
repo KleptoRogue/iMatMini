@@ -27,6 +27,10 @@
     -fx-background-radius: 10 10 10 10;
 }
 
+.text-border:hover {
+    -fx-background-color: #006400;
+}
+
 .menu-item .label {
     -fx-text-fill: white;
 }
