@@ -3,6 +3,12 @@
     -fx-font-family: "Avenir Book";
 }
 
+.text-eco {
+    -fx-font-size: 13px;
+    -fx-font-family: "Avenir Book";
+    -fx-font-weight: bold;
+    -fx-text-fill: #05804f;
+}
 
 .text-product-title {
     -fx-font-size: 15px;
@@ -22,11 +28,18 @@
 
 
 
-.add-product-styling {
+.addButton {
     -fx-background-color: #81D762;
     -fx-font-size: 16px;
     -fx-font-family: "Avenir Book";
     -fx-font-weight: bold;
+    -fx-border-width: 5px;
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+.addButton:hover {
+    -fx-background-color: #90EE90;
     -fx-border-width: 5px;
     -fx-border-radius: 10 10 10 10;
     -fx-background-radius: 10 10 10 10;
@@ -42,3 +55,5 @@
     -fx-border-width: 3px;
 
 }
+
+.buttons:
