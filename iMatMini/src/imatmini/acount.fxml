@@ -79,7 +79,7 @@
                                                                   <Font size="14.0" />
                                                                </font>
                                                             </TextField>
-                                                            <Button layoutX="147.0" layoutY="670.0" mnemonicParsing="false" onAction="#sparaKontouppgifter" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="140.0">
+                                                            <Button layoutX="147.0" layoutY="670.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="140.0">
                                                                <graphic>
                                                                   <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                                      <image>
@@ -159,7 +159,7 @@
                                                                   <Font size="14.0" />
                                                                </font>
                                                             </TextField>
-                                                            <Button layoutX="139.0" layoutY="450.0" mnemonicParsing="false" onAction="#sparaAdressuppgifter" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="140.0">
+                                                            <Button layoutX="139.0" layoutY="450.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="140.0">
                                                                <graphic>
                                                                   <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                                      <image>
