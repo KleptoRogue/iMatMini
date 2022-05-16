@@ -15,19 +15,14 @@ import java.util.Objects;
 
 public class iMat extends Application {
 
-
-    //new
-    @FXML
-    private AnchorPane headerPane;
-
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("iMatMini.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
     }
+
 
     public static void main(String[] args) {
         launch(args);

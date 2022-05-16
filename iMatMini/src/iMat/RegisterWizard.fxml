@@ -14,11 +14,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="loaderPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="1095.0" style="-fx-background-color: #FFA6A6;" stylesheets="@css/startpage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="loaderPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="1095.0" style="-fx-background-color: #FFA6A6;" stylesheets="@css/startpage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
    <children>
       <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="720.0" style="-fx-background-color: #1A6763aa;">
+            <AnchorPane fx:id="confirmAdress" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
                <children>
                   <Pane layoutX="7.0" layoutY="147.0" prefHeight="372.0" prefWidth="1079.0" style="-fx-background-color: #FBFBF8;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="9.0">
                      <children>
@@ -62,7 +62,7 @@
                               <Font size="18.0" />
                            </font>
                         </TextField>
-                        <Button layoutX="818.0" layoutY="240.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
+                        <Button layoutX="818.0" layoutY="240.0" mnemonicParsing="false" onAction="#confirmPasswordToFront" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
                            <graphic>
                               <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -71,7 +71,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button layoutX="34.0" layoutY="240.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
+                        <Button layoutX="34.0" layoutY="240.0" mnemonicParsing="false" onAction="#confirmPersonToFront" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
                            <graphic>
                               <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -120,7 +120,7 @@
                               <Font size="18.0" />
                            </font>
                         </Text>
-                        <Button layoutX="5.0" layoutY="5.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0" prefWidth="140.0" textAlignment="CENTER" wrapText="true">
+                        <Button layoutX="5.0" layoutY="5.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loadStart" prefHeight="85.0" prefWidth="140.0" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -136,100 +136,7 @@
                   </Pane>
                </children>
             </AnchorPane>
-            <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="720.0" style="-fx-background-color: #1A6763aa;">
-               <children>
-                  <Pane layoutX="7.0" layoutY="147.0" prefHeight="372.0" prefWidth="1079.0" style="-fx-background-color: #FBFBF8;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="9.0">
-                     <children>
-                        <Label layoutX="415.0" layoutY="70.0" prefHeight="25.0" prefWidth="100.0" text="Lösenord">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="415.0" layoutY="160.0" prefHeight="27.0" prefWidth="194.0" text="Bekräfta lösenord">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <TextField layoutX="415.0" layoutY="97.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv din address här!" text="Skriv ditt lösenord här!">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </TextField>
-                        <TextField layoutX="415.0" layoutY="183.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv din ort här!" text="Skriv ditt lösenord igen här!">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </TextField>
-                        <Button layoutX="818.0" layoutY="240.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
-                           <graphic>
-                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/btn_confirm_reg.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                        <Button layoutX="34.0" layoutY="240.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
-                           <graphic>
-                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/btn_prev_step.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </Pane>
-                  <Pane layoutY="22.0" prefHeight="148.0" prefWidth="1095.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="22.0">
-                     <children>
-                        <Line endX="52.0" fill="#868686" layoutX="386.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
-                        <Line endX="52.0" fill="#868686" layoutX="503.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
-                        <Line endX="52.0" fill="#868686" layoutX="627.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
-                        <Circle fill="#c7c7c7" layoutX="346.0" layoutY="42.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="42.0" layoutX="296.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
-                        <Text layoutX="293.0" layoutY="100.0" stroke="#87e85d" strokeType="OUTSIDE" strokeWidth="0.0" text="Person" textAlignment="CENTER" wrappingWidth="100.0">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Text>
-                        <Circle fill="#c7c7c7" layoutX="466.0" layoutY="42.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="42.0" layoutX="416.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
-                        <Circle fill="#17ee17" layoutX="586.0" layoutY="42.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#17ee17" height="42.0" layoutX="536.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
-                        <Circle fill="#c7c7c7" layoutX="706.0" layoutY="42.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="42.0" layoutX="656.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
-                        <Text layoutX="413.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" textAlignment="CENTER" wrappingWidth="100.0">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="533.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lösenord" textAlignment="CENTER" wrappingWidth="100.0">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="653.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Slutför" textAlignment="CENTER" wrappingWidth="100.0">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Text>
-                        <Button layoutX="5.0" layoutY="5.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0" prefWidth="140.0" textAlignment="CENTER" wrapText="true">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                           <graphic>
-                              <ImageView pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/btn_keep_shopping.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </Pane>
-               </children>
-            </AnchorPane>
-            <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="720.0" style="-fx-background-color: #1A6763aa;">
+            <AnchorPane fx:id="confirmReg" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="720.0" style="-fx-background-color: #1A6763aa;">
                <children>
                   <Pane layoutX="7.0" layoutY="147.0" prefHeight="372.0" prefWidth="1079.0" style="-fx-background-color: #FBFBF8;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="9.0">
                      <children>
@@ -257,7 +164,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button layoutX="540.0" layoutY="238.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="216.0" style="-fx-background-color: #00000000;">
+                        <Button layoutX="540.0" layoutY="238.0" mnemonicParsing="false" onAction="#loadStart" prefHeight="94.0" prefWidth="216.0" style="-fx-background-color: #00000000;">
                            <graphic>
                               <ImageView fitHeight="82.0" fitWidth="284.0" pickOnBounds="true">
                                  <image>
@@ -301,7 +208,7 @@
                               <Font size="18.0" />
                            </font>
                         </Text>
-                        <Button layoutX="5.0" layoutY="5.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0" prefWidth="140.0" textAlignment="CENTER" wrapText="true">
+                        <Button layoutX="5.0" layoutY="5.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loadStart" prefHeight="85.0" prefWidth="140.0" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>
@@ -317,15 +224,103 @@
                   </Pane>
                </children>
             </AnchorPane>
-            <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="720.0" style="-fx-background-color: #1A6763aa;">
+            <AnchorPane fx:id="confirmPassword" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="720.0" style="-fx-background-color: #1A6763aa;">
                <children>
                   <Pane layoutX="7.0" layoutY="147.0" prefHeight="372.0" prefWidth="1079.0" style="-fx-background-color: #FBFBF8;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="9.0">
                      <children>
-                        <Button alignment="CENTER" defaultButton="true" layoutX="487.0" layoutY="304.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #00000000;">
+                        <Label layoutX="415.0" layoutY="70.0" prefHeight="25.0" prefWidth="100.0" text="Lösenord">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="415.0" layoutY="160.0" prefHeight="27.0" prefWidth="194.0" text="Bekräfta lösenord">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="415.0" layoutY="97.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv din address här!" text="Skriv ditt lösenord här!">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField layoutX="415.0" layoutY="183.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv din ort här!" text="Skriv ditt lösenord igen här!">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="818.0" layoutY="240.0" mnemonicParsing="false" onAction="#confirmRegToFront" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
+                           <graphic>
+                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/btn_confirm_reg.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="34.0" layoutY="240.0" mnemonicParsing="false" onAction="#confirmAdressToFront" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
+                           <graphic>
+                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/btn_prev_step.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutY="22.0" prefHeight="148.0" prefWidth="1095.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="22.0">
+                     <children>
+                        <Line endX="52.0" fill="#868686" layoutX="386.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
+                        <Line endX="52.0" fill="#868686" layoutX="503.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
+                        <Line endX="52.0" fill="#868686" layoutX="627.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
+                        <Circle fill="#c7c7c7" layoutX="346.0" layoutY="42.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="42.0" layoutX="296.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                        <Text layoutX="293.0" layoutY="100.0" stroke="#87e85d" strokeType="OUTSIDE" strokeWidth="0.0" text="Person" textAlignment="CENTER" wrappingWidth="100.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Circle fill="#c7c7c7" layoutX="466.0" layoutY="42.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="42.0" layoutX="416.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                        <Circle fill="#17ee17" layoutX="586.0" layoutY="42.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#17ee17" height="42.0" layoutX="536.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                        <Circle fill="#c7c7c7" layoutX="706.0" layoutY="42.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="42.0" layoutX="656.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                        <Text layoutX="413.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" textAlignment="CENTER" wrappingWidth="100.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="533.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lösenord" textAlignment="CENTER" wrappingWidth="100.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="653.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Slutför" textAlignment="CENTER" wrappingWidth="100.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Button layoutX="5.0" layoutY="5.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loadStart" prefHeight="85.0" prefWidth="140.0" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>
+                           <graphic>
+                              <ImageView pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/btn_keep_shopping.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="confirmPerson" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="720.0" style="-fx-background-color: #1A6763aa;">
+               <children>
+                  <Pane layoutX="7.0" layoutY="147.0" prefHeight="372.0" prefWidth="1079.0" style="-fx-background-color: #FBFBF8;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="9.0">
+                     <children>
                         <Label layoutX="273.0" layoutY="56.0" prefHeight="25.0" prefWidth="100.0" text="Förnamn">
                            <font>
                               <Font size="18.0" />
@@ -346,7 +341,7 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Button layoutX="818.0" layoutY="240.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
+                        <Button layoutX="818.0" layoutY="240.0" mnemonicParsing="false" onAction="#confirmAdressToFront" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
                            <graphic>
                               <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -410,7 +405,7 @@
                               <Font size="18.0" />
                            </font>
                         </Text>
-                        <Button layoutX="5.0" layoutY="5.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0" prefWidth="140.0" textAlignment="CENTER" wrapText="true">
+                        <Button layoutX="5.0" layoutY="5.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#loadStart" prefHeight="85.0" prefWidth="140.0" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font size="24.0" />
                            </font>

@@ -207,4 +207,7 @@ public class iMatMiniController implements Initializable, ShoppingCartListener {
     public void mouseTrap(MouseEvent mouseEvent) {
         //att göra
     }
+
+    public void loadStart(ActionEvent actionEvent) {
+    }
 }

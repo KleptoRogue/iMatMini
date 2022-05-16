@@ -45,18 +45,56 @@ public class IMatController implements Initializable {
     //new
     @FXML
     private AnchorPane loaderPane;
+    @FXML
+    private AnchorPane confirmReg;
+    @FXML
+    private AnchorPane confirmPassword;
+    @FXML
+    private AnchorPane confirmAdress;
+    @FXML
+    private AnchorPane confirmPerson;
 
 
+    @FXML
+    public void confirmRegToFront(){
+        confirmReg.toFront();
+    }
 
+    @FXML
+    public void confirmPasswordToFront(){
+        confirmPassword.toFront();
+    }
+
+    @FXML
+    public void confirmAdressToFront(){
+        confirmAdress.toFront();
+    }
+
+    @FXML
+    public void confirmPersonToFront(){
+        confirmPerson.toFront();
+    }
+
+    @FXML
     public void loadWizard (ActionEvent event) throws IOException {
+        loaderPane.getChildren().remove(loaderPane.getChildren());
+
         AnchorPane newLoadedPane =  FXMLLoader.load(getClass().getResource("RegisterWizard.fxml"));
         loaderPane.getChildren().add(newLoadedPane);
-
     }
+
+    @FXML
+    public void loadStart (ActionEvent event) throws IOException {
+        loaderPane.getChildren().remove(loaderPane.getChildren());
+
+        AnchorPane newLoadedPane =  FXMLLoader.load(getClass().getResource("StartPage.fxml"));
+        loaderPane.getChildren().add(newLoadedPane);
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        updateProductList(model.getProducts());
+        //updateProductList(model.getProducts());
     }
 
     private void updateProductList(List<Product> products) {
