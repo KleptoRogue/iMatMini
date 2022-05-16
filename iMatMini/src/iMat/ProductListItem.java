@@ -4,7 +4,9 @@ package iMat;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
@@ -35,6 +37,16 @@ public class ProductListItem extends AnchorPane {
 
     @FXML
     private AnchorPane addProductAnchorPane;
+
+    @FXML
+    private Button addProductButton;
+
+
+    @FXML
+    private ImageView starImageView;
+
+    @FXML
+    private TextField productCounterTextField;
 
     // Count products added to cart
     private int productCounter = 0;

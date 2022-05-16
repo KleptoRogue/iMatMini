@@ -25,17 +25,6 @@ public class IMatController implements Initializable {
 
     private final IMatDataHandlerWrapper model = IMatDataHandlerWrapper.getInstance();
 
-    // Needed for listeners when clicking on product buttons
-    @FXML
-    private Button addProductButton;
-
-
-    @FXML
-    private ImageView starImageView;
-
-    @FXML
-    private TextField productCounterTextField;
-
     @FXML
     private FlowPane productFlowPane;
 
