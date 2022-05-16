@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
+<AnchorPane id="AnchorPane" prefHeight="820.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
     <children>
         <StackPane prefHeight="560.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -27,11 +29,54 @@
                                  <children>
                                     <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <content>
-                                          <FlowPane prefHeight="532.0" prefWidth="540.0">
-                                             <children>
-                                                <TitledPane animated="false" prefHeight="106.0" prefWidth="520.0" text="Kontouppgifter">
+                                          <Accordion>
+                                             <panes>
+                                                <TitledPane animated="false" prefHeight="500.0" prefWidth="520.0" text="Kontouppgifter">
                                                   <content>
-                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="107.0" prefWidth="518.0" />
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="107.0" prefWidth="518.0">
+                                                         <children>
+                                                            <Label layoutY="10.0" prefHeight="27.0" prefWidth="185.0" text="Förnamn:" AnchorPane.leftAnchor="130.0">
+                                                               <font>
+                                                                  <Font name="Arial" size="24.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="mailadress_textfield" layoutX="62.0" layoutY="50.0" prefHeight="45.0" prefWidth="180.0" text="Förnamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </TextField>
+                                                            <Label layoutX="155.0" layoutY="120.0" prefHeight="27.0" prefWidth="185.0" text="Efternamn:" AnchorPane.leftAnchor="130.0">
+                                                               <font>
+                                                                  <Font name="Arial" size="24.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="mailadress_textfield1" layoutX="157.0" layoutY="160.0" prefHeight="45.0" prefWidth="180.0" text="Efternamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </TextField>
+                                                            <Label layoutX="140.0" layoutY="230.0" prefHeight="27.0" prefWidth="185.0" text="Lösenord" AnchorPane.leftAnchor="130.0">
+                                                               <font>
+                                                                  <Font name="Arial" size="24.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="mailadress_textfield2" layoutX="171.0" layoutY="270.0" prefHeight="45.0" prefWidth="180.0" text="Lösenord" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </TextField>
+                                                            <Label layoutX="155.0" layoutY="340.0" prefHeight="27.0" prefWidth="185.0" text="Användarnamn" AnchorPane.leftAnchor="130.0">
+                                                               <font>
+                                                                  <Font name="Arial" size="24.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="mailadress_textfield3" layoutX="158.0" layoutY="380.0" prefHeight="45.0" prefWidth="180.0" text="Användarnamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </TextField>
+                                                         </children>
+                                                      </AnchorPane>
                                                   </content>
                                                    <font>
                                                       <Font name="Arial" size="18.0" />
@@ -61,8 +106,8 @@
                                                       <Font name="Arial" size="18.0" />
                                                    </font>
                                                 </TitledPane>
-                                             </children>
-                                          </FlowPane>
+                                             </panes>
+                                          </Accordion>
                                        </content>
                                     </ScrollPane>
                                  </children>
