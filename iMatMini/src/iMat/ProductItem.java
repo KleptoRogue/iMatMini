@@ -13,10 +13,12 @@ import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
 
-public class ProductListItem extends AnchorPane {
+public class ProductItem extends AnchorPane {
 
 
     private IMatController parentcontroller;
+
+    private IMatDataHandlerWrapper model = IMatDataHandlerWrapper.getInstance();
     private Product product;
     @FXML
     private ImageView productImageView;
@@ -39,8 +41,6 @@ public class ProductListItem extends AnchorPane {
     @FXML
     private AnchorPane addProductAnchorPane;
 
-    @FXML
-    private Button addProductButton;
 
     @FXML
     private AnchorPane unFavoritedAnchorPane;
@@ -55,7 +55,7 @@ public class ProductListItem extends AnchorPane {
     private int productCounter = 0;
 
 
-    public ProductListItem(Product product, IMatController controller) {
+    public ProductItem(Product product, IMatController controller) {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/productItem.fxml"));
         fxmlLoader.setRoot(this);
@@ -76,12 +76,12 @@ public class ProductListItem extends AnchorPane {
 
         priceLabel.setText(product.getPrice() + " kr / " + product.getUnitSuffix());
 
-        productImageView.setImage(parentcontroller.getFXImage(product,
+        productImageView.setImage(model.getFXImage(product,
                                                              productImageView.getFitWidth(),
                                                              productImageView.getFitHeight()));
 
 
-        if (parentcontroller.isProductFavorited(this.product)) {
+        if (model.isFavorite(this.product)) {
             favoritedAnchorPane.toFront();
         }
 
@@ -91,30 +91,32 @@ public class ProductListItem extends AnchorPane {
             //ecoFriendlyImageView.setImage(ecoImage);
             ecoLabel.setText("Ekologisk");
         }
-
-
-
     }
-
 
     @FXML
     public void onAddFavoriteEvent(Event event) {
-        parentcontroller.addFavorite(product, favoritedAnchorPane);
+        model.addFavorite(product);
+        System.out.println("Favorited: " + product);
+        favoritedAnchorPane.toFront();
     }
 
     @FXML
     public void onRemoveFavoriteEvent(Event event) {
-        parentcontroller.removeFavorite(product, unFavoritedAnchorPane);
+        model.removeFavorite(product);
+        System.out.println("Unfavorited: " + product);
+        unFavoritedAnchorPane.toFront();
     }
 
     @FXML
     public void onAddClickEvent(Event event) {
-        parentcontroller.addProduct(product, addRemoveProductAnchorPane);
+        //TODO Connect to backend to update cart
+        addRemoveProductAnchorPane.toFront();
     }
 
     @FXML
     public void onRemoveClickEvent(Event event) {
-        parentcontroller.removeProduct(product, addProductAnchorPane);
+        // TODO Connect to backend to update cart
+        addProductAnchorPane.toFront();
     }
     public Product getProduct() {
         return product;
