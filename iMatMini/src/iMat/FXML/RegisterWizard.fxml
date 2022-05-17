@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="loaderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: # #F2F5F3;" stylesheets="@css/startpage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
+<AnchorPane fx:id="loaderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: # #F2F5F3;" stylesheets="@../css/startpage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
    <children>
       <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
@@ -66,7 +66,7 @@
                            <graphic>
                               <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@resources/btn_next_step.png" />
+                                    <Image url="@../resources/btn_next_step.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -75,7 +75,7 @@
                            <graphic>
                               <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@resources/btn_prev_step.png" />
+                                    <Image url="@../resources/btn_prev_step.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -127,7 +127,7 @@
                            <graphic>
                               <ImageView pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@resources/btn_keep_shopping.png" />
+                                    <Image url="@../resources/btn_keep_shopping.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -142,7 +142,7 @@
                      <children>
                         <ImageView fitHeight="119.0" fitWidth="140.0" layoutX="476.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@resources/checkmark.png" />
+                              <Image url="@../resources/checkmark.png" />
                            </image>
                         </ImageView>
                         <Label layoutX="415.0" layoutY="133.0" prefHeight="53.0" prefWidth="250.0" text="Ditt konto har skapats">
@@ -159,7 +159,7 @@
                            <graphic>
                               <ImageView fitHeight="82.0" fitWidth="284.0" pickOnBounds="true">
                                  <image>
-                                    <Image url="@resources/btn_go_to_account.png" />
+                                    <Image url="@../resources/btn_go_to_account.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -168,7 +168,7 @@
                            <graphic>
                               <ImageView fitHeight="82.0" fitWidth="284.0" pickOnBounds="true">
                                  <image>
-                                    <Image url="@resources/btn_go_to_startpage.png" />
+                                    <Image url="@../resources/btn_go_to_startpage.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -215,7 +215,7 @@
                            <graphic>
                               <ImageView pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@resources/btn_keep_shopping.png" />
+                                    <Image url="@../resources/btn_keep_shopping.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -252,7 +252,7 @@
                            <graphic>
                               <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@resources/btn_confirm_reg.png" />
+                                    <Image url="@../resources/btn_confirm_reg.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -261,7 +261,7 @@
                            <graphic>
                               <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@resources/btn_prev_step.png" />
+                                    <Image url="@../resources/btn_prev_step.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -308,7 +308,7 @@
                            <graphic>
                               <ImageView pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@resources/btn_keep_shopping.png" />
+                                    <Image url="@../resources/btn_keep_shopping.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -345,7 +345,7 @@
                            <graphic>
                               <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@resources/btn_next_step.png" />
+                                    <Image url="@../resources/btn_next_step.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -412,7 +412,7 @@
                            <graphic>
                               <ImageView pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@resources/btn_keep_shopping.png" />
+                                    <Image url="@../resources/btn_keep_shopping.png" />
                                  </image>
                               </ImageView>
                            </graphic>

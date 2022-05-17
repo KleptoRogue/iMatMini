@@ -25,7 +25,7 @@
                                 </Button>
                                 <ImageView fx:id="closeImageView" fitHeight="35.0" fitWidth="35.0" layoutX="200.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
                                     <image>
-                                        <Image url="@resources/icon_close.png" />
+                                        <Image url="@../resources/icon_close.png" />
                                     </image>
                                 </ImageView>
                         <Label layoutX="137.0" layoutY="35.0" text="Logga In">

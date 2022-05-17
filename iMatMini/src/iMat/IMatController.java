@@ -94,7 +94,7 @@ public class IMatController implements Initializable {
     public void loadWizard (ActionEvent event) throws IOException {
         loaderPane.getChildren().remove(loaderPane.getChildren());
         mainToFront();
-        AnchorPane newLoadedPane =  FXMLLoader.load(getClass().getResource("RegisterWizard.fxml"));
+        AnchorPane newLoadedPane =  FXMLLoader.load(getClass().getResource("FXML/RegisterWizard.fxml"));
         loaderPane.getChildren().add(newLoadedPane);
     }
 
@@ -102,7 +102,7 @@ public class IMatController implements Initializable {
     public void loadStart (ActionEvent event) throws IOException {
         loaderPane.getChildren().remove(loaderPane.getChildren());
 
-        AnchorPane newLoadedPane =  FXMLLoader.load(getClass().getResource("StartPage.fxml"));
+        AnchorPane newLoadedPane =  FXMLLoader.load(getClass().getResource("FXML/StartPage.fxml"));
         loaderPane.getChildren().add(newLoadedPane);
     }
 

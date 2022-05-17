@@ -10,18 +10,18 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@css/productItem.css" type="AnchorPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css" type="AnchorPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
          <children>
             <ImageView fx:id="productImageView" fitHeight="122.0" fitWidth="126.0" layoutX="37.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@resources/empty_image.png" />
+                  <Image url="@../resources/empty_image.png" />
                </image>
             </ImageView>
             <ImageView fx:id="starImageView" fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@resources/star_unmarked.jpg" />
+                  <Image url="@../resources/star_unmarked.jpg" />
                </image>
             </ImageView>
             <ImageView fx:id="ecoFriendlyImageView" fitHeight="34.0" fitWidth="35.0" layoutX="-1.0" layoutY="34.0" pickOnBounds="true" />
@@ -52,12 +52,12 @@
                   </TextField>
                   <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" onMouseClicked="#onRemoveClickEvent" pickOnBounds="true" styleClass="button">
                      <image>
-                        <Image url="@resources/MinusButton.png" />
+                        <Image url="@../resources/MinusButton.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="129.0" layoutY="8.0" onMouseClicked="#onAddClickEvent" pickOnBounds="true">
                      <image>
-                        <Image url="@resources/PlusButton.png" />
+                        <Image url="@../resources/PlusButton.png" />
                      </image>
                   </ImageView>
                </children>
