@@ -14,10 +14,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
+<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
     <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="126.0" prefWidth="1095.0" stylesheets="@css/header.css">
          <children>
@@ -36,7 +37,7 @@
                   </ImageView>
                </children>
             </AnchorPane>
-            <StackPane layoutX="791.0" layoutY="1.0" prefHeight="120.0" prefWidth="160.0" AnchorPane.topAnchor="1.0">
+            <StackPane layoutX="791.0" layoutY="2.0" prefHeight="120.0" prefWidth="160.0" AnchorPane.topAnchor="2.0">
                <children>
                   <AnchorPane fx:id="profileAnchorPane1" prefHeight="107.0" prefWidth="116.0" styleClass="set-background-color">
                      <children>
@@ -59,7 +60,7 @@
                         </MenuButton>
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="loginAnchorPane1" prefHeight="113.0" prefWidth="163.0" styleClass="set-background-color">
+                  <AnchorPane fx:id="loginAnchorPane1" prefHeight="113.0" prefWidth="129.0" styleClass="set-background-color">
                      <children>
                         <Label alignment="CENTER" layoutX="16.0" layoutY="82.0" prefHeight="31.0" prefWidth="130.0" text="Logga in">
                            <styleClass>
@@ -77,7 +78,7 @@
                   </AnchorPane>
                </children>
             </StackPane>
-            <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="85.0" prefWidth="233.0" styleClass="border-logo">
+            <AnchorPane layoutY="8.0" prefHeight="85.0" prefWidth="213.0" styleClass="border-logo">
                <children>
                   <Label layoutX="112.0" layoutY="21.0" prefHeight="58.0" prefWidth="136.0" styleClass="text-logo" text="IMat" />
                   <ImageView fitHeight="90.0" fitWidth="94.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true">
@@ -88,13 +89,14 @@
                   <Button mnemonicParsing="false" onAction="#loadStart" prefHeight="101.0" prefWidth="254.0" style="-fx-background-color: #00000000;" />
                </children>
             </AnchorPane>
+            <Line endX="1094.0" endY="124.0" startX="-0.9999923706054688" startY="124.0" strokeWidth="5.0" />
          </children>
          <styleClass>
             <String fx:value="set-background-color" />
             <String fx:value="set-text-color-white" />
          </styleClass>
       </AnchorPane>
-      <AnchorPane fx:id="loaderPane" layoutX="-1.0" layoutY="124.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="1095.0" style="-fx-background-color: #F2F5F3;" stylesheets="@css/startpage.css">
+      <AnchorPane fx:id="loaderPane" layoutX="-1.0" layoutY="124.0" maxHeight="-Infinity" prefHeight="528.0" prefWidth="1095.0" style="-fx-background-color: #F2F5F3;" stylesheets="@css/startpage.css">
          <children>
             <Accordion layoutY="128.0">
               <panes>
