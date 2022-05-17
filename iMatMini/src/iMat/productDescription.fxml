@@ -14,10 +14,10 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imatmini.iMatMiniController">
-    <children>
-        <StackPane prefHeight="560.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <children>
-                <AnchorPane fx:id="productDescriptionPanel" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+   <children>
+      <StackPane prefHeight="560.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="productDescriptionPanel" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
                <children>
                   <AnchorPane layoutX="19.0" layoutY="104.0" onMouseClicked="#mouseTrap" prefHeight="456.0" prefWidth="749.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
                      <children>
@@ -61,7 +61,7 @@
                               </ToggleButton>
                            </toggles>
                         </ToggleButtonGroup>
-                        <Button fx:id="LäggTillButton" layoutX="469.0" layoutY="225.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #7FFF00;" text="Lägg till">
+                        <Button fx:id="LäggTillButton" layoutX="469.0" layoutY="225.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #81D762;" text="Lägg till">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -118,8 +118,8 @@
                      </opaqueInsets>
                   </AnchorPane>
                </children>
-                </AnchorPane>
-            </children>
-        </StackPane>
-    </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
 </AnchorPane>
