@@ -87,7 +87,7 @@ public class IMatController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        updateProductList(model.getProducts());
+       // updateProductList(model.getProducts());
     }
 
     private void updateProductList(List<Product> products) {
