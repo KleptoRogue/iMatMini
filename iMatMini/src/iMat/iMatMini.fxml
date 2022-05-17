@@ -18,126 +18,176 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
     <children>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="126.0" prefWidth="1095.0" stylesheets="@css/header.css">
+      <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1095.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane fx:id="cartAnchorPane1" layoutX="951.0" layoutY="2.0" prefHeight="120.0" prefWidth="130.0" AnchorPane.leftAnchor="951.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="2.0">
+            <AnchorPane id="AnchorPane" fx:id="loginpage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1095.0">
                <children>
-                  <Label alignment="CENTER" layoutX="8.0" layoutY="82.0" prefHeight="31.0" prefWidth="110.0" text="Varukorg">
+                  <AnchorPane prefHeight="640.0" prefWidth="1095.2" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane fx:id="log_in_overlay" layoutX="322.0" layoutY="30.0" onMouseClicked="#mouseTrap" prefHeight="592.0" prefWidth="400.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="322.0" AnchorPane.rightAnchor="322.0" AnchorPane.topAnchor="30.0">
+                           <children>
+                              <Button fx:id="Logga_in" layoutX="43.0" layoutY="402.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #81D762;" text="Logga in">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="137.0" layoutY="35.0" text="Logga In">
+                                 <font>
+                                    <Font name="Arial" size="40.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="150.0" layoutY="152.0" prefHeight="27.0" prefWidth="151.0" text="E-postadress">
+                                 <font>
+                                    <Font name="Arial" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="mailadress_textfield" layoutX="150.0" layoutY="182.0" text="någon@exempel.se" />
+                              <Label alignment="CENTER" layoutX="150.0" layoutY="252.0" prefHeight="27.0" prefWidth="150.0" text="Lösenord">
+                                 <font>
+                                    <Font name="Arial" size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="lösenord_textfield" layoutX="150.0" layoutY="282.0" text="Lösenord" />
+                              <Button fx:id="Registrera" layoutX="248.0" layoutY="402.0" mnemonicParsing="false" onAction="#loadWizard" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #9D9D9D;" text="Registrera">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="mainpage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1095.0">
+               <children>
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="1095.0" stylesheets="@css/header.css" AnchorPane.bottomAnchor="6.400000000000006" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane fx:id="cartAnchorPane1" layoutX="951.0" layoutY="2.0" prefHeight="120.0" prefWidth="130.0" AnchorPane.leftAnchor="951.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="2.0">
+                           <children>
+                              <Label alignment="CENTER" layoutX="8.0" layoutY="82.0" prefHeight="31.0" prefWidth="110.0" text="Varukorg">
+                                 <styleClass>
+                                    <String fx:value="text-icon" />
+                                    <String fx:value="text-border" />
+                                 </styleClass>
+                              </Label>
+                              <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="31.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/cart_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <StackPane layoutX="791.0" layoutY="2.0" prefHeight="120.0" prefWidth="160.0" AnchorPane.topAnchor="2.0">
+                           <children>
+                              <AnchorPane fx:id="profileAnchorPane1" prefHeight="107.0" prefWidth="116.0" styleClass="set-background-color">
+                                 <children>
+                                    <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="52.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/profile_loggedin_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <MenuButton fx:id="profileMenuButton1" alignment="CENTER" layoutX="14.0" layoutY="82.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="130.0" text="Ditt konto" textFill="WHITE">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" text="Användaruppgifter" />
+                                          <MenuItem mnemonicParsing="false" text="Orderhistorik" />
+                                          <MenuItem mnemonicParsing="false" text="Favoriter" />
+                                          <MenuItem mnemonicParsing="false" text="Logga ut" />
+                                       </items>
+                                       <styleClass>
+                                          <String fx:value="text-icon" />
+                                          <String fx:value="menu-item" />
+                                       </styleClass>
+                                    </MenuButton>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="loginAnchorPane1" prefHeight="113.0" prefWidth="129.0" styleClass="set-background-color">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="16.0" layoutY="82.0" prefHeight="31.0" prefWidth="130.0" text="Logga in">
+                                       <styleClass>
+                                          <String fx:value="text-border" />
+                                          <String fx:value="text-icon" />
+                                       </styleClass>
+                                    </Label>
+                                    <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="58.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/profile_login_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button layoutX="9.0" layoutY="12.0" mnemonicParsing="false" onAction="#loginToFront" prefHeight="108.0" prefWidth="146.0" styleClass="transparentbutton" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </StackPane>
+                        <AnchorPane layoutY="8.0" prefHeight="85.0" prefWidth="213.0" styleClass="border-logo">
+                           <children>
+                              <Label layoutX="112.0" layoutY="21.0" prefHeight="58.0" prefWidth="136.0" styleClass="text-logo" text="IMat" />
+                              <ImageView fitHeight="90.0" fitWidth="94.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@resources/iMat_logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Button mnemonicParsing="false" onAction="#loadStart" prefHeight="101.0" prefWidth="254.0" style="-fx-background-color: #00000000;" />
+                           </children>
+                        </AnchorPane>
+                        <Line endX="1094.0" endY="124.0" startX="-0.9999923706054688" startY="124.0" strokeWidth="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-4.7999999999999545" />
+                     </children>
                      <styleClass>
-                        <String fx:value="text-icon" />
-                        <String fx:value="text-border" />
+                        <String fx:value="set-background-color" />
+                        <String fx:value="set-text-color-white" />
                      </styleClass>
-                  </Label>
-                  <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="31.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@resources/cart_icon.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-            <StackPane layoutX="791.0" layoutY="2.0" prefHeight="120.0" prefWidth="160.0" AnchorPane.topAnchor="2.0">
-               <children>
-                  <AnchorPane fx:id="profileAnchorPane1" prefHeight="107.0" prefWidth="116.0" styleClass="set-background-color">
-                     <children>
-                        <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="52.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/profile_loggedin_icon.png" />
-                           </image>
-                        </ImageView>
-                        <MenuButton fx:id="profileMenuButton1" alignment="CENTER" layoutX="14.0" layoutY="82.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="130.0" text="Ditt konto" textFill="WHITE">
-                           <items>
-                              <MenuItem mnemonicParsing="false" text="Användaruppgifter" />
-                              <MenuItem mnemonicParsing="false" text="Orderhistorik" />
-                              <MenuItem mnemonicParsing="false" text="Favoriter" />
-                              <MenuItem mnemonicParsing="false" text="Logga ut" />
-                           </items>
-                           <styleClass>
-                              <String fx:value="text-icon" />
-                              <String fx:value="menu-item" />
-                           </styleClass>
-                        </MenuButton>
-                     </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="loginAnchorPane1" prefHeight="113.0" prefWidth="129.0" styleClass="set-background-color">
+                  <AnchorPane fx:id="loaderPane" layoutY="125.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #F2F5F3;" stylesheets="@css/startpage.css">
                      <children>
-                        <Label alignment="CENTER" layoutX="16.0" layoutY="82.0" prefHeight="31.0" prefWidth="130.0" text="Logga in">
-                           <styleClass>
-                              <String fx:value="text-border" />
-                              <String fx:value="text-icon" />
-                           </styleClass>
-                        </Label>
-                        <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="58.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/profile_login_icon.png" />
-                           </image>
-                        </ImageView>
-                        <Button layoutX="9.0" layoutY="12.0" mnemonicParsing="false" onAction="#loadWizard" prefHeight="108.0" prefWidth="146.0" styleClass="transparentbutton" />
+                        <Accordion layoutY="128.0">
+                          <panes>
+                            <TitledPane animated="false" text="Basvaror">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Mejeri">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </TitledPane>
+                              <TitledPane animated="false" text="Grönsaker">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                </content>
+                              </TitledPane>
+                          </panes>
+                        </Accordion>
+                        <Pane layoutY="56.0" prefHeight="58.0" prefWidth="202.0" style="-fx-background-color: #EAEAE9;">
+                           <children>
+                              <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorier" textAlignment="CENTER" wrappingWidth="202.39999999999998">
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <TextField layoutX="316.0" layoutY="16.0" prefHeight="39.0" prefWidth="462.0" promptText="Skriv in vara eller kategori du vill söka efter" styleClass="searchBoxLabelIcon">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="40.0" right="2.0" />
+                           </padding>
+                        </TextField>
+                        <Button layoutX="716.0" layoutY="22.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" text="SÖK" />
                      </children>
+            
+            
                   </AnchorPane>
                </children>
-            </StackPane>
-            <AnchorPane layoutY="8.0" prefHeight="85.0" prefWidth="213.0" styleClass="border-logo">
-               <children>
-                  <Label layoutX="112.0" layoutY="21.0" prefHeight="58.0" prefWidth="136.0" styleClass="text-logo" text="IMat" />
-                  <ImageView fitHeight="90.0" fitWidth="94.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true">
-                     <image>
-                        <Image url="@resources/iMat_logo.png" />
-                     </image>
-                  </ImageView>
-                  <Button mnemonicParsing="false" onAction="#loadStart" prefHeight="101.0" prefWidth="254.0" style="-fx-background-color: #00000000;" />
-               </children>
             </AnchorPane>
-            <Line endX="1094.0" endY="124.0" startX="-0.9999923706054688" startY="124.0" strokeWidth="5.0" />
          </children>
-         <styleClass>
-            <String fx:value="set-background-color" />
-            <String fx:value="set-text-color-white" />
-         </styleClass>
-      </AnchorPane>
-      <AnchorPane fx:id="loaderPane" layoutX="-1.0" layoutY="124.0" maxHeight="-Infinity" prefHeight="528.0" prefWidth="1095.0" style="-fx-background-color: #F2F5F3;" stylesheets="@css/startpage.css">
-         <children>
-            <Accordion layoutY="128.0">
-              <panes>
-                <TitledPane animated="false" text="Basvaror">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </TitledPane>
-                <TitledPane animated="false" text="Mejeri">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </TitledPane>
-                  <TitledPane animated="false" text="Grönsaker">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                    </content>
-                  </TitledPane>
-              </panes>
-            </Accordion>
-            <Pane layoutY="56.0" prefHeight="58.0" prefWidth="202.0" style="-fx-background-color: #EAEAE9;">
-               <children>
-                  <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorier" textAlignment="CENTER" wrappingWidth="202.39999999999998">
-                     <font>
-                        <Font size="29.0" />
-                     </font>
-                  </Text>
-               </children>
-            </Pane>
-            <TextField layoutX="316.0" layoutY="16.0" prefHeight="39.0" prefWidth="462.0" promptText="Skriv in vara eller kategori du vill söka efter" styleClass="searchBoxLabelIcon">
-               <font>
-                  <Font size="14.0" />
-               </font>
-               <padding>
-                  <Insets left="40.0" right="2.0" />
-               </padding>
-            </TextField>
-            <Button layoutX="716.0" layoutY="22.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" text="SÖK" />
-         </children>
-
-
-      </AnchorPane>
+      </StackPane>
     </children>
 </AnchorPane>

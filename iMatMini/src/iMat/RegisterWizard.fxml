@@ -14,9 +14,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="loaderPane" maxHeight="-Infinity" prefHeight="528.0" prefWidth="1095.0" style="-fx-background-color: # #F2F5F3;" stylesheets="@css/startpage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
+<AnchorPane fx:id="loaderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: # #F2F5F3;" stylesheets="@css/startpage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
    <children>
-      <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="1095.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <AnchorPane fx:id="confirmAdress" prefHeight="200.0" prefWidth="720.0" style="-fx-background-color: #1A6763aa;">
                <children>

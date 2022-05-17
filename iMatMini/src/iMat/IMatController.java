@@ -15,6 +15,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.Product;
@@ -53,6 +54,10 @@ public class IMatController implements Initializable {
     private AnchorPane confirmAdress;
     @FXML
     private AnchorPane confirmPerson;
+    @FXML
+    private AnchorPane loginpage;
+    @FXML
+    private AnchorPane mainpage;
 
 
     @FXML
@@ -76,9 +81,19 @@ public class IMatController implements Initializable {
     }
 
     @FXML
+    public void loginToFront(){
+        loginpage.toFront();
+    }
+
+    @FXML
+    public void mainToFront(){
+        mainpage.toFront();
+    }
+
+    @FXML
     public void loadWizard (ActionEvent event) throws IOException {
         loaderPane.getChildren().remove(loaderPane.getChildren());
-
+        mainToFront();
         AnchorPane newLoadedPane =  FXMLLoader.load(getClass().getResource("RegisterWizard.fxml"));
         loaderPane.getChildren().add(newLoadedPane);
     }
@@ -118,4 +133,9 @@ public class IMatController implements Initializable {
     protected Image getFXImage(Product product, double width, double height) {
         return model.getFXImage(product, width, height);
     }
+
+    public void mouseTrap(MouseEvent mouseEvent) {
+        //att göra
+    }
+
 }
