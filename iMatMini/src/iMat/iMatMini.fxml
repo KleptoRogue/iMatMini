@@ -24,9 +24,9 @@
          <children>
             <AnchorPane id="AnchorPane" fx:id="loginpage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1095.0">
                <children>
-                  <AnchorPane prefHeight="640.0" prefWidth="1095.2" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1095.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <AnchorPane fx:id="log_in_overlay" layoutX="322.0" layoutY="30.0" onMouseClicked="#mouseTrap" prefHeight="592.0" prefWidth="400.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="322.0" AnchorPane.rightAnchor="322.0" AnchorPane.topAnchor="30.0">
+                        <AnchorPane fx:id="log_in_overlay" layoutX="322.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#mouseTrap" prefHeight="592.0" prefWidth="400.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="322.0" AnchorPane.rightAnchor="322.0" AnchorPane.topAnchor="30.0">
                            <children>
                               <Button fx:id="Logga_in" layoutX="43.0" layoutY="402.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #81D762;" text="Logga in">
                                  <font>
@@ -66,7 +66,7 @@
             </AnchorPane>
             <AnchorPane fx:id="mainpage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1095.0">
                <children>
-                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="1095.0" stylesheets="@css/header.css" AnchorPane.bottomAnchor="6.400000000000006" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="1095.0" stylesheets="@css/header.css">
                      <children>
                         <AnchorPane fx:id="cartAnchorPane1" layoutX="951.0" layoutY="2.0" prefHeight="120.0" prefWidth="130.0" AnchorPane.leftAnchor="951.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="2.0">
                            <children>
@@ -135,7 +135,7 @@
                               <Button mnemonicParsing="false" onAction="#loadStart" prefHeight="101.0" prefWidth="254.0" style="-fx-background-color: #00000000;" />
                            </children>
                         </AnchorPane>
-                        <Line endX="1094.0" endY="124.0" startX="-0.9999923706054688" startY="124.0" strokeWidth="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-4.7999999999999545" />
+                        <Line endX="1090.0" endY="124.0" startX="-0.9999923706054688" startY="124.0" strokeWidth="5.0" AnchorPane.leftAnchor="0.0" />
                      </children>
                      <styleClass>
                         <String fx:value="set-background-color" />

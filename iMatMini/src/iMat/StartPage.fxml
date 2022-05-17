@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="loaderPane" prefHeight="528.0" prefWidth="1095.0" style="-fx-background-color: #F2F5F3;" stylesheets="@css/startpage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="loaderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #F2F5F3;" stylesheets="@css/startpage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Accordion layoutY="128.0">
          <panes>

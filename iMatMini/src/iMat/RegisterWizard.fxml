@@ -16,11 +16,11 @@
 
 <AnchorPane fx:id="loaderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: # #F2F5F3;" stylesheets="@css/startpage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
    <children>
-      <StackPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0">
          <children>
-            <AnchorPane fx:id="confirmAdress" prefHeight="200.0" prefWidth="720.0" style="-fx-background-color: #1A6763aa;">
+            <AnchorPane fx:id="confirmAdress" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
                <children>
-                  <Pane layoutX="7.0" layoutY="170.0" maxHeight="-Infinity" prefHeight="350.0" prefWidth="1079.0" style="-fx-background-color: #FBFBF8;">
+                  <Pane layoutX="7.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="1079.0" style="-fx-background-color: #FBFBF8;">
                      <children>
                         <Label layoutX="273.0" layoutY="56.0" prefHeight="25.0" prefWidth="100.0" text="Address">
                            <font>
@@ -87,7 +87,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane layoutX="8.0" layoutY="10.0" prefHeight="148.0" prefWidth="1079.0" style="-fx-background-color: #FFFFFF;">
+                  <Pane layoutX="8.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="1079.0" style="-fx-background-color: #FFFFFF;">
                      <children>
                         <Line endX="52.0" fill="#868686" layoutX="386.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
                         <Line endX="52.0" fill="#868686" layoutX="503.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
@@ -136,9 +136,9 @@
                   </Pane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="confirmReg" prefHeight="200.0" prefWidth="720.0" style="-fx-background-color: #1A6763aa;">
+            <AnchorPane fx:id="confirmReg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
                <children>
-                  <Pane layoutX="7.0" layoutY="170.0" maxHeight="-Infinity" prefHeight="350.0" prefWidth="1079.0" style="-fx-background-color: #FBFBF8;">
+                  <Pane layoutX="7.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="1079.0" style="-fx-background-color: #FBFBF8;">
                      <children>
                         <ImageView fitHeight="119.0" fitWidth="140.0" layoutX="476.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -175,7 +175,7 @@
                         </Button>
                      </children>
                   </Pane>
-                  <Pane layoutX="8.0" layoutY="10.0" prefHeight="148.0" prefWidth="1079.0" style="-fx-background-color: #FFFFFF;">
+                  <Pane layoutX="8.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="1079.0" style="-fx-background-color: #FFFFFF;">
                      <children>
                         <Line endX="52.0" fill="#868686" layoutX="386.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
                         <Line endX="52.0" fill="#868686" layoutX="503.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
@@ -224,9 +224,9 @@
                   </Pane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="confirmPassword" prefHeight="200.0" prefWidth="720.0" style="-fx-background-color: #1A6763aa;">
+            <AnchorPane fx:id="confirmPassword" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
                <children>
-                  <Pane layoutX="7.0" layoutY="170.0" maxHeight="-Infinity" prefHeight="350.0" prefWidth="1079.0" style="-fx-background-color: #FBFBF8;">
+                  <Pane layoutX="7.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="1079.0" style="-fx-background-color: #FBFBF8;">
                      <children>
                         <Label layoutX="415.0" layoutY="70.0" prefHeight="25.0" prefWidth="100.0" text="Lösenord">
                            <font>
@@ -268,7 +268,7 @@
                         </Button>
                      </children>
                   </Pane>
-                  <Pane layoutX="8.0" layoutY="10.0" prefHeight="148.0" prefWidth="1079.0" style="-fx-background-color: #FFFFFF;">
+                  <Pane layoutX="8.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="1079.0" style="-fx-background-color: #FFFFFF;">
                      <children>
                         <Line endX="52.0" fill="#868686" layoutX="386.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
                         <Line endX="52.0" fill="#868686" layoutX="503.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
@@ -317,9 +317,9 @@
                   </Pane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="confirmPerson" prefHeight="200.0" prefWidth="720.0" style="-fx-background-color: #1A6763aa;">
+            <AnchorPane fx:id="confirmPerson" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
                <children>
-                  <Pane layoutX="7.0" layoutY="170.0" maxHeight="-Infinity" prefHeight="350.0" prefWidth="1079.0" style="-fx-background-color: #FBFBF8;">
+                  <Pane layoutX="7.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="1079.0" style="-fx-background-color: #FBFBF8;">
                      <children>
                         <Label layoutX="273.0" layoutY="56.0" prefHeight="25.0" prefWidth="100.0" text="Förnamn">
                            <font>
@@ -372,7 +372,7 @@
                         </TextField>
                      </children>
                   </Pane>
-                  <Pane layoutX="8.0" layoutY="10.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="1079.0" style="-fx-background-color: #FFFFFF;">
+                  <Pane layoutX="8.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="1079.0" style="-fx-background-color: #FFFFFF;">
                      <children>
                         <Line endX="52.0" fill="#868686" layoutX="386.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
                         <Line endX="52.0" fill="#868686" layoutX="503.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
