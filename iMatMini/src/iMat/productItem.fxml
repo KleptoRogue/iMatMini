@@ -19,12 +19,29 @@
                   <Image url="@resources/empty_image.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="starImageView" fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@resources/star_unmarked.jpg" />
-               </image>
-            </ImageView>
             <ImageView fx:id="ecoFriendlyImageView" fitHeight="34.0" fitWidth="35.0" layoutX="-1.0" layoutY="34.0" pickOnBounds="true" />
+            <StackPane prefHeight="37.0" prefWidth="34.0">
+               <children>
+                  <AnchorPane fx:id="favoritedAnchorPane" onMouseClicked="#onRemoveFavoriteEvent" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/star_marked.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="unFavoritedAnchorPane" onMouseClicked="#onAddFavoriteEvent" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/star_unmarked.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
          </children>
          <styleClass>
             <String fx:value="whiteBackGround" />

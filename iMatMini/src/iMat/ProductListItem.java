@@ -15,6 +15,7 @@ import java.io.IOException;
 
 public class ProductListItem extends AnchorPane {
 
+
     private IMatController parentcontroller;
     private Product product;
     @FXML
@@ -41,9 +42,11 @@ public class ProductListItem extends AnchorPane {
     @FXML
     private Button addProductButton;
 
+    @FXML
+    private AnchorPane unFavoritedAnchorPane;
 
     @FXML
-    private ImageView starImageView;
+    private AnchorPane favoritedAnchorPane;
 
     @FXML
     private TextField productCounterTextField;
@@ -53,6 +56,7 @@ public class ProductListItem extends AnchorPane {
 
 
     public ProductListItem(Product product, IMatController controller) {
+
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("productItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -77,15 +81,31 @@ public class ProductListItem extends AnchorPane {
                                                              productImageView.getFitHeight()));
 
 
+        if (parentcontroller.isProductFavorited(this.product)) {
+            favoritedAnchorPane.toFront();
+        }
+
+
         if (product.isEcological()) {
-          //  Image ecoImage = new Image("ecological_icon.png");
-       //     ecoFriendlyImageView.setImage(image);
+            //Image ecoImage = new Image("ecological_icon.png");
+            //ecoFriendlyImageView.setImage(ecoImage);
             ecoLabel.setText("Ekologisk");
         }
+
+
 
     }
 
 
+    @FXML
+    public void onAddFavoriteEvent(Event event) {
+        parentcontroller.addFavorite(product, favoritedAnchorPane);
+    }
+
+    @FXML
+    public void onRemoveFavoriteEvent(Event event) {
+        parentcontroller.removeFavorite(product, unFavoritedAnchorPane);
+    }
 
     @FXML
     public void onAddClickEvent(Event event) {

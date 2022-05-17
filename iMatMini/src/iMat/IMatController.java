@@ -12,14 +12,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.Product;
-
-import javax.swing.text.html.ImageView;
 
 public class IMatController implements Initializable {
 
@@ -29,6 +25,8 @@ public class IMatController implements Initializable {
     private FlowPane productFlowPane;
 
     private final Map<String, Product> productItemMap = new HashMap<>();
+
+    private final Map<Product, Integer> favoritedProductMap = new HashMap<>();
 
 
     //new
@@ -83,16 +81,44 @@ public class IMatController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //updateProductList(model.getProducts());
+        initializeFavoritedProductMap(model.getFavorites());
+        updateProductList(model.getProducts());
     }
 
+
+
+    public Boolean isProductFavorited(Product product) {
+        if (favoritedProductMap.get(product) == null)
+            return false;
+
+        return true;
+    }
+
+    private void initializeFavoritedProductMap(List<Product> favorites) {
+        for (Product favorite : favorites) {
+            favoritedProductMap.put(favorite, 1);
+        }
+    }
     private void updateProductList(List<Product> products) {
         productFlowPane.getChildren().clear();
+
         for (Product product : products) {
             productFlowPane.getChildren().add(new ProductListItem(product, this));
         }
     }
 
+
+    protected void addFavorite(Product product, AnchorPane favorited) {
+        model.addFavorite(product);
+        System.out.println("Favorited: " + product);
+        favorited.toFront();
+    }
+
+    protected void removeFavorite(Product product, AnchorPane unfavorited) {
+        model.removeFavorite(product);
+        System.out.println("Unfavorited: " + product);
+        unfavorited.toFront();
+    }
 
     protected void addProduct(Product product, Node anchorpane) {
         //TODO Connect to backend to update cart and productCounterTextField
