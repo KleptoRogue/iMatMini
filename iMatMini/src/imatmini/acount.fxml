@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.gluonhq.charm.glisten.control.ToggleButtonGroup?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
@@ -26,18 +27,54 @@
                                 <Insets />
                             </opaqueInsets>
                      <children>
-                        <SplitPane dividerPositions="0.23565965583174" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <SplitPane dividerPositions="0.234225621414914" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <items>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="50.0">
                                  <children>
+                                    <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="-1.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="20.0">
+                                       <image>
+                                          <Image url="@resources/ditt_konto_knapp.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button layoutX="9.0" layoutY="60.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Användaruppgifter" AnchorPane.leftAnchor="5.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="9.0" layoutY="195.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Logga ut" AnchorPane.leftAnchor="5.0">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="9.0" layoutY="150.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Favoriter" AnchorPane.leftAnchor="5.0">
+                                       <font>
+                                          <Font name="Arial" size="15.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="9.0" layoutY="105.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Orderhistorik" AnchorPane.leftAnchor="5.0">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Button>
+                                 </children></AnchorPane>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                                            </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
                                     <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <content>
                                           <Accordion>
                                              <panes>
                                                 <TitledPane animated="false" prefHeight="800.0" prefWidth="520.0" text="Kontouppgifter">
                                                   <content>
-                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="107.0" prefWidth="518.0">
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="600.0">
                                                          <children>
                                                             <Label layoutY="10.0" prefHeight="27.0" prefWidth="185.0" text="Förnamn:" AnchorPane.leftAnchor="130.0">
                                                                <font>
@@ -117,7 +154,7 @@
                                                 </TitledPane>
                                                 <TitledPane animated="false" prefHeight="600.0" prefWidth="520.0" text="Adressuppgifter">
                                                    <content>
-                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="141.0" prefWidth="482.0">
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="600.0">
                                                          <children>
                                                             <Label layoutX="136.0" layoutY="120.0" prefHeight="27.0" prefWidth="185.0" text="Postkod:" AnchorPane.leftAnchor="130.0">
                                                                <font>
@@ -175,44 +212,117 @@
                                                       <Font name="Arial" size="18.0" />
                                                    </font>
                                                 </TitledPane>
-                                                <TitledPane animated="false" prefHeight="600.0" prefWidth="520.0" text="Betalningsuppgifter">
+                                                <TitledPane animated="false" prefHeight="800.0" prefWidth="520.0" text="Betalningsuppgifter">
                                                    <content>
-                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="59.0" prefWidth="518.0">
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="600.0">
                                                          <children>
-                                                            <Label layoutX="139.0" layoutY="290.0" prefHeight="27.0" prefWidth="185.0" text="Mobilnummer:">
+                                                            <Label layoutX="121.0" layoutY="270.0" prefHeight="27.0" prefWidth="242.0" text="Korthaverens namn:" AnchorPane.leftAnchor="130.0">
                                                                <font>
                                                                   <Font name="Arial" size="24.0" />
                                                                </font>
                                                             </Label>
-                                                            <TextField layoutX="131.0" layoutY="334.0" prefHeight="45.0" prefWidth="180.0" text="Mobilnummer:">
+                                                            <TextField layoutX="121.0" layoutY="310.0" prefHeight="45.0" prefWidth="180.0" text="Korthavarens namn:" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                                <font>
                                                                   <Font size="14.0" />
                                                                </font>
                                                             </TextField>
-                                                            <RadioButton layoutX="405.0" layoutY="100.0" mnemonicParsing="false" />
-                                                            <RadioButton layoutX="130.0" layoutY="100.0" mnemonicParsing="false" />
-                                                            <RadioButton layoutX="40.0" layoutY="100.0" mnemonicParsing="false" />
-                                                            <RadioButton layoutX="250.0" layoutY="100.0" mnemonicParsing="false" />
-                                                            <Label layoutX="30.0" layoutY="60.0" text="Kort">
+                                                            <Label contentDisplay="RIGHT" layoutX="10.0" layoutY="60.0" text="Kort">
+                                                               <font>
+                                                                  <Font name="Arial" size="24.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@resources/kortBetalningLogo.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Label contentDisplay="RIGHT" layoutX="245.0" layoutY="60.0" text="Swish">
+                                                               <font>
+                                                                  <Font name="Arial" size="24.0" />
+                                                               </font>
+                                                               <graphic>
+                                                                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@resources/swishLogo.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Label layoutX="130.0" layoutY="60.0" text="E-faktura">
                                                                <font>
                                                                   <Font name="Arial" size="24.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="120.0" layoutY="60.0" text="Swish">
+                                                            <Label layoutX="350.0" layoutY="60.0" text="Pappersfaktura">
                                                                <font>
                                                                   <Font name="Arial" size="24.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="220.0" layoutY="60.0" text="E-faktura">
+                                                            <Label layoutX="158.4" layoutY="380.0" prefHeight="27.0" prefWidth="241.0" text="Giltig till och med " AnchorPane.leftAnchor="144.0">
                                                                <font>
                                                                   <Font name="Arial" size="24.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="340.0" layoutY="60.0" text="Pappersfaktura">
+                                                            <TextField layoutX="121.0" layoutY="420.0" prefHeight="45.0" prefWidth="180.0" text="mm-yy" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </TextField>
+                                                            <Label layoutX="121.0" layoutY="160.0" prefHeight="27.0" prefWidth="185.0" text="Kortnummer:" AnchorPane.leftAnchor="130.0">
                                                                <font>
                                                                   <Font name="Arial" size="24.0" />
                                                                </font>
                                                             </Label>
+                                                            <TextField layoutX="121.0" layoutY="200.0" prefHeight="45.0" prefWidth="180.0" text="Kortnummer" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </TextField>
+                                                            <Label layoutX="121.0" layoutY="490.0" prefHeight="27.0" prefWidth="185.0" text="Cvc-kod" AnchorPane.leftAnchor="130.0">
+                                                               <font>
+                                                                  <Font name="Arial" size="24.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField layoutX="121.0" layoutY="530.0" prefHeight="45.0" prefWidth="180.0" text="123" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                               <font>
+                                                                  <Font size="14.0" />
+                                                               </font>
+                                                            </TextField>
+                                                            <Button layoutX="121.0" layoutY="600.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="140.0">
+                                                               <graphic>
+                                                                  <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../iMat/resources/spara_knapp.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                               </graphic>
+                                                            </Button>
+                                                            <ToggleButtonGroup layoutX="5.4" layoutY="100.0" prefHeight="24.0" prefWidth="525.0" selectionType="SINGLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                                <toggles>
+                                                                  <RadioButton fx:id="kortBetalning" mnemonicParsing="false">
+                                                                     <padding>
+                                                                        <Insets left="30.0" />
+                                                                     </padding>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="E_fakturaBetalning" mnemonicParsing="false">
+                                                                     <padding>
+                                                                        <Insets left="110.0" />
+                                                                     </padding>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="swishBetalning" mnemonicParsing="false">
+                                                                     <padding>
+                                                                        <Insets left="85.0" />
+                                                                     </padding>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="pappersfakturaBetalning" graphicTextGap="10.0" mnemonicParsing="false">
+                                                                     <padding>
+                                                                        <Insets left="120.0" />
+                                                                     </padding>
+                                                                  </RadioButton>
+                                                                </toggles>
+                                                            </ToggleButtonGroup>
                                                          </children>
                                                       </AnchorPane>
                                                    </content>
@@ -224,6 +334,15 @@
                                           </Accordion>
                                        </content>
                                     </ScrollPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                             <image>
+                                                <Image url="@resources/dina_favoriter.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </AnchorPane>
                           </items>
