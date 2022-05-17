@@ -1,6 +1,6 @@
 package iMat;
 
-import imatmini.Model;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

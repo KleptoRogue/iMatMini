@@ -33,7 +33,7 @@
                                  <children>
                                     <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="-1.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="20.0">
                                        <image>
-                                          <Image url="@resources/ditt_konto_knapp.png" />
+                                          <Image url="@../imatmini/resources/ditt_konto_knapp.png" />
                                        </image>
                                     </ImageView>
                                     <Button layoutX="9.0" layoutY="60.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Användaruppgifter" AnchorPane.leftAnchor="5.0">
@@ -59,9 +59,43 @@
                                  </children></AnchorPane>
                               <AnchorPane prefHeight="200.0" prefWidth="200.0">
                                  <children>
-                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <AnchorPane fx:id="orderhistorikPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                          <ImageView fitHeight="100.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.666666666666629" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                             <image>
+                                                <Image url="@../imatmini/resources/dina_favoriter.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="131.0" layoutY="40.0" text="Din Orderhistorik">
+                                             <font>
+                                                <Font name="Arial" size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <ScrollPane layoutY="112.0" prefHeight="605.0" prefWidth="531.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                                            </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="favoriterPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <ImageView fitHeight="100.0" fitWidth="500.0" layoutX="6.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.666666666666629" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                             <image>
+                                                <Image url="@../imatmini/resources/dina_favoriter.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="137.0" layoutY="39.0" text="Dina Favoriter">
+                                             <font>
+                                                <Font name="Arial" size="36.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="388.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@resources/star_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ScrollPane prefHeight="606.0" prefWidth="531.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
                                             <content>
                                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
                                             </content>
@@ -120,7 +154,7 @@
                                                                <graphic>
                                                                   <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                                      <image>
-                                                                        <Image url="@../iMat/resources/spara_knapp.png" />
+                                                                        <Image url="@resources/spara_knapp.png" />
                                                                      </image>
                                                                   </ImageView>
                                                                </graphic>
@@ -161,7 +195,7 @@
                                                                   <Font name="Arial" size="24.0" />
                                                                </font>
                                                             </Label>
-                                                            <TextField layoutX="190.0" layoutY="160.0" prefHeight="45.0" prefWidth="180.0" text="Postkod" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                            <TextField layoutX="190.0" layoutY="160.0" prefHeight="45.0" prefWidth="180.0" text="1234 56" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                                <font>
                                                                   <Font size="14.0" />
                                                                </font>
@@ -200,7 +234,7 @@
                                                                <graphic>
                                                                   <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                                      <image>
-                                                                        <Image url="@../iMat/resources/spara_knapp.png" />
+                                                                        <Image url="@resources/spara_knapp.png" />
                                                                      </image>
                                                                   </ImageView>
                                                                </graphic>
@@ -233,7 +267,7 @@
                                                                <graphic>
                                                                   <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                                                      <image>
-                                                                        <Image url="@resources/kortBetalningLogo.png" />
+                                                                        <Image url="@../imatmini/resources/kortBetalningLogo.png" />
                                                                      </image>
                                                                   </ImageView>
                                                                </graphic>
@@ -245,7 +279,7 @@
                                                                <graphic>
                                                                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                                                      <image>
-                                                                        <Image url="@resources/swishLogo.png" />
+                                                                        <Image url="@../imatmini/resources/swishLogo.png" />
                                                                      </image>
                                                                   </ImageView>
                                                                </graphic>
@@ -294,7 +328,7 @@
                                                                <graphic>
                                                                   <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                                                      <image>
-                                                                        <Image url="@../iMat/resources/spara_knapp.png" />
+                                                                        <Image url="@resources/spara_knapp.png" />
                                                                      </image>
                                                                   </ImageView>
                                                                </graphic>
@@ -334,15 +368,6 @@
                                           </Accordion>
                                        </content>
                                     </ScrollPane>
-                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                       <children>
-                                          <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
-                                             <image>
-                                                <Image url="@resources/dina_favoriter.png" />
-                                             </image>
-                                          </ImageView>
-                                       </children>
-                                    </AnchorPane>
                                  </children>
                               </AnchorPane>
                           </items>
