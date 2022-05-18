@@ -6,7 +6,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
@@ -15,342 +14,339 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="820.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
     <children>
-        <StackPane prefHeight="560.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <AnchorPane fx:id="productDescriptionPanel" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+                <AnchorPane fx:id="productDescriptionPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
                     <children>
                         <AnchorPane layoutX="19.0" layoutY="104.0" prefHeight="456.0" prefWidth="749.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
                             <opaqueInsets>
                                 <Insets />
                             </opaqueInsets>
                      <children>
-                        <SplitPane dividerPositions="0.234225621414914" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                          <items>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="50.0">
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="439.0" prefWidth="180.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="817.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="-1.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="20.0">
+                                 <image>
+                                    <Image url="@../resources/ditt_konto_knapp.png" />
+                                 </image>
+                              </ImageView>
+                              <Button layoutX="9.0" layoutY="60.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Användaruppgifter" AnchorPane.leftAnchor="5.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="9.0" layoutY="195.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Logga ut" AnchorPane.leftAnchor="5.0">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="9.0" layoutY="150.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Favoriter" AnchorPane.leftAnchor="5.0">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="9.0" layoutY="105.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Orderhistorik" AnchorPane.leftAnchor="5.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="439.0" prefWidth="805.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="orderhistorikPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
-                                    <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="-1.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="20.0">
+                                    <ImageView fitHeight="100.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.666666666666629" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
                                        <image>
-                                          <Image url="@../resources/ditt_konto_knapp.png" />
+                                          <Image url="@../resources/dina_favoriter.png" />
                                        </image>
                                     </ImageView>
-                                    <Button layoutX="9.0" layoutY="60.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Användaruppgifter" AnchorPane.leftAnchor="5.0">
+                                    <Label layoutX="131.0" layoutY="40.0" text="Din Orderhistorik">
                                        <font>
-                                          <Font size="15.0" />
+                                          <Font name="Arial" size="36.0" />
                                        </font>
-                                    </Button>
-                                    <Button layoutX="9.0" layoutY="195.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Logga ut" AnchorPane.leftAnchor="5.0">
-                                       <font>
-                                          <Font name="Arial" size="15.0" />
-                                       </font>
-                                    </Button>
-                                    <Button layoutX="9.0" layoutY="150.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Favoriter" AnchorPane.leftAnchor="5.0">
-                                       <font>
-                                          <Font name="Arial" size="15.0" />
-                                       </font>
-                                    </Button>
-                                    <Button layoutX="9.0" layoutY="105.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Orderhistorik" AnchorPane.leftAnchor="5.0">
-                                       <font>
-                                          <Font size="15.0" />
-                                       </font>
-                                    </Button>
-                                 </children></AnchorPane>
-                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                                 <children>
-                                    <AnchorPane fx:id="orderhistorikPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                       <children>
-                                          <ImageView fitHeight="100.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.666666666666629" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
-                                             <image>
-                                                <Image url="@../resources/dina_favoriter.png" />
-                                             </image>
-                                          </ImageView>
-                                          <Label layoutX="131.0" layoutY="40.0" text="Din Orderhistorik">
-                                             <font>
-                                                <Font name="Arial" size="36.0" />
-                                             </font>
-                                          </Label>
-                                          <ScrollPane layoutY="112.0" prefHeight="605.0" prefWidth="531.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
-                                            <content>
-                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-                                            </content>
-                                          </ScrollPane>
-                                       </children>
-                                    </AnchorPane>
-                                    <AnchorPane fx:id="favoriterPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                       <children>
-                                          <ImageView fitHeight="100.0" fitWidth="500.0" layoutX="6.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.666666666666629" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
-                                             <image>
-                                                <Image url="@../resources/dina_favoriter.png" />
-                                             </image>
-                                          </ImageView>
-                                          <Label layoutX="137.0" layoutY="39.0" text="Dina Favoriter">
-                                             <font>
-                                                <Font name="Arial" size="36.0" />
-                                             </font>
-                                          </Label>
-                                          <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="388.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../resources/star_icon.png" />
-                                             </image>
-                                          </ImageView>
-                                          <ScrollPane prefHeight="606.0" prefWidth="531.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
-                                            <content>
-                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-                                            </content>
-                                          </ScrollPane>
-                                       </children>
-                                    </AnchorPane>
-                                    <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                       <content>
-                                          <Accordion>
-                                             <panes>
-                                                <TitledPane animated="false" prefHeight="800.0" prefWidth="520.0" text="Kontouppgifter">
-                                                  <content>
-                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="600.0">
-                                                         <children>
-                                                            <Label layoutY="10.0" prefHeight="27.0" prefWidth="185.0" text="Förnamn:" AnchorPane.leftAnchor="130.0">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <TextField layoutX="62.0" layoutY="50.0" prefHeight="45.0" prefWidth="180.0" text="Förnamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <Label layoutX="155.0" layoutY="120.0" prefHeight="27.0" prefWidth="185.0" text="Efternamn:" AnchorPane.leftAnchor="130.0">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <TextField layoutX="157.0" layoutY="160.0" prefHeight="45.0" prefWidth="180.0" text="Efternamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <Label layoutX="140.0" layoutY="230.0" prefHeight="27.0" prefWidth="185.0" text="Lösenord" AnchorPane.leftAnchor="130.0">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <TextField fx:id="mailadress_textfield2" layoutX="171.0" layoutY="270.0" prefHeight="45.0" prefWidth="180.0" text="Lösenord" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <Label layoutX="155.0" layoutY="340.0" prefHeight="27.0" prefWidth="185.0" text="Användarnamn" AnchorPane.leftAnchor="130.0">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <TextField layoutX="158.0" layoutY="380.0" prefHeight="45.0" prefWidth="180.0" text="Användarnamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <Button layoutX="147.0" layoutY="670.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="140.0">
-                                                               <graphic>
-                                                                  <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                                                     <image>
-                                                                        <Image url="@../resources/spara_knapp.png" />
-                                                                     </image>
-                                                                  </ImageView>
-                                                               </graphic>
-                                                            </Button>
-                                                            <Label layoutX="154.0" layoutY="450.0" prefHeight="27.0" prefWidth="185.0" text="Telefonnummer:" AnchorPane.leftAnchor="130.0">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <TextField layoutX="39.0" layoutY="490.0" prefHeight="45.0" prefWidth="180.0" text="Telefonnummer" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <Label layoutX="153.0" layoutY="560.0" prefHeight="27.0" prefWidth="185.0" text="Mobilnummer:" AnchorPane.leftAnchor="130.0">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <TextField layoutX="150.0" layoutY="600.0" prefHeight="45.0" prefWidth="180.0" text="Mobilnummer:" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </TextField>
-                                                         </children>
-                                                      </AnchorPane>
-                                                  </content>
-                                                   <font>
-                                                      <Font name="Arial" size="18.0" />
-                                                   </font>
-                                                </TitledPane>
-                                                <TitledPane animated="false" prefHeight="600.0" prefWidth="520.0" text="Adressuppgifter">
-                                                   <content>
-                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="600.0">
-                                                         <children>
-                                                            <Label layoutX="136.0" layoutY="120.0" prefHeight="27.0" prefWidth="185.0" text="Postkod:" AnchorPane.leftAnchor="130.0">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <TextField layoutX="190.0" layoutY="160.0" prefHeight="45.0" prefWidth="180.0" text="1234 56" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <Label layoutX="76.0" layoutY="230.0" prefHeight="27.0" prefWidth="185.0" text="Ort:" AnchorPane.leftAnchor="130.0">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <TextField layoutX="50.0" layoutY="270.0" prefHeight="45.0" prefWidth="180.0" text="Ort" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <Label layoutX="121.0" layoutY="10.0" prefHeight="27.0" prefWidth="185.0" text="Adress:" AnchorPane.leftAnchor="130.0">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <TextField layoutX="131.0" layoutY="50.0" prefHeight="45.0" prefWidth="180.0" text="Adress" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <Label layoutX="146.0" layoutY="340.0" prefHeight="27.0" prefWidth="185.0" text="Portnummer:" AnchorPane.leftAnchor="130.0">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <TextField layoutX="139.0" layoutY="380.0" prefHeight="45.0" prefWidth="180.0" text="Portnummer" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <Button layoutX="139.0" layoutY="450.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="140.0">
-                                                               <graphic>
-                                                                  <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                                                     <image>
-                                                                        <Image url="@../resources/spara_knapp.png" />
-                                                                     </image>
-                                                                  </ImageView>
-                                                               </graphic>
-                                                            </Button>
-                                                         </children>
-                                                      </AnchorPane>
-                                                   </content>
-                                                   <font>
-                                                      <Font name="Arial" size="18.0" />
-                                                   </font>
-                                                </TitledPane>
-                                                <TitledPane animated="false" prefHeight="800.0" prefWidth="520.0" text="Betalningsuppgifter">
-                                                   <content>
-                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="600.0">
-                                                         <children>
-                                                            <Label layoutX="121.0" layoutY="270.0" prefHeight="27.0" prefWidth="242.0" text="Korthaverens namn:" AnchorPane.leftAnchor="130.0">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <TextField layoutX="121.0" layoutY="310.0" prefHeight="45.0" prefWidth="180.0" text="Korthavarens namn:" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <Label contentDisplay="RIGHT" layoutX="10.0" layoutY="60.0" text="Kort">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                               <graphic>
-                                                                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                                                     <image>
-                                                                        <Image url="@../resources/kortBetalningLogo.png" />
-                                                                     </image>
-                                                                  </ImageView>
-                                                               </graphic>
-                                                            </Label>
-                                                            <Label contentDisplay="RIGHT" layoutX="245.0" layoutY="60.0" text="Swish">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                               <graphic>
-                                                                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                                                     <image>
-                                                                        <Image url="@../resources/swishLogo.png" />
-                                                                     </image>
-                                                                  </ImageView>
-                                                               </graphic>
-                                                            </Label>
-                                                            <Label layoutX="130.0" layoutY="60.0" text="E-faktura">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <Label layoutX="350.0" layoutY="60.0" text="Pappersfaktura">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <Label layoutX="158.4" layoutY="380.0" prefHeight="27.0" prefWidth="241.0" text="Giltig till och med " AnchorPane.leftAnchor="144.0">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <TextField layoutX="121.0" layoutY="420.0" prefHeight="45.0" prefWidth="180.0" text="mm-yy" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <Label layoutX="121.0" layoutY="160.0" prefHeight="27.0" prefWidth="185.0" text="Kortnummer:" AnchorPane.leftAnchor="130.0">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <TextField layoutX="121.0" layoutY="200.0" prefHeight="45.0" prefWidth="180.0" text="Kortnummer" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <Label layoutX="121.0" layoutY="490.0" prefHeight="27.0" prefWidth="185.0" text="Cvc-kod" AnchorPane.leftAnchor="130.0">
-                                                               <font>
-                                                                  <Font name="Arial" size="24.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <TextField layoutX="121.0" layoutY="530.0" prefHeight="45.0" prefWidth="180.0" text="123" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <Button layoutX="121.0" layoutY="600.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="140.0">
-                                                               <graphic>
-                                                                  <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                                                     <image>
-                                                                        <Image url="@../resources/spara_knapp.png" />
-                                                                     </image>
-                                                                  </ImageView>
-                                                               </graphic>
-                                                            </Button>
-                                                            <RadioButton fx:id="kortBetalning" layoutX="35.0" layoutY="100.0" mnemonicParsing="false" />
-                                                            <RadioButton fx:id="E_fakturaBetalning" layoutX="165.0" layoutY="100.0" mnemonicParsing="false" />
-                                                            <RadioButton fx:id="swishBetalning" layoutX="275.0" layoutY="100.0" mnemonicParsing="false" />
-                                                            <RadioButton fx:id="pappersfakturaBetalning" graphicTextGap="10.0" layoutX="420.0" layoutY="100.0" mnemonicParsing="false" />
-                                                         </children>
-                                                      </AnchorPane>
-                                                   </content>
-                                                   <font>
-                                                      <Font name="Arial" size="18.0" />
-                                                   </font>
-                                                </TitledPane>
-                                             </panes>
-                                          </Accordion>
-                                       </content>
+                                    </Label>
+                                    <ScrollPane layoutY="112.0" prefHeight="605.0" prefWidth="531.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                                      </content>
                                     </ScrollPane>
                                  </children>
                               </AnchorPane>
-                          </items>
-                        </SplitPane>
+                              <AnchorPane fx:id="favoriterPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="500.0" layoutX="6.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.666666666666629" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                       <image>
+                                          <Image url="@../resources/dina_favoriter.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="137.0" layoutY="39.0" text="Dina Favoriter">
+                                       <font>
+                                          <Font name="Arial" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="38.0" fitWidth="44.0" layoutX="388.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/star_icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ScrollPane prefHeight="606.0" prefWidth="531.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+                                      </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                              <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <content>
+                                    <Accordion>
+                                       <panes>
+                                          <TitledPane animated="false" prefHeight="800.0" prefWidth="520.0" text="Kontouppgifter">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="600.0">
+                                                   <children>
+                                                      <Label layoutY="10.0" prefHeight="27.0" prefWidth="185.0" text="Förnamn:" AnchorPane.leftAnchor="130.0">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="62.0" layoutY="50.0" prefHeight="45.0" prefWidth="180.0" text="Förnamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label layoutX="155.0" layoutY="120.0" prefHeight="27.0" prefWidth="185.0" text="Efternamn:" AnchorPane.leftAnchor="130.0">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="157.0" layoutY="160.0" prefHeight="45.0" prefWidth="180.0" text="Efternamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label layoutX="140.0" layoutY="230.0" prefHeight="27.0" prefWidth="185.0" text="Lösenord" AnchorPane.leftAnchor="130.0">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="mailadress_textfield2" layoutX="171.0" layoutY="270.0" prefHeight="45.0" prefWidth="180.0" text="Lösenord" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label layoutX="155.0" layoutY="340.0" prefHeight="27.0" prefWidth="185.0" text="Användarnamn" AnchorPane.leftAnchor="130.0">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="158.0" layoutY="380.0" prefHeight="45.0" prefWidth="180.0" text="Användarnamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Button layoutX="147.0" layoutY="670.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="140.0">
+                                                         <graphic>
+                                                            <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../resources/spara_knapp.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <Label layoutX="154.0" layoutY="450.0" prefHeight="27.0" prefWidth="185.0" text="Telefonnummer:" AnchorPane.leftAnchor="130.0">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="39.0" layoutY="490.0" prefHeight="45.0" prefWidth="180.0" text="Telefonnummer" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label layoutX="153.0" layoutY="560.0" prefHeight="27.0" prefWidth="185.0" text="Mobilnummer:" AnchorPane.leftAnchor="130.0">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="150.0" layoutY="600.0" prefHeight="45.0" prefWidth="180.0" text="Mobilnummer:" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                             <font>
+                                                <Font name="Arial" size="18.0" />
+                                             </font>
+                                          </TitledPane>
+                                          <TitledPane animated="false" prefHeight="600.0" prefWidth="520.0" text="Adressuppgifter">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="600.0">
+                                                   <children>
+                                                      <Label layoutX="136.0" layoutY="120.0" prefHeight="27.0" prefWidth="185.0" text="Postkod:" AnchorPane.leftAnchor="130.0">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="190.0" layoutY="160.0" prefHeight="45.0" prefWidth="180.0" text="1234 56" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label layoutX="76.0" layoutY="230.0" prefHeight="27.0" prefWidth="185.0" text="Ort:" AnchorPane.leftAnchor="130.0">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="50.0" layoutY="270.0" prefHeight="45.0" prefWidth="180.0" text="Ort" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label layoutX="121.0" layoutY="10.0" prefHeight="27.0" prefWidth="185.0" text="Adress:" AnchorPane.leftAnchor="130.0">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="131.0" layoutY="50.0" prefHeight="45.0" prefWidth="180.0" text="Adress" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label layoutX="146.0" layoutY="340.0" prefHeight="27.0" prefWidth="185.0" text="Portnummer:" AnchorPane.leftAnchor="130.0">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="139.0" layoutY="380.0" prefHeight="45.0" prefWidth="180.0" text="Portnummer" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Button layoutX="139.0" layoutY="450.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="140.0">
+                                                         <graphic>
+                                                            <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../resources/spara_knapp.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                             <font>
+                                                <Font name="Arial" size="18.0" />
+                                             </font>
+                                          </TitledPane>
+                                          <TitledPane animated="false" prefHeight="800.0" prefWidth="520.0" text="Betalningsuppgifter">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="600.0">
+                                                   <children>
+                                                      <Label layoutX="121.0" layoutY="270.0" prefHeight="27.0" prefWidth="242.0" text="Korthaverens namn:" AnchorPane.leftAnchor="130.0">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="121.0" layoutY="310.0" prefHeight="45.0" prefWidth="180.0" text="Korthavarens namn:" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label contentDisplay="RIGHT" layoutX="10.0" layoutY="60.0" text="Kort">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../resources/kortBetalningLogo.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Label>
+                                                      <Label contentDisplay="RIGHT" layoutX="245.0" layoutY="60.0" text="Swish">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../resources/swishLogo.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Label>
+                                                      <Label layoutX="130.0" layoutY="60.0" text="E-faktura">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="350.0" layoutY="60.0" text="Pappersfaktura">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="158.4" layoutY="380.0" prefHeight="27.0" prefWidth="241.0" text="Giltig till och med " AnchorPane.leftAnchor="144.0">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="121.0" layoutY="420.0" prefHeight="45.0" prefWidth="180.0" text="mm-yy" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label layoutX="121.0" layoutY="160.0" prefHeight="27.0" prefWidth="185.0" text="Kortnummer:" AnchorPane.leftAnchor="130.0">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="121.0" layoutY="200.0" prefHeight="45.0" prefWidth="180.0" text="Kortnummer" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label layoutX="121.0" layoutY="490.0" prefHeight="27.0" prefWidth="185.0" text="Cvc-kod" AnchorPane.leftAnchor="130.0">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField layoutX="121.0" layoutY="530.0" prefHeight="45.0" prefWidth="180.0" text="123" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Button layoutX="121.0" layoutY="600.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="140.0">
+                                                         <graphic>
+                                                            <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../resources/spara_knapp.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                      <RadioButton fx:id="kortBetalning" layoutX="35.0" layoutY="100.0" mnemonicParsing="false" />
+                                                      <RadioButton fx:id="E_fakturaBetalning" layoutX="165.0" layoutY="100.0" mnemonicParsing="false" />
+                                                      <RadioButton fx:id="swishBetalning" layoutX="275.0" layoutY="100.0" mnemonicParsing="false" />
+                                                      <RadioButton fx:id="pappersfakturaBetalning" graphicTextGap="10.0" layoutX="420.0" layoutY="100.0" mnemonicParsing="false" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                             <font>
+                                                <Font name="Arial" size="18.0" />
+                                             </font>
+                                          </TitledPane>
+                                       </panes>
+                                    </Accordion>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
                      </children>
                         </AnchorPane>
                     </children>
