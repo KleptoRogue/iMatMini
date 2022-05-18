@@ -44,6 +44,9 @@ public class IMatController implements Initializable {
     public void logginClicked(){
         loginpage.toFront();
     }
+    public void cartClicked(){
+
+    }
 
     @FXML
     public void confirmRegToFront(){
