@@ -5,6 +5,6 @@
 
 <ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="766.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
    <content>
-      <FlowPane fx:id="productFlowPane" prefHeight="768.0" prefWidth="759.0" />
+      <FlowPane prefHeight="768.0" prefWidth="759.0" />
    </content>
 </ScrollPane>

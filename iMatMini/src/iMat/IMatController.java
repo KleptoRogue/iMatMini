@@ -116,17 +116,15 @@ public class IMatController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       // updateProductList(model.getProducts());
+       updateProductList(model.getProducts());
     }
 
     private void updateProductList(List<Product> products) {
         productFlowPane.getChildren().clear();
-
         for (Product product : products) {
             productFlowPane.getChildren().add(new ProductItem(product, this));
         }
     }
-
 
 
     public void mouseTrap(MouseEvent mouseEvent) {
