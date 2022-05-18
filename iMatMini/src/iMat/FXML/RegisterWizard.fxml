@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="loaderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: # #F2F5F3;" stylesheets="@../css/startpage.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #F2F5F3;" stylesheets="@../css/registerwizard.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
    <children>
       <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0">
          <children>
@@ -64,7 +64,7 @@
                         </TextField>
                         <Button layoutX="818.0" layoutY="240.0" mnemonicParsing="false" onAction="#confirmPasswordToFront" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
                            <graphic>
-                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
                                  <image>
                                     <Image url="@../resources/btn_next_step.png" />
                                  </image>
@@ -73,7 +73,7 @@
                         </Button>
                         <Button layoutX="34.0" layoutY="240.0" mnemonicParsing="false" onAction="#confirmPersonToFront" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
                            <graphic>
-                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
                                  <image>
                                     <Image url="@../resources/btn_prev_step.png" />
                                  </image>
@@ -157,7 +157,7 @@
                         </Label>
                         <Button layoutX="196.0" layoutY="238.0" mnemonicParsing="false" onAction="#loadAccount" prefHeight="94.0" prefWidth="216.0" style="-fx-background-color: #00000000;">
                            <graphic>
-                              <ImageView fitHeight="82.0" fitWidth="284.0" pickOnBounds="true">
+                              <ImageView fitHeight="82.0" fitWidth="284.0" pickOnBounds="true" styleClass="button">
                                  <image>
                                     <Image url="@../resources/btn_go_to_account.png" />
                                  </image>
@@ -166,7 +166,7 @@
                         </Button>
                         <Button layoutX="540.0" layoutY="238.0" mnemonicParsing="false" onAction="#loadStart" prefHeight="94.0" prefWidth="216.0" style="-fx-background-color: #00000000;">
                            <graphic>
-                              <ImageView fitHeight="82.0" fitWidth="284.0" pickOnBounds="true">
+                              <ImageView fitHeight="82.0" fitWidth="284.0" pickOnBounds="true" styleClass="button">
                                  <image>
                                     <Image url="@../resources/btn_go_to_startpage.png" />
                                  </image>
@@ -250,7 +250,7 @@
                         </TextField>
                         <Button layoutX="818.0" layoutY="240.0" mnemonicParsing="false" onAction="#confirmRegToFront" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
                            <graphic>
-                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
                                  <image>
                                     <Image url="@../resources/btn_confirm_reg.png" />
                                  </image>
@@ -259,7 +259,7 @@
                         </Button>
                         <Button layoutX="34.0" layoutY="240.0" mnemonicParsing="false" onAction="#confirmAdressToFront" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
                            <graphic>
-                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
                                  <image>
                                     <Image url="@../resources/btn_prev_step.png" />
                                  </image>
@@ -343,7 +343,7 @@
                         </Label>
                         <Button layoutX="818.0" layoutY="240.0" mnemonicParsing="false" onAction="#confirmAdressToFront" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
                            <graphic>
-                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
                                  <image>
                                     <Image url="@../resources/btn_next_step.png" />
                                  </image>
@@ -410,7 +410,7 @@
                               <Font size="24.0" />
                            </font>
                            <graphic>
-                              <ImageView pickOnBounds="true" preserveRatio="true">
+                              <ImageView pickOnBounds="true" preserveRatio="true" styleClass="button">
                                  <image>
                                     <Image url="@../resources/btn_keep_shopping.png" />
                                  </image>

@@ -26,7 +26,7 @@
                <children>
                   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1095.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <AnchorPane fx:id="log_in_overlay" layoutX="322.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#mouseTrap" prefHeight="592.0" prefWidth="400.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="322.0" AnchorPane.rightAnchor="322.0" AnchorPane.topAnchor="30.0">
+                        <AnchorPane fx:id="log_in_overlay" layoutX="322.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#mouseTrap" prefHeight="592.0" prefWidth="400.0" style="-fx-background-color: -fx-background;" stylesheets="@../css/login.css" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="322.0" AnchorPane.rightAnchor="322.0" AnchorPane.topAnchor="30.0">
                            <children>
                               <Button fx:id="Logga_in" layoutX="43.0" layoutY="402.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #81D762;" text="Logga in">
                                  <font>
@@ -1174,7 +1174,7 @@
                   </AnchorPane>
                   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="1095.0" stylesheets="@../css/header.css">
                      <children>
-                        <AnchorPane fx:id="cartAnchorPane" layoutX="951.0" layoutY="2.0"  prefHeight="120.0" prefWidth="130.0" AnchorPane.leftAnchor="951.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="2.0">
+                        <AnchorPane fx:id="cartAnchorPane" layoutX="951.0" layoutY="2.0" onMouseClicked="#cartClicked" prefHeight="120.0" prefWidth="130.0" AnchorPane.leftAnchor="951.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="2.0">
                            <children>
                               <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="43.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
