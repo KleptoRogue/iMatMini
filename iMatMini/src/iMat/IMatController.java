@@ -37,7 +37,13 @@ public class IMatController implements Initializable {
     @FXML
     private AnchorPane mainpage;
 
+    @FXML private AnchorPane cartAnchorPane;
+    @FXML private AnchorPane loginAnchorPane;
 
+
+    public void logginClicked(){
+        loginpage.toFront();
+    }
 
     @FXML
     public void confirmRegToFront(){
