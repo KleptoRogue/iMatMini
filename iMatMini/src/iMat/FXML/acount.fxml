@@ -20,12 +20,12 @@
             <children>
                 <AnchorPane fx:id="productDescriptionPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
                     <children>
-                        <AnchorPane layoutX="19.0" layoutY="104.0" prefHeight="456.0" prefWidth="749.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                        <AnchorPane layoutX="19.0" layoutY="104.0" prefHeight="456.0" prefWidth="749.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <opaqueInsets>
                                 <Insets />
                             </opaqueInsets>
                      <children>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="439.0" prefWidth="180.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="817.0" AnchorPane.topAnchor="0.0">
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="539.0" prefWidth="186.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="910.0" AnchorPane.topAnchor="0.0">
                            <children>
                               <ImageView fitHeight="100.0" fitWidth="150.0" layoutX="-1.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="20.0">
                                  <image>
@@ -243,7 +243,7 @@
                                                 <Font name="Arial" size="18.0" />
                                              </font>
                                           </TitledPane>
-                                          <TitledPane animated="false" prefHeight="800.0" prefWidth="520.0" text="Betalningsuppgifter">
+                                          <TitledPane animated="false" prefHeight="800.0" prefWidth="900.0" text="Betalningsuppgifter">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="600.0">
                                                    <children>
