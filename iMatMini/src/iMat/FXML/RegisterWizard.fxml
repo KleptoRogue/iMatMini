@@ -155,7 +155,7 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Button layoutX="196.0" layoutY="238.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="216.0" style="-fx-background-color: #00000000;">
+                        <Button layoutX="196.0" layoutY="238.0" mnemonicParsing="false" onAction="#loadAccount" prefHeight="94.0" prefWidth="216.0" style="-fx-background-color: #00000000;">
                            <graphic>
                               <ImageView fitHeight="82.0" fitWidth="284.0" pickOnBounds="true">
                                  <image>
