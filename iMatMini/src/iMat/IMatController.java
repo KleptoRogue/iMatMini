@@ -40,7 +40,7 @@ public class IMatController implements Initializable {
     @FXML private AnchorPane cartAnchorPane;
     @FXML private AnchorPane loginAnchorPane;
 
-
+    //test för klick på icon    /LH
     public void logginClicked(){
         loginpage.toFront();
     }
