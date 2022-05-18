@@ -1181,7 +1181,7 @@
                                     <Image url="@../resources/cart_icon.png" />
                                  </image>
                               </ImageView>
-                              <Button layoutY="61.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="130.0" style="-fx-background-color: #00000000;">
+                              <Button layoutY="61.0" mnemonicParsing="false" onAction="#loadCart" prefHeight="47.0" prefWidth="130.0" style="-fx-background-color: #00000000;">
                                  <graphic>
                                     <Label alignment="CENTER" prefHeight="31.0" prefWidth="110.0" text="Varukorg">
                                        <styleClass>

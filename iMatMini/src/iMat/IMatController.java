@@ -97,7 +97,7 @@ public class IMatController implements Initializable {
     public void loadCart (ActionEvent event) throws IOException {
         loaderPane.getChildren().remove(loaderPane.getChildren());
 
-        AnchorPane newLoadedPane =  FXMLLoader.load(getClass().getResource("FXML/acount.fxml"));
+        AnchorPane newLoadedPane =  FXMLLoader.load(getClass().getResource("FXML/cart.fxml"));
         loaderPane.getChildren().add(newLoadedPane);
     }
 
