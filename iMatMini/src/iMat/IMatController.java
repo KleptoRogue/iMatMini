@@ -93,6 +93,14 @@ public class IMatController implements Initializable {
         loaderPane.getChildren().add(newLoadedPane);
     }
 
+    @FXML
+    public void loadCart (ActionEvent event) throws IOException {
+        loaderPane.getChildren().remove(loaderPane.getChildren());
+
+        AnchorPane newLoadedPane =  FXMLLoader.load(getClass().getResource("FXML/acount.fxml"));
+        loaderPane.getChildren().add(newLoadedPane);
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
