@@ -40,12 +40,15 @@ public class IMatController implements Initializable {
     @FXML private AnchorPane cartAnchorPane;
     @FXML private AnchorPane loginAnchorPane;
 
-    //test för klick på icon    /LH
+    //För klick på loggin icon
     public void logginClicked(){
         loginpage.toFront();
     }
-    public void cartClicked(){
 
+    //För klick på cart icon
+    public void cartClicked(){
+        // TODO skriv in FXML fil namn för att kunna klicka på icon
+        //NAMEHERE.toFront();
     }
 
     @FXML
@@ -113,17 +116,15 @@ public class IMatController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       // updateProductList(model.getProducts());
+       updateProductList(model.getProducts());
     }
 
     private void updateProductList(List<Product> products) {
         productFlowPane.getChildren().clear();
-
         for (Product product : products) {
             productFlowPane.getChildren().add(new ProductItem(product, this));
         }
     }
-
 
 
     public void mouseTrap(MouseEvent mouseEvent) {
