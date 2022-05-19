@@ -1055,9 +1055,9 @@
                                           <String fx:value="image-shadow-effect" />
                                        </styleClass>
                                     </AnchorPane>
-                                    <Label fx:id="productNameLabel1111" alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
-                                    <Label fx:id="priceLabel1111" layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="148.0" styleClass="text-normal" text="xx kr" />
-                                    <Label fx:id="ecoLabel1111" alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true">
+                                    <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
+                                    <Label layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="148.0" styleClass="text-normal" text="xx kr" />
+                                    <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true">
                                        <font>
                                           <Font size="15.0" />
                                        </font>

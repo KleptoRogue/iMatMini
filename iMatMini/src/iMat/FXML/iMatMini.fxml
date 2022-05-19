@@ -19,7 +19,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
     <children>
       <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1095.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -27,7 +27,7 @@
                <children>
                   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1095.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <AnchorPane fx:id="log_in_overlay" layoutX="322.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#mouseTrap" prefHeight="592.0" prefWidth="400.0" style="-fx-background-color: -fx-background;" stylesheets="@../css/login.css" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="322.0" AnchorPane.rightAnchor="322.0" AnchorPane.topAnchor="30.0">
+                        <AnchorPane fx:id="log_in_overlay" layoutX="322.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#mouseTrap" prefHeight="592.0" prefWidth="400.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="322.0" AnchorPane.rightAnchor="322.0" AnchorPane.topAnchor="30.0">
                            <children>
                               <Button fx:id="Logga_in" layoutX="43.0" layoutY="402.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #81D762;" text="Logga in">
                                  <font>
@@ -152,6 +152,1018 @@
                                                 </Pane>
                                              </children>
                                           </Pane>
+                                          <AnchorPane layoutY="325.0" prefHeight="293.0" prefWidth="874.0">
+                                             <children>
+                                                <AnchorPane layoutY="590.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="297.0" prefWidth="872.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css">
+                                                         <children>
+                                                            <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
+                                                               <children>
+                                                                  <StackPane prefHeight="37.0" prefWidth="34.0">
+                                                                     <children>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_marked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_unmarked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                     </children>
+                                                                  </StackPane>
+                                                                  <ImageView fitHeight="122.0" fitWidth="126.0" layoutX="37.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../resources/empty_image.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                                  <ImageView fitHeight="34.0" fitWidth="35.0" layoutX="-1.0" layoutY="34.0" pickOnBounds="true" />
+                                                               </children>
+                                                               <styleClass>
+                                                                  <String fx:value="whiteBackGround" />
+                                                                  <String fx:value="image-shadow-effect" />
+                                                               </styleClass>
+                                                            </AnchorPane>
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
+                                                            <Label layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="148.0" styleClass="text-normal" text="xx kr" />
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="text-normal" />
+                                                                  <String fx:value="text-eco" />
+                                                               </styleClass>
+                                                            </Label>
+                                                            <StackPane layoutX="7.0" layoutY="238.0" prefHeight="48.0" prefWidth="174.0" styleClass="whiteGreyBackground">
+                                                               <children>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <TextField alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
+                                                                           <font>
+                                                                              <Font size="13.0" />
+                                                                           </font>
+                                                                        </TextField>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true" styleClass="button">
+                                                                           <image>
+                                                                              <Image url="@../resources/MinusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="129.0" layoutY="8.0" pickOnBounds="true">
+                                                                           <image>
+                                                                              <Image url="@../resources/PlusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <Button layoutX="13.0" layoutY="7.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" styleClass="addButton" text="Lägg till" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </children>
+                                                            </StackPane>
+                                                         </children>
+                                                         <styleClass>
+                                                            <String fx:value="whiteGreyBackGround" />
+                                                            <String fx:value="product-border" />
+                                                         </styleClass>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="248.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css">
+                                                         <children>
+                                                            <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
+                                                               <children>
+                                                                  <StackPane prefHeight="37.0" prefWidth="34.0">
+                                                                     <children>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_marked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_unmarked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                     </children>
+                                                                  </StackPane>
+                                                                  <ImageView fitHeight="122.0" fitWidth="126.0" layoutX="37.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../resources/empty_image.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                                  <ImageView fitHeight="34.0" fitWidth="35.0" layoutX="-1.0" layoutY="34.0" pickOnBounds="true" />
+                                                               </children>
+                                                               <styleClass>
+                                                                  <String fx:value="whiteBackGround" />
+                                                                  <String fx:value="image-shadow-effect" />
+                                                               </styleClass>
+                                                            </AnchorPane>
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
+                                                            <Label layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="148.0" styleClass="text-normal" text="xx kr" />
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="text-normal" />
+                                                                  <String fx:value="text-eco" />
+                                                               </styleClass>
+                                                            </Label>
+                                                            <StackPane layoutX="7.0" layoutY="238.0" prefHeight="48.0" prefWidth="174.0" styleClass="whiteGreyBackground">
+                                                               <children>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <TextField alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
+                                                                           <font>
+                                                                              <Font size="13.0" />
+                                                                           </font>
+                                                                        </TextField>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true" styleClass="button">
+                                                                           <image>
+                                                                              <Image url="@../resources/MinusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="129.0" layoutY="8.0" pickOnBounds="true">
+                                                                           <image>
+                                                                              <Image url="@../resources/PlusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <Button layoutX="13.0" layoutY="7.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" styleClass="addButton" text="Lägg till" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </children>
+                                                            </StackPane>
+                                                         </children>
+                                                         <styleClass>
+                                                            <String fx:value="whiteGreyBackGround" />
+                                                            <String fx:value="product-border" />
+                                                         </styleClass>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="466.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css">
+                                                         <children>
+                                                            <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
+                                                               <children>
+                                                                  <StackPane prefHeight="37.0" prefWidth="34.0">
+                                                                     <children>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_marked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_unmarked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                     </children>
+                                                                  </StackPane>
+                                                                  <ImageView fitHeight="122.0" fitWidth="126.0" layoutX="37.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../resources/empty_image.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                                  <ImageView fitHeight="34.0" fitWidth="35.0" layoutX="-1.0" layoutY="34.0" pickOnBounds="true" />
+                                                               </children>
+                                                               <styleClass>
+                                                                  <String fx:value="whiteBackGround" />
+                                                                  <String fx:value="image-shadow-effect" />
+                                                               </styleClass>
+                                                            </AnchorPane>
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
+                                                            <Label layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="148.0" styleClass="text-normal" text="xx kr" />
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="text-normal" />
+                                                                  <String fx:value="text-eco" />
+                                                               </styleClass>
+                                                            </Label>
+                                                            <StackPane layoutX="7.0" layoutY="238.0" prefHeight="48.0" prefWidth="174.0" styleClass="whiteGreyBackground">
+                                                               <children>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <TextField alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
+                                                                           <font>
+                                                                              <Font size="13.0" />
+                                                                           </font>
+                                                                        </TextField>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true" styleClass="button">
+                                                                           <image>
+                                                                              <Image url="@../resources/MinusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="129.0" layoutY="8.0" pickOnBounds="true">
+                                                                           <image>
+                                                                              <Image url="@../resources/PlusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <Button layoutX="13.0" layoutY="7.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" styleClass="addButton" text="Lägg till" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </children>
+                                                            </StackPane>
+                                                         </children>
+                                                         <styleClass>
+                                                            <String fx:value="whiteGreyBackGround" />
+                                                            <String fx:value="product-border" />
+                                                         </styleClass>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="684.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css">
+                                                         <children>
+                                                            <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
+                                                               <children>
+                                                                  <StackPane prefHeight="37.0" prefWidth="34.0">
+                                                                     <children>
+                                                                        <AnchorPane fx:id="favoritedAnchorPane1112" prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_marked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane fx:id="unFavoritedAnchorPane1112" prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_unmarked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                     </children>
+                                                                  </StackPane>
+                                                                  <ImageView fx:id="productImageView1112" fitHeight="122.0" fitWidth="126.0" layoutX="37.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../resources/empty_image.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                                  <ImageView fx:id="ecoFriendlyImageView1112" fitHeight="34.0" fitWidth="35.0" layoutX="-1.0" layoutY="34.0" pickOnBounds="true" />
+                                                               </children>
+                                                               <styleClass>
+                                                                  <String fx:value="whiteBackGround" />
+                                                                  <String fx:value="image-shadow-effect" />
+                                                               </styleClass>
+                                                            </AnchorPane>
+                                                            <Label fx:id="productNameLabel1112" alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
+                                                            <Label fx:id="priceLabel1112" layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="148.0" styleClass="text-normal" text="xx kr" />
+                                                            <Label fx:id="ecoLabel1112" alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="text-normal" />
+                                                                  <String fx:value="text-eco" />
+                                                               </styleClass>
+                                                            </Label>
+                                                            <StackPane layoutX="7.0" layoutY="238.0" prefHeight="48.0" prefWidth="174.0" styleClass="whiteGreyBackground">
+                                                               <children>
+                                                                  <AnchorPane fx:id="addRemoveProductAnchorPane1112" prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <TextField fx:id="productCounterTextField1112" alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
+                                                                           <font>
+                                                                              <Font size="13.0" />
+                                                                           </font>
+                                                                        </TextField>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true" styleClass="button">
+                                                                           <image>
+                                                                              <Image url="@../resources/MinusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="129.0" layoutY="8.0" pickOnBounds="true">
+                                                                           <image>
+                                                                              <Image url="@../resources/PlusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane fx:id="addProductAnchorPane1112" prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <Button fx:id="addButton1112" layoutX="13.0" layoutY="7.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" styleClass="addButton" text="Lägg till" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </children>
+                                                            </StackPane>
+                                                         </children>
+                                                         <styleClass>
+                                                            <String fx:value="whiteGreyBackGround" />
+                                                            <String fx:value="product-border" />
+                                                         </styleClass>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="297.0" prefWidth="872.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css">
+                                                         <children>
+                                                            <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
+                                                               <children>
+                                                                  <StackPane prefHeight="37.0" prefWidth="34.0">
+                                                                     <children>
+                                                                        <AnchorPane fx:id="favoritedAnchorPane" prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_marked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane fx:id="unFavoritedAnchorPane" prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_unmarked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                     </children>
+                                                                  </StackPane>
+                                                                  <ImageView fx:id="productImageView" fitHeight="122.0" fitWidth="126.0" layoutX="37.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../resources/empty_image.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                                  <ImageView fx:id="ecoFriendlyImageView" fitHeight="34.0" fitWidth="35.0" layoutX="-1.0" layoutY="34.0" pickOnBounds="true" />
+                                                               </children>
+                                                               <styleClass>
+                                                                  <String fx:value="whiteBackGround" />
+                                                                  <String fx:value="image-shadow-effect" />
+                                                               </styleClass>
+                                                            </AnchorPane>
+                                                            <Label fx:id="productNameLabel" alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
+                                                            <Label fx:id="priceLabel" layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="148.0" styleClass="text-normal" text="xx kr" />
+                                                            <Label fx:id="ecoLabel" alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="text-normal" />
+                                                                  <String fx:value="text-eco" />
+                                                               </styleClass>
+                                                            </Label>
+                                                            <StackPane layoutX="7.0" layoutY="238.0" prefHeight="48.0" prefWidth="174.0" styleClass="whiteGreyBackground">
+                                                               <children>
+                                                                  <AnchorPane fx:id="addRemoveProductAnchorPane" prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <TextField fx:id="productCounterTextField" alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
+                                                                           <font>
+                                                                              <Font size="13.0" />
+                                                                           </font>
+                                                                        </TextField>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true" styleClass="button">
+                                                                           <image>
+                                                                              <Image url="@../resources/MinusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="129.0" layoutY="8.0" pickOnBounds="true">
+                                                                           <image>
+                                                                              <Image url="@../resources/PlusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane fx:id="addProductAnchorPane" prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <Button fx:id="addButton" layoutX="13.0" layoutY="7.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" styleClass="addButton" text="Lägg till" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </children>
+                                                            </StackPane>
+                                                         </children>
+                                                         <styleClass>
+                                                            <String fx:value="whiteGreyBackGround" />
+                                                            <String fx:value="product-border" />
+                                                         </styleClass>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="248.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css">
+                                                         <children>
+                                                            <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
+                                                               <children>
+                                                                  <StackPane prefHeight="37.0" prefWidth="34.0">
+                                                                     <children>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_marked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_unmarked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                     </children>
+                                                                  </StackPane>
+                                                                  <ImageView fitHeight="122.0" fitWidth="126.0" layoutX="37.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../resources/empty_image.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                                  <ImageView fitHeight="34.0" fitWidth="35.0" layoutX="-1.0" layoutY="34.0" pickOnBounds="true" />
+                                                               </children>
+                                                               <styleClass>
+                                                                  <String fx:value="whiteBackGround" />
+                                                                  <String fx:value="image-shadow-effect" />
+                                                               </styleClass>
+                                                            </AnchorPane>
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
+                                                            <Label layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="148.0" styleClass="text-normal" text="xx kr" />
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="text-normal" />
+                                                                  <String fx:value="text-eco" />
+                                                               </styleClass>
+                                                            </Label>
+                                                            <StackPane layoutX="7.0" layoutY="238.0" prefHeight="48.0" prefWidth="174.0" styleClass="whiteGreyBackground">
+                                                               <children>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <TextField alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
+                                                                           <font>
+                                                                              <Font size="13.0" />
+                                                                           </font>
+                                                                        </TextField>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true" styleClass="button">
+                                                                           <image>
+                                                                              <Image url="@../resources/MinusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="129.0" layoutY="8.0" pickOnBounds="true">
+                                                                           <image>
+                                                                              <Image url="@../resources/PlusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <Button layoutX="13.0" layoutY="7.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" styleClass="addButton" text="Lägg till" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </children>
+                                                            </StackPane>
+                                                         </children>
+                                                         <styleClass>
+                                                            <String fx:value="whiteGreyBackGround" />
+                                                            <String fx:value="product-border" />
+                                                         </styleClass>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="466.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css">
+                                                         <children>
+                                                            <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
+                                                               <children>
+                                                                  <StackPane prefHeight="37.0" prefWidth="34.0">
+                                                                     <children>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_marked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_unmarked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                     </children>
+                                                                  </StackPane>
+                                                                  <ImageView fitHeight="122.0" fitWidth="126.0" layoutX="37.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../resources/empty_image.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                                  <ImageView fitHeight="34.0" fitWidth="35.0" layoutX="-1.0" layoutY="34.0" pickOnBounds="true" />
+                                                               </children>
+                                                               <styleClass>
+                                                                  <String fx:value="whiteBackGround" />
+                                                                  <String fx:value="image-shadow-effect" />
+                                                               </styleClass>
+                                                            </AnchorPane>
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
+                                                            <Label layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="148.0" styleClass="text-normal" text="xx kr" />
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="text-normal" />
+                                                                  <String fx:value="text-eco" />
+                                                               </styleClass>
+                                                            </Label>
+                                                            <StackPane layoutX="7.0" layoutY="238.0" prefHeight="48.0" prefWidth="174.0" styleClass="whiteGreyBackground">
+                                                               <children>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <TextField alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
+                                                                           <font>
+                                                                              <Font size="13.0" />
+                                                                           </font>
+                                                                        </TextField>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true" styleClass="button">
+                                                                           <image>
+                                                                              <Image url="@../resources/MinusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="129.0" layoutY="8.0" pickOnBounds="true">
+                                                                           <image>
+                                                                              <Image url="@../resources/PlusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <Button layoutX="13.0" layoutY="7.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" styleClass="addButton" text="Lägg till" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </children>
+                                                            </StackPane>
+                                                         </children>
+                                                         <styleClass>
+                                                            <String fx:value="whiteGreyBackGround" />
+                                                            <String fx:value="product-border" />
+                                                         </styleClass>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="684.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css">
+                                                         <children>
+                                                            <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
+                                                               <children>
+                                                                  <StackPane prefHeight="37.0" prefWidth="34.0">
+                                                                     <children>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_marked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_unmarked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                     </children>
+                                                                  </StackPane>
+                                                                  <ImageView fitHeight="122.0" fitWidth="126.0" layoutX="37.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../resources/empty_image.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                                  <ImageView fitHeight="34.0" fitWidth="35.0" layoutX="-1.0" layoutY="34.0" pickOnBounds="true" />
+                                                               </children>
+                                                               <styleClass>
+                                                                  <String fx:value="whiteBackGround" />
+                                                                  <String fx:value="image-shadow-effect" />
+                                                               </styleClass>
+                                                            </AnchorPane>
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
+                                                            <Label layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="148.0" styleClass="text-normal" text="xx kr" />
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="text-normal" />
+                                                                  <String fx:value="text-eco" />
+                                                               </styleClass>
+                                                            </Label>
+                                                            <StackPane layoutX="7.0" layoutY="238.0" prefHeight="48.0" prefWidth="174.0" styleClass="whiteGreyBackground">
+                                                               <children>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <TextField alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
+                                                                           <font>
+                                                                              <Font size="13.0" />
+                                                                           </font>
+                                                                        </TextField>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true" styleClass="button">
+                                                                           <image>
+                                                                              <Image url="@../resources/MinusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="129.0" layoutY="8.0" pickOnBounds="true">
+                                                                           <image>
+                                                                              <Image url="@../resources/PlusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <Button layoutX="13.0" layoutY="7.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" styleClass="addButton" text="Lägg till" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </children>
+                                                            </StackPane>
+                                                         </children>
+                                                         <styleClass>
+                                                            <String fx:value="whiteGreyBackGround" />
+                                                            <String fx:value="product-border" />
+                                                         </styleClass>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutY="295.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="297.0" prefWidth="872.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css">
+                                                         <children>
+                                                            <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
+                                                               <children>
+                                                                  <StackPane prefHeight="37.0" prefWidth="34.0">
+                                                                     <children>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_marked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_unmarked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                     </children>
+                                                                  </StackPane>
+                                                                  <ImageView fitHeight="122.0" fitWidth="126.0" layoutX="37.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../resources/empty_image.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                                  <ImageView fitHeight="34.0" fitWidth="35.0" layoutX="-1.0" layoutY="34.0" pickOnBounds="true" />
+                                                               </children>
+                                                               <styleClass>
+                                                                  <String fx:value="whiteBackGround" />
+                                                                  <String fx:value="image-shadow-effect" />
+                                                               </styleClass>
+                                                            </AnchorPane>
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
+                                                            <Label layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="148.0" styleClass="text-normal" text="xx kr" />
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="text-normal" />
+                                                                  <String fx:value="text-eco" />
+                                                               </styleClass>
+                                                            </Label>
+                                                            <StackPane layoutX="7.0" layoutY="238.0" prefHeight="48.0" prefWidth="174.0" styleClass="whiteGreyBackground">
+                                                               <children>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <TextField alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
+                                                                           <font>
+                                                                              <Font size="13.0" />
+                                                                           </font>
+                                                                        </TextField>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true" styleClass="button">
+                                                                           <image>
+                                                                              <Image url="@../resources/MinusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="129.0" layoutY="8.0" pickOnBounds="true">
+                                                                           <image>
+                                                                              <Image url="@../resources/PlusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <Button layoutX="13.0" layoutY="7.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" styleClass="addButton" text="Lägg till" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </children>
+                                                            </StackPane>
+                                                         </children>
+                                                         <styleClass>
+                                                            <String fx:value="whiteGreyBackGround" />
+                                                            <String fx:value="product-border" />
+                                                         </styleClass>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="248.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css">
+                                                         <children>
+                                                            <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
+                                                               <children>
+                                                                  <StackPane prefHeight="37.0" prefWidth="34.0">
+                                                                     <children>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_marked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_unmarked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                     </children>
+                                                                  </StackPane>
+                                                                  <ImageView fitHeight="122.0" fitWidth="126.0" layoutX="37.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../resources/empty_image.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                                  <ImageView fitHeight="34.0" fitWidth="35.0" layoutX="-1.0" layoutY="34.0" pickOnBounds="true" />
+                                                               </children>
+                                                               <styleClass>
+                                                                  <String fx:value="whiteBackGround" />
+                                                                  <String fx:value="image-shadow-effect" />
+                                                               </styleClass>
+                                                            </AnchorPane>
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
+                                                            <Label layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="148.0" styleClass="text-normal" text="xx kr" />
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="text-normal" />
+                                                                  <String fx:value="text-eco" />
+                                                               </styleClass>
+                                                            </Label>
+                                                            <StackPane layoutX="7.0" layoutY="238.0" prefHeight="48.0" prefWidth="174.0" styleClass="whiteGreyBackground">
+                                                               <children>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <TextField alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
+                                                                           <font>
+                                                                              <Font size="13.0" />
+                                                                           </font>
+                                                                        </TextField>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true" styleClass="button">
+                                                                           <image>
+                                                                              <Image url="@../resources/MinusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="129.0" layoutY="8.0" pickOnBounds="true">
+                                                                           <image>
+                                                                              <Image url="@../resources/PlusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <Button layoutX="13.0" layoutY="7.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" styleClass="addButton" text="Lägg till" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </children>
+                                                            </StackPane>
+                                                         </children>
+                                                         <styleClass>
+                                                            <String fx:value="whiteGreyBackGround" />
+                                                            <String fx:value="product-border" />
+                                                         </styleClass>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="466.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css">
+                                                         <children>
+                                                            <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
+                                                               <children>
+                                                                  <StackPane prefHeight="37.0" prefWidth="34.0">
+                                                                     <children>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_marked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_unmarked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                     </children>
+                                                                  </StackPane>
+                                                                  <ImageView fitHeight="122.0" fitWidth="126.0" layoutX="37.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../resources/empty_image.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                                  <ImageView fitHeight="34.0" fitWidth="35.0" layoutX="-1.0" layoutY="34.0" pickOnBounds="true" />
+                                                               </children>
+                                                               <styleClass>
+                                                                  <String fx:value="whiteBackGround" />
+                                                                  <String fx:value="image-shadow-effect" />
+                                                               </styleClass>
+                                                            </AnchorPane>
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
+                                                            <Label layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="148.0" styleClass="text-normal" text="xx kr" />
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="text-normal" />
+                                                                  <String fx:value="text-eco" />
+                                                               </styleClass>
+                                                            </Label>
+                                                            <StackPane layoutX="7.0" layoutY="238.0" prefHeight="48.0" prefWidth="174.0" styleClass="whiteGreyBackground">
+                                                               <children>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <TextField alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
+                                                                           <font>
+                                                                              <Font size="13.0" />
+                                                                           </font>
+                                                                        </TextField>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true" styleClass="button">
+                                                                           <image>
+                                                                              <Image url="@../resources/MinusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="129.0" layoutY="8.0" pickOnBounds="true">
+                                                                           <image>
+                                                                              <Image url="@../resources/PlusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <Button layoutX="13.0" layoutY="7.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" styleClass="addButton" text="Lägg till" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </children>
+                                                            </StackPane>
+                                                         </children>
+                                                         <styleClass>
+                                                            <String fx:value="whiteGreyBackGround" />
+                                                            <String fx:value="product-border" />
+                                                         </styleClass>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="684.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css">
+                                                         <children>
+                                                            <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
+                                                               <children>
+                                                                  <StackPane prefHeight="37.0" prefWidth="34.0">
+                                                                     <children>
+                                                                        <AnchorPane fx:id="favoritedAnchorPane1111" prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_marked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                        <AnchorPane fx:id="unFavoritedAnchorPane1111" prefHeight="200.0" prefWidth="200.0">
+                                                                           <children>
+                                                                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                                                                 <image>
+                                                                                    <Image url="@../resources/star_unmarked.jpg" />
+                                                                                 </image>
+                                                                              </ImageView>
+                                                                           </children>
+                                                                        </AnchorPane>
+                                                                     </children>
+                                                                  </StackPane>
+                                                                  <ImageView fx:id="productImageView1111" fitHeight="122.0" fitWidth="126.0" layoutX="37.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                                                     <image>
+                                                                        <Image url="@../resources/empty_image.png" />
+                                                                     </image>
+                                                                  </ImageView>
+                                                                  <ImageView fx:id="ecoFriendlyImageView1111" fitHeight="34.0" fitWidth="35.0" layoutX="-1.0" layoutY="34.0" pickOnBounds="true" />
+                                                               </children>
+                                                               <styleClass>
+                                                                  <String fx:value="whiteBackGround" />
+                                                                  <String fx:value="image-shadow-effect" />
+                                                               </styleClass>
+                                                            </AnchorPane>
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="152.0" prefHeight="34.0" prefWidth="148.0" styleClass="text-product-title" text="Produkt namn" wrapText="true" />
+                                                            <Label layoutX="25.0" layoutY="186.0" prefHeight="19.0" prefWidth="148.0" styleClass="text-normal" text="xx kr" />
+                                                            <Label alignment="TOP_LEFT" layoutX="25.0" layoutY="209.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                               <styleClass>
+                                                                  <String fx:value="text-normal" />
+                                                                  <String fx:value="text-eco" />
+                                                               </styleClass>
+                                                            </Label>
+                                                            <StackPane layoutX="7.0" layoutY="238.0" prefHeight="48.0" prefWidth="174.0" styleClass="whiteGreyBackground">
+                                                               <children>
+                                                                  <AnchorPane fx:id="addRemoveProductAnchorPane1111" prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <TextField fx:id="productCounterTextField1111" alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
+                                                                           <font>
+                                                                              <Font size="13.0" />
+                                                                           </font>
+                                                                        </TextField>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true" styleClass="button">
+                                                                           <image>
+                                                                              <Image url="@../resources/MinusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="129.0" layoutY="8.0" pickOnBounds="true">
+                                                                           <image>
+                                                                              <Image url="@../resources/PlusButton.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                                  <AnchorPane fx:id="addProductAnchorPane1111" prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                                                                     <children>
+                                                                        <Button fx:id="addButton1111" layoutX="13.0" layoutY="7.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="148.0" styleClass="addButton" text="Lägg till" />
+                                                                     </children>
+                                                                  </AnchorPane>
+                                                               </children>
+                                                            </StackPane>
+                                                         </children>
+                                                         <styleClass>
+                                                            <String fx:value="whiteGreyBackGround" />
+                                                            <String fx:value="product-border" />
+                                                         </styleClass>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
                                        </children>
                                     </AnchorPane>
                                  </content>
@@ -171,16 +1183,12 @@
                                     <Image url="@../resources/cart_icon.png" />
                                  </image>
                               </ImageView>
-                              <Button layoutY="61.0" mnemonicParsing="false" onAction="#loadCart" prefHeight="47.0" prefWidth="130.0" style="-fx-background-color: #00000000;">
-                                 <graphic>
-                                    <Label alignment="CENTER" prefHeight="31.0" prefWidth="110.0" text="Varukorg">
-                                       <styleClass>
-                                          <String fx:value="text-icon" />
-                                          <String fx:value="text-border" />
-                                       </styleClass>
-                                    </Label>
-                                 </graphic>
-                              </Button>
+                              <Label alignment="CENTER" layoutX="11.0" layoutY="70.0" prefHeight="31.0" prefWidth="110.0" text="Varukorg">
+                                 <styleClass>
+                                    <String fx:value="text-icon" />
+                                    <String fx:value="text-border" />
+                                 </styleClass>
+                              </Label>
                            </children>
                         </AnchorPane>
                         <StackPane layoutX="791.0" layoutY="1.0" prefHeight="120.0" prefWidth="160.0" AnchorPane.topAnchor="1.0">
@@ -213,16 +1221,12 @@
                                           <Image url="@../resources/profile_login_icon.png" />
                                        </image>
                                     </ImageView>
-                                    <Button layoutX="15.0" layoutY="62.0" mnemonicParsing="false" onAction="#loginToFront" prefHeight="47.0" prefWidth="130.0" style="-fx-background-color: #00000000;">
-                                       <graphic>
-                                          <Label alignment="CENTER" prefHeight="31.0" prefWidth="130.0" text="Logga in">
-                                             <styleClass>
-                                                <String fx:value="text-border" />
-                                                <String fx:value="text-icon" />
-                                             </styleClass>
-                                          </Label>
-                                       </graphic>
-                                    </Button>
+                                    <Label alignment="CENTER" layoutX="18.0" layoutY="70.0" prefHeight="31.0" prefWidth="130.0" text="Logga in">
+                                       <styleClass>
+                                          <String fx:value="text-border" />
+                                          <String fx:value="text-icon" />
+                                       </styleClass>
+                                    </Label>
                                  </children>
                               </AnchorPane>
                            </children>
