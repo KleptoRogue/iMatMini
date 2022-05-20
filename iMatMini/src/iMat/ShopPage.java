@@ -2,6 +2,7 @@ package iMat;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
 
@@ -13,13 +14,16 @@ public class ShopPage extends AnchorPane {
     @FXML
     private AnchorPane productFlowPane;
 
-    private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
+
+
+    private IMatDataHandlerWrapper wrapper;
     private IMatController mainController;
 
     public ShopPage(IMatController mainController) {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/ShopPage.fxml"));
         fxmlLoader.setRoot(this);
+        fxmlLoader.setController(this);
 
         try {
             fxmlLoader.load();
@@ -27,12 +31,17 @@ public class ShopPage extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
+
+
+        this.wrapper  = IMatDataHandlerWrapper.getInstance();
+        this.mainController = mainController;
+
         updateProductList(wrapper.getProducts());
 
-        this.mainController = mainController;
     }
 
     private void updateProductList(List<Product> products) {
+        productFlowPane.getChildren().clear();
         for (Product product : products) {
             productFlowPane.getChildren().add(new ProductItem(product, mainController));
         }

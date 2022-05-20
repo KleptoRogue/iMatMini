@@ -61,6 +61,7 @@ public class ProductItem extends AnchorPane {
         fxmlLoader.setController(this);
 
 
+
         try {
             fxmlLoader.load();
         } catch (IOException exception) {
