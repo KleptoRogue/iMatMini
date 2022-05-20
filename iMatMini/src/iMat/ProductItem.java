@@ -4,7 +4,6 @@ package iMat;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -57,7 +56,7 @@ public class ProductItem extends AnchorPane {
 
     public ProductItem(Product product, IMatController controller) {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/productItem.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/ProductItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 

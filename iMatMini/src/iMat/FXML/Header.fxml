@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="126.0" prefWidth="1095.0" stylesheets="@../css/header.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="125.0" prefWidth="1095.0" stylesheets="@../css/header.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane fx:id="cartAnchorPane" layoutX="951.0" layoutY="2.0" prefHeight="120.0" prefWidth="130.0" AnchorPane.leftAnchor="951.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="2.0">
          <children>
@@ -18,7 +18,7 @@
                   <Image url="@../resources/cart_icon.png" />
                </image>
             </ImageView>
-            <Label alignment="CENTER" layoutX="10.0" layoutY="75.0" prefHeight="31.0" prefWidth="110.0" text="Varukorg">
+            <Label alignment="CENTER" layoutX="11.0" layoutY="70.0" prefHeight="31.0" prefWidth="110.0" text="Varukorg">
                <styleClass>
                   <String fx:value="text-icon" />
                   <String fx:value="text-border" />
@@ -28,21 +28,6 @@
       </AnchorPane>
       <StackPane layoutX="791.0" layoutY="1.0" prefHeight="120.0" prefWidth="160.0" AnchorPane.topAnchor="1.0">
          <children>
-            <AnchorPane fx:id="loginAnchorPane" prefHeight="120.0" prefWidth="115.0" styleClass="set-background-color">
-               <children>
-                  <Label alignment="CENTER" layoutX="16.0" layoutY="82.0" prefHeight="31.0" prefWidth="130.0" text="Logga in">
-                     <styleClass>
-                        <String fx:value="text-border" />
-                        <String fx:value="text-icon" />
-                     </styleClass>
-                  </Label>
-                  <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="58.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../resources/profile_login_icon.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
             <AnchorPane fx:id="profileAnchorPane" prefHeight="107.0" prefWidth="116.0" styleClass="set-background-color">
                <children>
                   <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="43.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
@@ -64,9 +49,24 @@
                   </MenuButton>
                </children>
             </AnchorPane>
+            <AnchorPane fx:id="loginAnchorPane" prefHeight="120.0" prefWidth="115.0" styleClass="set-background-color">
+               <children>
+                  <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="58.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/profile_login_icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="18.0" layoutY="70.0" prefHeight="31.0" prefWidth="130.0" text="Logga in">
+                     <styleClass>
+                        <String fx:value="text-border" />
+                        <String fx:value="text-icon" />
+                     </styleClass>
+                  </Label>
+               </children>
+            </AnchorPane>
          </children>
       </StackPane>
-      <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="85.0" prefWidth="233.0" styleClass="border-logo">
+      <AnchorPane fx:id="homeAnchorPane" layoutX="14.0" layoutY="11.0" prefHeight="85.0" prefWidth="233.0" styleClass="border-logo">
          <children>
             <Label layoutX="112.0" layoutY="21.0" prefHeight="58.0" prefWidth="136.0" styleClass="text-logo" text="IMat" />
             <ImageView fitHeight="90.0" fitWidth="94.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true">
@@ -81,4 +81,4 @@
       <String fx:value="set-background-color" />
       <String fx:value="set-text-color-white" />
    </styleClass>
-</AnchorPane>
+</fx:root>

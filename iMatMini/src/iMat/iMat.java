@@ -11,7 +11,7 @@ public class iMat extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader. load(getClass().getResource("FXML/acount.fxml"));
+        Parent root = FXMLLoader. load(getClass().getResource("FXML/MainWindow.fxml"));
         Scene scene = new Scene(root);
         stage.setResizable(false);
         stage.setScene(scene);

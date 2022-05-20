@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
+<fx:root prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #ffffff;" stylesheets="@../css/cart.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -112,7 +112,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="62.0" layoutY="50.0" prefHeight="45.0" prefWidth="180.0" text="Förnamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField layoutX="62.0" layoutY="50.0" prefHeight="45.0" prefWidth="180.0" promptText="Förnamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -122,7 +122,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="157.0" layoutY="160.0" prefHeight="45.0" prefWidth="180.0" text="Efternamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField layoutX="157.0" layoutY="160.0" prefHeight="45.0" prefWidth="180.0" promptText="Efternamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -132,7 +132,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField fx:id="mailadress_textfield2" layoutX="171.0" layoutY="270.0" prefHeight="45.0" prefWidth="180.0" text="Lösenord" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField fx:id="mailadress_textfield2" layoutX="171.0" layoutY="270.0" prefHeight="45.0" prefWidth="180.0" promptText="Lösenord" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -142,7 +142,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="158.0" layoutY="380.0" prefHeight="45.0" prefWidth="180.0" text="Användarnamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField layoutX="158.0" layoutY="380.0" prefHeight="45.0" prefWidth="180.0" promptText="Användarnamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -161,7 +161,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="39.0" layoutY="490.0" prefHeight="45.0" prefWidth="180.0" text="Telefonnummer" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField layoutX="39.0" layoutY="490.0" prefHeight="45.0" prefWidth="180.0" promptText="Telefonnummer" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -171,7 +171,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="150.0" layoutY="600.0" prefHeight="45.0" prefWidth="180.0" text="Mobilnummer:" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField layoutX="150.0" layoutY="600.0" prefHeight="45.0" prefWidth="180.0" promptText="Mobilnummer:" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -192,7 +192,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="190.0" layoutY="160.0" prefHeight="45.0" prefWidth="180.0" text="1234 56" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField layoutX="190.0" layoutY="160.0" prefHeight="45.0" prefWidth="180.0" promptText="1234 56" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -202,7 +202,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="50.0" layoutY="270.0" prefHeight="45.0" prefWidth="180.0" text="Ort" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField layoutX="50.0" layoutY="270.0" prefHeight="45.0" prefWidth="180.0" promptText="Ort" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -212,7 +212,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="131.0" layoutY="50.0" prefHeight="45.0" prefWidth="180.0" text="Adress" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField layoutX="131.0" layoutY="50.0" prefHeight="45.0" prefWidth="180.0" promptText="Adress" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -222,7 +222,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="139.0" layoutY="380.0" prefHeight="45.0" prefWidth="180.0" text="Portnummer" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField layoutX="139.0" layoutY="380.0" prefHeight="45.0" prefWidth="180.0" promptText="Portnummer" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -252,7 +252,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="121.0" layoutY="310.0" prefHeight="45.0" prefWidth="180.0" text="Korthavarens namn:" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField layoutX="121.0" layoutY="310.0" prefHeight="45.0" prefWidth="180.0" promptText="Korthavarens namn:" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -296,7 +296,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="121.0" layoutY="420.0" prefHeight="45.0" prefWidth="180.0" text="mm-yy" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField layoutX="121.0" layoutY="420.0" prefHeight="45.0" prefWidth="180.0" promptText="mm-yy" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -306,7 +306,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="121.0" layoutY="200.0" prefHeight="45.0" prefWidth="180.0" text="Kortnummer" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField layoutX="121.0" layoutY="200.0" prefHeight="45.0" prefWidth="180.0" promptText="Kortnummer" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -316,7 +316,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="121.0" layoutY="530.0" prefHeight="45.0" prefWidth="180.0" text="123" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField layoutX="121.0" layoutY="530.0" prefHeight="45.0" prefWidth="180.0" promptText="123" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -354,4 +354,4 @@
             </children>
         </StackPane>
     </children>
-</AnchorPane>
+</fx:root>
