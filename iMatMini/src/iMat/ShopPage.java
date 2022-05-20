@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
@@ -12,11 +13,11 @@ import java.util.List;
 public class ShopPage extends AnchorPane {
 
     @FXML
-    private AnchorPane productFlowPane;
+    private FlowPane productFlowPane;
 
 
 
-    private IMatDataHandlerWrapper wrapper;
+    private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
 
     public ShopPage(IMatController mainController) {
@@ -31,9 +32,6 @@ public class ShopPage extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-
-
-        this.wrapper  = IMatDataHandlerWrapper.getInstance();
         this.mainController = mainController;
 
         updateProductList(wrapper.getProducts());
@@ -41,7 +39,7 @@ public class ShopPage extends AnchorPane {
     }
 
     private void updateProductList(List<Product> products) {
-        productFlowPane.getChildren().clear();
+        //productFlowPane.getChildren().clear();
         for (Product product : products) {
             productFlowPane.getChildren().add(new ProductItem(product, mainController));
         }
