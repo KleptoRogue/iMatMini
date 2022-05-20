@@ -14,6 +14,8 @@ public class ShopPage extends AnchorPane {
 
     @FXML
     private FlowPane productFlowPane;
+    @FXML
+    private AnchorPane productPanelAnchorPane;
 
 
 
@@ -33,13 +35,15 @@ public class ShopPage extends AnchorPane {
         }
 
         this.mainController = mainController;
+        //productPanelAnchorPane.onMouseClickedProperty().set(event -> mainController.openProductDescription());
+
 
         updateProductList(wrapper.getProducts());
 
     }
 
     private void updateProductList(List<Product> products) {
-        //productFlowPane.getChildren().clear();
+        productFlowPane.getChildren().clear();
         for (Product product : products) {
             productFlowPane.getChildren().add(new ProductItem(product, mainController));
         }

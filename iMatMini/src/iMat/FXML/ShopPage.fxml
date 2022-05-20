@@ -7,8 +7,6 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.Pane?>
@@ -17,7 +15,7 @@
 
 <fx:root prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #ffffff;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Accordion layoutY="113.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+      <Accordion layoutY="126.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
          <panes>
             <TitledPane animated="false" text="Basvaror">
                <content>
@@ -51,7 +49,7 @@
             </TitledPane>
          </panes>
       </Accordion>
-      <Pane layoutY="55.0" prefHeight="58.0" prefWidth="202.0" style="-fx-background-color: #EAEAE9;">
+      <Pane layoutY="68.0" prefHeight="58.0" prefWidth="202.0" style="-fx-background-color: #EAEAE9;">
          <children>
             <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorier" textAlignment="CENTER" wrappingWidth="202.39999999999998">
                <font>
@@ -71,14 +69,9 @@
       <Button layoutX="716.0" layoutY="22.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" text="SÖK" />
       <ScrollPane layoutX="202.0" layoutY="68.0" prefHeight="473.0" prefWidth="894.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
          <content>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1061.0" prefWidth="874.0">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="11500.0" prefWidth="874.0">
                <children>
-                  <ImageView fitHeight="214.0" fitWidth="375.0" layoutX="250.0" layoutY="-1.0" pickOnBounds="true">
-                     <image>
-                        <Image url="@../resources/MainFeature.png" />
-                     </image>
-                  </ImageView>
-                  <Pane layoutX="1.0" layoutY="213.0" prefHeight="94.0" prefWidth="879.0" style="-fx-background-color: #b2ccb2;">
+                  <Pane layoutX="1.0" layoutY="213.0" prefHeight="94.0" prefWidth="879.0" style="-fx-background-color: #b2ccb2;" AnchorPane.topAnchor="0.0">
                      <children>
                         <Pane layoutX="308.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF;">
                            <children>
@@ -91,7 +84,7 @@
                         </Pane>
                      </children>
                   </Pane>
-                  <FlowPane fx:id="productFlowPane" layoutX="1.0" layoutY="307.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="761.0" />
+                  <FlowPane fx:id="productFlowPane" layoutX="1.0" layoutY="307.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="874.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="95.0" />
                </children>
             </AnchorPane>
          </content>

@@ -2,11 +2,9 @@
   <library name="lib">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../../java-deval/javafx-sdk-17.0.2/lib" />
-      <root url="file://$PROJECT_DIR$/../../../../../../andra.ISAKMAGNUSSON/Desktop/javafx-sdk-18/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
-    <jarDirectory url="file://$PROJECT_DIR$/../../../../../../andra.ISAKMAGNUSSON/Desktop/javafx-sdk-18/lib" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/../../java-deval/javafx-sdk-17.0.2/lib" recursive="false" />
   </library>
 </component>

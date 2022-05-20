@@ -26,6 +26,10 @@ public class IMatController implements Initializable {
     private AnchorPane registerPaneFXML;
     @FXML
     private AnchorPane loginLightBoxFXML;
+    @FXML
+    private AnchorPane orderhistorikPane;
+    @FXML
+    private AnchorPane productDescriptionLightBoxFXML;
 
     public void openLoginLightBox(){
         loginLightBoxFXML.toFront();
@@ -48,6 +52,14 @@ public class IMatController implements Initializable {
         accountPaneFXML.toFront();
     }
 
+    public void openOrderhistorik() {
+        orderhistorikPane.toFront();
+    }
+
+    public void openProductDescription() {
+        productDescriptionLightBoxFXML.toFront();
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -65,5 +77,7 @@ public class IMatController implements Initializable {
     public void mouseTrap(MouseEvent mouseEvent) {
         //att göra
     }
+
+
 
 }

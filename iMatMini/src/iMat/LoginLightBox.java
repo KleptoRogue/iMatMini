@@ -31,6 +31,7 @@ public class LoginLightBox extends AnchorPane {
             throw new RuntimeException(exception);
         }
         this.mainController = mainController;
+
         register.addEventHandler(ActionEvent.ACTION, event -> mainController.openRegister());
 
     }

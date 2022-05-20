@@ -1,6 +1,9 @@
 package iMat;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
 
@@ -8,6 +11,8 @@ import java.io.IOException;
 
 public class AccountPage extends AnchorPane {
 
+    @FXML
+    private Button orderhistorik;
 
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
@@ -24,6 +29,9 @@ public class AccountPage extends AnchorPane {
             throw new RuntimeException(exception);
         }
         this.mainController = mainController;
+
+        orderhistorik.addEventHandler(ActionEvent.ACTION, event -> mainController.openOrderhistorik());
+
     }
 
 }

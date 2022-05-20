@@ -47,7 +47,7 @@
                                     <Font name="Arial" size="15.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="9.0" layoutY="105.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Orderhistorik" AnchorPane.leftAnchor="5.0">
+                              <Button fx:id="orderhistorik" layoutX="9.0" layoutY="105.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Orderhistorik" AnchorPane.leftAnchor="5.0">
                                  <font>
                                     <Font size="15.0" />
                                  </font>

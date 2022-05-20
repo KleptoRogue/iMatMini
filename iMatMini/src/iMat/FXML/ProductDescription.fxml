@@ -92,7 +92,7 @@
                         </Label>
                         <ImageView fx:id="star_unmarked" fitHeight="50.0" fitWidth="50.0" layoutX="287.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../resources/star_unmarked.jpg" />
+                              <Image url="@../resources/star_unmarked.png" />
                            </image>
                         </ImageView>
                         <Separator layoutX="50.0" layoutY="370.0" prefWidth="600.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="52.0" />
