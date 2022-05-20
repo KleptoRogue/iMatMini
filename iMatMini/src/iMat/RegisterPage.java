@@ -4,7 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.User;
 
 
 import java.io.IOException;
@@ -43,6 +46,16 @@ public class RegisterPage extends AnchorPane {
     @FXML
     private Button goToShop;
 
+    @FXML
+    private TextField mail;
+    @FXML
+    private TextField password;
+    @FXML
+    private TextField passwordConfirm;
+
+    @FXML
+    private Label error;
+
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
 
@@ -68,7 +81,7 @@ public class RegisterPage extends AnchorPane {
         p2GoBack.addEventHandler(ActionEvent.ACTION, event -> openWizard1());
 
         p3KeepShop.addEventHandler(ActionEvent.ACTION, event -> mainController.openShop());
-        p3NextStep.addEventHandler(ActionEvent.ACTION, event -> openWizard4());
+        p3NextStep.addEventHandler(ActionEvent.ACTION, event -> finishRegister());
         p3GoBack.addEventHandler(ActionEvent.ACTION, event -> openWizard2());
 
         p4KeepShop.addEventHandler(ActionEvent.ACTION, event -> mainController.openShop());
@@ -92,7 +105,45 @@ public class RegisterPage extends AnchorPane {
     }
 
     @FXML
-    public void openWizard4(){
-        confirmReg.toFront();
+    public void finishRegister(){
+        if(!areFieldsFilled()){
+            error.setText("Hoppsan! Du måste Fylla i alla fält!");
+        }
+        else if(!isPasswordCorrect()){
+            error.setText("Hoppsan! Lösenorden måste vara lika!");
+        }
+        else if(isUserRegistered()){
+            error.setText("Hoppsan! Din mail används redan!");
+        }
+        else{
+            mainController.addUser(createUser(mail.getText(), password.getText()));
+            confirmReg.toFront();
+        }
     }
+
+    private User createUser(String name, String password){
+        User user = new User();
+        user.setUserName(name);
+        user.setPassword(password);
+        return user;
+    }
+
+    private boolean areFieldsFilled(){
+        return !mail.getText().equals("") &&
+                !password.getText().equals("");
+
+    }
+
+    private boolean isPasswordCorrect(){
+        return password.getText().equals(passwordConfirm.getText());
+    }
+
+    private boolean isUserRegistered(){
+        for(User user : mainController.getUsers()){
+            if (user.getUserName().equals(mail)) return true;
+        }
+        return false;
+    }
+
+
 }

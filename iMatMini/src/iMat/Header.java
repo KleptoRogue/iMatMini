@@ -37,4 +37,6 @@ public class Header extends AnchorPane {
         cartAnchorPane.onMouseClickedProperty().set(event -> mainController.openCart());
         loginAnchorPane.onMouseClickedProperty().set(event -> mainController.openLoginLightBox());
     }
+
+
 }

@@ -13,6 +13,8 @@ public class AccountPage extends AnchorPane {
 
     @FXML
     private Button orderhistorik;
+    @FXML
+    private AnchorPane orderhistorikPane;
 
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
@@ -30,8 +32,12 @@ public class AccountPage extends AnchorPane {
         }
         this.mainController = mainController;
 
-        orderhistorik.addEventHandler(ActionEvent.ACTION, event -> mainController.openOrderhistorik());
+        orderhistorik.addEventHandler(ActionEvent.ACTION, event -> openOrderhistorik());
 
+    }
+
+    public void openOrderhistorik() {
+        orderhistorikPane.toFront();
     }
 
 }

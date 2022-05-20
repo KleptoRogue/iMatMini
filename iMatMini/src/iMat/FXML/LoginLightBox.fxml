@@ -11,9 +11,9 @@
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1095.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane fx:id="log_in_overlay" layoutX="322.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"  prefHeight="592.0" prefWidth="400.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="322.0" AnchorPane.rightAnchor="322.0" AnchorPane.topAnchor="30.0">
+            <AnchorPane fx:id="log_in_overlay" layoutX="322.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="400.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="322.0" AnchorPane.rightAnchor="322.0" AnchorPane.topAnchor="30.0">
                <children>
-                  <Button fx:id="login" layoutX="43.0" layoutY="402.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #81D762;" text="Logga in">
+                  <Button fx:id="login" layoutX="38.0" layoutY="372.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #81D762;" text="Logga in">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -28,7 +28,7 @@
                         <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="mailadress_textfield" layoutX="101.0" layoutY="186.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="250.0" promptText="Skriv din mail här!">
+                  <TextField fx:id="mail" layoutX="101.0" layoutY="186.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="250.0" promptText="Skriv din mail här!">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -38,16 +38,21 @@
                         <Font name="Arial" size="24.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="lösenord_textfield" layoutX="101.0" layoutY="287.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="250.0" promptText="Skriv ditt lösenord här!">
+                  <TextField fx:id="password" layoutX="101.0" layoutY="287.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="250.0" promptText="Skriv ditt lösenord här!">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="register" layoutX="248.0" layoutY="402.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #9D9D9D;" text="Registrera">
+                  <Button fx:id="register" layoutX="243.0" layoutY="372.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #9D9D9D;" text="Registrera">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Button>
+                  <Label fx:id="error" layoutX="43.0" layoutY="444.0" prefHeight="117.0" prefWidth="345.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
                </children>
                <opaqueInsets>
                   <Insets />

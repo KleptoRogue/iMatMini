@@ -1,18 +1,22 @@
 package iMat;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.User;
 
 
 public class IMatController implements Initializable {
 
     private final IMatDataHandlerWrapper model = IMatDataHandlerWrapper.getInstance();
 
+    private ArrayList<User> users = new ArrayList<User>();
+    private User loggedInUser = null;
 
     @FXML
     private AnchorPane accountPaneFXML;
@@ -26,8 +30,6 @@ public class IMatController implements Initializable {
     private AnchorPane registerPaneFXML;
     @FXML
     private AnchorPane loginLightBoxFXML;
-    @FXML
-    private AnchorPane orderhistorikPane;
     @FXML
     private AnchorPane productDescriptionLightBoxFXML;
 
@@ -52,9 +54,6 @@ public class IMatController implements Initializable {
         accountPaneFXML.toFront();
     }
 
-    public void openOrderhistorik() {
-        orderhistorikPane.toFront();
-    }
 
     public void openProductDescription() {
         productDescriptionLightBoxFXML.toFront();
@@ -72,6 +71,21 @@ public class IMatController implements Initializable {
         accountPaneFXML.getChildren().add(new AccountPage(this));
     }
 
+    public void addUser(User user){
+        users.add(user);
+    }
+
+    public ArrayList<User> getUsers(){
+        return users;
+    }
+
+    public User getLoggedinUser(){
+        return loggedInUser;
+    }
+
+    public void setLoggedinUser(User user){
+        loggedInUser = user;
+    }
 
 
     public void mouseTrap(MouseEvent mouseEvent) {
