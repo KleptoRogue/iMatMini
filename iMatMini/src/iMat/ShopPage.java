@@ -8,7 +8,7 @@ import se.chalmers.cse.dat216.project.Product;
 import java.io.IOException;
 import java.util.List;
 
-public class StartPage extends AnchorPane {
+public class ShopPage extends AnchorPane {
 
     @FXML
     private AnchorPane productFlowPane;
@@ -16,7 +16,7 @@ public class StartPage extends AnchorPane {
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
 
-    public StartPage(IMatController mainController) {
+    public ShopPage(IMatController mainController) {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/ShopPage.fxml"));
         fxmlLoader.setRoot(this);
