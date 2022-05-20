@@ -57,6 +57,7 @@ public class LoginLightBox extends AnchorPane {
     }
 
     private boolean confirmLogin(User user){
+        error.setText("allt funkar men resten ej färdigt!");
         return mail.getText().equals(user.getUserName()) && password.getText().equals(user.getPassword());
     }
 
