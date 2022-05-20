@@ -15,7 +15,7 @@ public class ShopPage extends AnchorPane {
     @FXML
     private FlowPane productFlowPane;
     @FXML
-    private AnchorPane productPanelAnchorPane;
+    private AnchorPane productItemAnchorPane;
 
 
 
@@ -35,7 +35,7 @@ public class ShopPage extends AnchorPane {
         }
 
         this.mainController = mainController;
-        //productPanelAnchorPane.onMouseClickedProperty().set(event -> mainController.openProductDescription());
+        //productItemAnchorPane.onMouseClickedProperty().set(event -> mainController.openProductDescription());
 
 
         updateProductList(wrapper.getProducts());

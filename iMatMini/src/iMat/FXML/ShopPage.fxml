@@ -15,7 +15,7 @@
 
 <fx:root prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #ffffff;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Accordion layoutY="126.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+      <Accordion layoutY="58.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
          <panes>
             <TitledPane animated="false" text="Basvaror">
                <content>
@@ -49,7 +49,7 @@
             </TitledPane>
          </panes>
       </Accordion>
-      <Pane layoutY="68.0" prefHeight="58.0" prefWidth="202.0" style="-fx-background-color: #EAEAE9;">
+      <Pane prefHeight="58.0" prefWidth="202.0" style="-fx-background-color: #EAEAE9;">
          <children>
             <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorier" textAlignment="CENTER" wrappingWidth="202.39999999999998">
                <font>
@@ -58,22 +58,13 @@
             </Text>
          </children>
       </Pane>
-      <TextField layoutX="317.0" layoutY="16.0" prefHeight="39.0" prefWidth="462.0" promptText="Skriv in vara eller kategori du vill söka efter" styleClass="searchBoxLabelIcon">
-         <font>
-            <Font size="14.0" />
-         </font>
-         <padding>
-            <Insets left="40.0" right="2.0" />
-         </padding>
-      </TextField>
-      <Button layoutX="716.0" layoutY="22.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" text="SÖK" />
-      <ScrollPane layoutX="202.0" layoutY="68.0" prefHeight="473.0" prefWidth="894.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+      <ScrollPane layoutX="202.0" layoutY="22.0" prefHeight="519.0" prefWidth="893.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <content>
             <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="11500.0" prefWidth="874.0">
                <children>
                   <Pane layoutX="1.0" layoutY="213.0" prefHeight="94.0" prefWidth="879.0" style="-fx-background-color: #b2ccb2;" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Pane layoutX="308.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF;">
+                        <Pane layoutX="520.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF;">
                            <children>
                               <Label alignment="CENTER" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="300.0" text="Populära varor" textAlignment="CENTER">
                                  <font>
@@ -82,6 +73,15 @@
                               </Label>
                            </children>
                         </Pane>
+                        <TextField layoutX="18.0" layoutY="29.0" prefHeight="39.0" prefWidth="462.0" promptText="Skriv in vara eller kategori du vill söka efter" styleClass="searchBoxLabelIcon">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="40.0" right="2.0" />
+                           </padding>
+                        </TextField>
+                        <Button layoutX="417.0" layoutY="35.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" text="SÖK" />
                      </children>
                   </Pane>
                   <FlowPane fx:id="productFlowPane" layoutX="1.0" layoutY="307.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="874.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="95.0" />
