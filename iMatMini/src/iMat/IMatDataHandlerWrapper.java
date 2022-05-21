@@ -103,9 +103,19 @@ public class IMatDataHandlerWrapper {
     public User getUser() {
         return iMatDataHandler.getUser();
     }
-    public void setUser(User user) {
-        iMatDataHandler.getUser().setUserName(user.getUserName());
-        iMatDataHandler.getUser().setPassword(user.getPassword());
+    public void setUser(String userName, String password) {
+        iMatDataHandler.getUser().setUserName(userName);
+        iMatDataHandler.getUser().setPassword(password);
+    }
+
+    public void setCustomer(String firstName, String lastName, String adress, String mail, String phoneNumber, String postcode) {
+        iMatDataHandler.getCustomer().setFirstName(firstName);
+        iMatDataHandler.getCustomer().setLastName(lastName);
+        iMatDataHandler.getCustomer().setEmail(mail);
+        iMatDataHandler.getCustomer().setPhoneNumber(phoneNumber);
+
+        iMatDataHandler.getCustomer().setAddress(adress);
+        iMatDataHandler.getCustomer().setPostCode(postcode);
     }
 
     private boolean isLoggedIn;

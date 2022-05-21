@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.Customer;
 import se.chalmers.cse.dat216.project.User;
 
 
@@ -19,7 +20,7 @@ public class RegisterPage extends AnchorPane {
     @FXML
     private AnchorPane confirmPassword;
     @FXML
-    private AnchorPane confirmAdress;
+    private AnchorPane confirmAddress;
     @FXML
     private AnchorPane confirmPerson;
 
@@ -47,7 +48,23 @@ public class RegisterPage extends AnchorPane {
     private Button goToShop;
 
     @FXML
+    private TextField firstname;
+    @FXML
+    private TextField lastname;
+    @FXML
+    private TextField phone;
+    @FXML
     private TextField mail;
+
+    @FXML
+    private TextField address;
+    @FXML
+    private TextField postcode;
+  //  @FXML
+  //  private TextField location;
+    @FXML
+    private TextField apartmentnumber;
+
     @FXML
     private TextField password;
     @FXML
@@ -96,7 +113,7 @@ public class RegisterPage extends AnchorPane {
 
     @FXML
     public void openWizard2(){
-        confirmAdress.toFront();
+        confirmAddress.toFront();
     }
 
     @FXML
@@ -107,7 +124,8 @@ public class RegisterPage extends AnchorPane {
     @FXML
     public void finishRegister(){
         if(isValid()){
-            wrapper.setUser(createUser(mail.getText(), password.getText()));
+            createUser();
+            createCustomer();
             wrapper.setIsLoogedIn(true);
             mainController.updateLogin();
             confirmReg.toFront();
@@ -116,17 +134,25 @@ public class RegisterPage extends AnchorPane {
         }
     }
 
+    private void createUser(){
+        wrapper.setUser(mail.getText(), password.getText());
+    }
+
+    private void createCustomer(){
+        wrapper.setCustomer(
+                firstname.getText(),
+                lastname.getText(),
+                address.getText(),
+                mail.getText(),
+                phone.getText(),
+                postcode.getText()
+        );
+    }
+
     private String generateErrorMessage(){
         if(!areFieldsFilled())        return "Hoppsan! Du måste Fylla i din mail!";
         else if(!isPasswordCorrect()) return "Hoppsan! Lösenorden måste vara lika!";
         else                          return "nått okänt gick galet :(";
-    }
-
-    private User createUser(String name, String password){
-        User user = new User();
-        user.setUserName(name);
-        user.setPassword(password);
-        return user;
     }
 
     private boolean isValid(){

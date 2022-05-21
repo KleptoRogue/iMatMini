@@ -204,7 +204,7 @@
                   </Pane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="confirmAdress" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
+            <AnchorPane fx:id="confirmAddress" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
                <children>
                   <Pane layoutX="7.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="1079.0" style="-fx-background-color: #FBFBF8;">
                      <children>
@@ -228,22 +228,22 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="273.0" layoutY="83.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv din address här!">
+                        <TextField fx:id="address" layoutX="273.0" layoutY="83.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv din address här!">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </TextField>
-                        <TextField layoutX="273.0" layoutY="169.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv din ort här!">
+                        <TextField fx:id="postcode" layoutX="568.0" layoutY="83.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv ditt postnummer här!">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </TextField>
-                        <TextField layoutX="568.0" layoutY="83.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv ditt postnummer här!">
+                        <TextField fx:id="location" layoutX="273.0" layoutY="169.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv din ort här!">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </TextField>
-                        <TextField layoutX="568.0" layoutY="173.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv ditt lägenhetsnr. här!">
+                        <TextField fx:id="apartmentnumber" layoutX="568.0" layoutY="173.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv ditt lägenhetsnr. här!">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -336,7 +336,7 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label layoutX="273.0" layoutY="146.0" prefHeight="27.0" prefWidth="139.0" text="Personnummer">
+                        <Label layoutX="273.0" layoutY="146.0" prefHeight="27.0" prefWidth="139.0" text="Telefon">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -355,17 +355,17 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <TextField layoutX="267.0" layoutY="94.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv ditt förnman här!">
+                        <TextField fx:id="firstname" layoutX="267.0" layoutY="94.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv ditt förnman här!">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </TextField>
-                        <TextField layoutX="267.0" layoutY="180.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv ditt personnummer här!">
+                        <TextField fx:id="lastname" layoutX="562.0" layoutY="94.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv ditt efternamn här!">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </TextField>
-                        <TextField layoutX="562.0" layoutY="94.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv ditt efternamn här!">
+                        <TextField fx:id="phone" layoutX="267.0" layoutY="180.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv ditt tel.nummer här!">
                            <font>
                               <Font size="18.0" />
                            </font>

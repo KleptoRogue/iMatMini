@@ -112,7 +112,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="62.0" layoutY="50.0" prefHeight="45.0" prefWidth="180.0" promptText="Förnamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField fx:id="firstname" layoutX="62.0" layoutY="50.0" prefHeight="45.0" prefWidth="180.0" promptText="Förnamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -122,7 +122,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="157.0" layoutY="160.0" prefHeight="45.0" prefWidth="180.0" promptText="Efternamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField fx:id="lastname" layoutX="157.0" layoutY="160.0" prefHeight="45.0" prefWidth="180.0" promptText="Efternamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -132,7 +132,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField fx:id="mailadress_textfield2" layoutX="171.0" layoutY="270.0" prefHeight="45.0" prefWidth="180.0" promptText="Lösenord" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField fx:id="password" layoutX="171.0" layoutY="270.0" prefHeight="45.0" prefWidth="180.0" promptText="Lösenord" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -142,7 +142,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="158.0" layoutY="380.0" prefHeight="45.0" prefWidth="180.0" promptText="Användarnamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField fx:id="username" layoutX="158.0" layoutY="380.0" prefHeight="45.0" prefWidth="180.0" promptText="Användarnamn" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -161,7 +161,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="39.0" layoutY="490.0" prefHeight="45.0" prefWidth="180.0" promptText="Telefonnummer" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField fx:id="phone" layoutX="39.0" layoutY="490.0" prefHeight="45.0" prefWidth="180.0" promptText="Telefonnummer" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -187,12 +187,22 @@
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="150.0" prefWidth="600.0">
                                                    <children>
+                                                      <Label layoutX="121.0" layoutY="10.0" prefHeight="27.0" prefWidth="185.0" text="Adress:" AnchorPane.leftAnchor="130.0">
+                                                         <font>
+                                                            <Font name="Arial" size="24.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="address" layoutX="131.0" layoutY="50.0" prefHeight="45.0" prefWidth="180.0" promptText="Adress" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
                                                       <Label layoutX="136.0" layoutY="120.0" prefHeight="27.0" prefWidth="185.0" text="Postkod:" AnchorPane.leftAnchor="130.0">
                                                          <font>
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="190.0" layoutY="160.0" prefHeight="45.0" prefWidth="180.0" promptText="1234 56" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField fx:id="postcode" layoutX="190.0" layoutY="160.0" prefHeight="45.0" prefWidth="180.0" promptText="1234 56" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
@@ -202,17 +212,7 @@
                                                             <Font name="Arial" size="24.0" />
                                                          </font>
                                                       </Label>
-                                                      <TextField layoutX="50.0" layoutY="270.0" prefHeight="45.0" prefWidth="180.0" promptText="Ort" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </TextField>
-                                                      <Label layoutX="121.0" layoutY="10.0" prefHeight="27.0" prefWidth="185.0" text="Adress:" AnchorPane.leftAnchor="130.0">
-                                                         <font>
-                                                            <Font name="Arial" size="24.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <TextField layoutX="131.0" layoutY="50.0" prefHeight="45.0" prefWidth="180.0" promptText="Adress" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
+                                                      <TextField fx:id="location" layoutX="50.0" layoutY="270.0" prefHeight="45.0" prefWidth="180.0" promptText="Ort" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="50.0">
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font>
