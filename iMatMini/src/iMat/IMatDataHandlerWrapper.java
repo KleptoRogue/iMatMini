@@ -14,7 +14,6 @@ public class IMatDataHandlerWrapper {
     // Categories
     private final Map<String, List<Product>> productItemMap = new HashMap<>();
 
-
     private static IMatDataHandlerWrapper instance = null;
 
     private final IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
@@ -22,8 +21,6 @@ public class IMatDataHandlerWrapper {
     private IMatDataHandlerWrapper() {
         // No instantiation
     }
-
-
 
     private void initiateProductCategories() {
         // TODO
@@ -105,6 +102,18 @@ public class IMatDataHandlerWrapper {
     // Returns the single user object holding information about the (optional) user.
     public User getUser() {
         return iMatDataHandler.getUser();
+    }
+    public void setUser(User user) {
+        iMatDataHandler.getUser().setUserName(user.getUserName());
+        iMatDataHandler.getUser().setPassword(user.getPassword());
+    }
+
+    private boolean isLoggedIn;
+    public void setIsLoogedIn(boolean isIn){
+        isLoggedIn = isIn;
+    }
+    public boolean getIsLoggedIn(){
+        return isLoggedIn;
     }
 
     public CreditCard getCreditCard() {

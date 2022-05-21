@@ -107,9 +107,9 @@ public class RegisterPage extends AnchorPane {
     @FXML
     public void finishRegister(){
         if(isValid()){
-            User newUser = createUser(mail.getText(), password.getText());
-            mainController.addUser(newUser);
-            mainController.setLoggedinUser(newUser);
+            wrapper.setUser(createUser(mail.getText(), password.getText()));
+            wrapper.setIsLoogedIn(true);
+            mainController.updateLogin();
             confirmReg.toFront();
         } else{
             error.setText(generateErrorMessage());
@@ -119,7 +119,6 @@ public class RegisterPage extends AnchorPane {
     private String generateErrorMessage(){
         if(!areFieldsFilled())        return "Hoppsan! Du måste Fylla i din mail!";
         else if(!isPasswordCorrect()) return "Hoppsan! Lösenorden måste vara lika!";
-        else if(isUserNew())          return "Hoppsan! Din mail används redan!";
         else                          return "nått okänt gick galet :(";
     }
 
@@ -131,7 +130,7 @@ public class RegisterPage extends AnchorPane {
     }
 
     private boolean isValid(){
-        return areFieldsFilled() && isPasswordCorrect() && isUserNew();
+        return areFieldsFilled() && isPasswordCorrect();
     }
 
     private boolean areFieldsFilled(){
@@ -143,10 +142,5 @@ public class RegisterPage extends AnchorPane {
         return password.getText().equals(passwordConfirm.getText());
     }
 
-    private boolean isUserNew(){
-        for(User user : mainController.getUsers()){
-            if (user.getUserName().equals(mail)) return false;
-        }
-        return true;
-    }
+
 }

@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.User;
 
 
@@ -15,9 +16,8 @@ public class IMatController implements Initializable {
 
     private final IMatDataHandlerWrapper model = IMatDataHandlerWrapper.getInstance();
 
-    private ArrayList<User> users = new ArrayList<User>();
     private ArrayList<ChangedOnLogin> changedOnLogin = new ArrayList<>();
-    private User loggedInUser = null;
+
 
 
     @FXML
@@ -73,27 +73,13 @@ public class IMatController implements Initializable {
         accountPaneFXML.getChildren().add(new AccountPage(this));
     }
 
-    public void addUser(User user){
-        users.add(user);
-    }
-    public void addChangedOnLogin(ChangedOnLogin login){
-        changedOnLogin.add(login);
+
+    public void addChangedOnLogin(ChangedOnLogin willBeChanged){
+        changedOnLogin.add(willBeChanged);
     }
 
 
-    public ArrayList<User> getUsers(){
-        return users;
-    }
-    public User getLoggedinUser(){
-        return loggedInUser;
-    }
-
-    public void setLoggedinUser(User user){
-        loggedInUser = user;
-        updateLogin();
-    }
-
-    private void updateLogin(){
+    public void updateLogin(){
         for (ChangedOnLogin changed : changedOnLogin) {
             changed.updateOnLogin();
         }
