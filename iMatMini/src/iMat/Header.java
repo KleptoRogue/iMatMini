@@ -7,7 +7,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
-public class Header extends AnchorPane {
+public class Header extends AnchorPane implements ChangedOnLogin {
 
     @FXML
     private AnchorPane homeAnchorPane;
@@ -15,6 +15,9 @@ public class Header extends AnchorPane {
     private AnchorPane cartAnchorPane;
     @FXML
     private AnchorPane loginAnchorPane;
+    @FXML
+    private AnchorPane profileAnchorPane;
+
 
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
@@ -32,11 +35,15 @@ public class Header extends AnchorPane {
         }
         this.mainController = mainController;
 
-
+        mainController.addChangedOnLogin(this);
         homeAnchorPane.onMouseClickedProperty().set(event -> mainController.openShop());
         cartAnchorPane.onMouseClickedProperty().set(event -> mainController.openCart());
         loginAnchorPane.onMouseClickedProperty().set(event -> mainController.openLoginLightBox());
     }
 
 
+    @Override
+    public void updateOnLogin() {
+        if(mainController.getLoggedinUser() != null) profileAnchorPane.toFront();
+    }
 }

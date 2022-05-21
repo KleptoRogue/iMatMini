@@ -17,8 +17,6 @@ public class ShopPage extends AnchorPane {
     @FXML
     private AnchorPane productItemAnchorPane;
 
-
-
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
 

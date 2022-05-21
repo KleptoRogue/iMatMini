@@ -106,19 +106,21 @@ public class RegisterPage extends AnchorPane {
 
     @FXML
     public void finishRegister(){
-        if(!areFieldsFilled()){
-            error.setText("Hoppsan! Du måste Fylla i alla fält!");
-        }
-        else if(!isPasswordCorrect()){
-            error.setText("Hoppsan! Lösenorden måste vara lika!");
-        }
-        else if(isUserRegistered()){
-            error.setText("Hoppsan! Din mail används redan!");
-        }
-        else{
-            mainController.addUser(createUser(mail.getText(), password.getText()));
+        if(isValid()){
+            User newUser = createUser(mail.getText(), password.getText());
+            mainController.addUser(newUser);
+            mainController.setLoggedinUser(newUser);
             confirmReg.toFront();
+        } else{
+            error.setText(generateErrorMessage());
         }
+    }
+
+    private String generateErrorMessage(){
+        if(!areFieldsFilled())        return "Hoppsan! Du måste Fylla i din mail!";
+        else if(!isPasswordCorrect()) return "Hoppsan! Lösenorden måste vara lika!";
+        else if(isUserNew())          return "Hoppsan! Din mail används redan!";
+        else                          return "nått okänt gick galet :(";
     }
 
     private User createUser(String name, String password){
@@ -128,22 +130,23 @@ public class RegisterPage extends AnchorPane {
         return user;
     }
 
+    private boolean isValid(){
+        return areFieldsFilled() && isPasswordCorrect() && isUserNew();
+    }
+
     private boolean areFieldsFilled(){
         return !mail.getText().equals("") &&
                 !password.getText().equals("");
-
     }
 
     private boolean isPasswordCorrect(){
         return password.getText().equals(passwordConfirm.getText());
     }
 
-    private boolean isUserRegistered(){
+    private boolean isUserNew(){
         for(User user : mainController.getUsers()){
-            if (user.getUserName().equals(mail)) return true;
+            if (user.getUserName().equals(mail)) return false;
         }
-        return false;
+        return true;
     }
-
-
 }

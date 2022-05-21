@@ -47,21 +47,23 @@ public class LoginLightBox extends AnchorPane {
 
     @FXML
     private void login(){
-        if(mainController.getUsers().size() == 0) error.setText("Ingen användare är registrerad!");
         for(User user : mainController.getUsers()){
-             if(confirmLogin(user)) loginUser(user);
-             else if(!mail.getText().equals(user.getUserName())) error.setText("Fel namn!");
-             else if(!password.getText().equals(user.getPassword())) error.setText("Fel lösenord!");
-             else  error.setText("Nu har nått gått sönder :(");
+             if(checkCredentials(user)){
+                 mainController.setLoggedinUser(user);
+                 return;
+             }
         }
+
+        error.setText(generateErrorMessage());
     }
 
-    private boolean confirmLogin(User user){
-        error.setText("allt funkar men resten ej färdigt!");
+    private String generateErrorMessage(){
+        if(mainController.getUsers().size() == 0) return "Ingen användare är registrerad!";
+        else return "Fel mail eller lösenord";
+    }
+
+    private boolean checkCredentials(User user){
         return mail.getText().equals(user.getUserName()) && password.getText().equals(user.getPassword());
     }
 
-    private void loginUser(User user){
-        mainController.setLoggedinUser(user);
-    }
 }

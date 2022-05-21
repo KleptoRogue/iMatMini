@@ -16,7 +16,9 @@ public class IMatController implements Initializable {
     private final IMatDataHandlerWrapper model = IMatDataHandlerWrapper.getInstance();
 
     private ArrayList<User> users = new ArrayList<User>();
+    private ArrayList<ChangedOnLogin> changedOnLogin = new ArrayList<>();
     private User loggedInUser = null;
+
 
     @FXML
     private AnchorPane accountPaneFXML;
@@ -74,19 +76,28 @@ public class IMatController implements Initializable {
     public void addUser(User user){
         users.add(user);
     }
+    public void addChangedOnLogin(ChangedOnLogin login){
+        changedOnLogin.add(login);
+    }
+
 
     public ArrayList<User> getUsers(){
         return users;
     }
-
     public User getLoggedinUser(){
         return loggedInUser;
     }
 
     public void setLoggedinUser(User user){
         loggedInUser = user;
+        updateLogin();
     }
 
+    private void updateLogin(){
+        for (ChangedOnLogin changed : changedOnLogin) {
+            changed.updateOnLogin();
+        }
+    }
 
     public void mouseTrap(MouseEvent mouseEvent) {
         //att göra
