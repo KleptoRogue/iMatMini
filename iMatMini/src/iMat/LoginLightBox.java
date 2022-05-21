@@ -24,6 +24,11 @@ public class LoginLightBox extends AnchorPane {
     private TextField password;
     @FXML
     private Label error;
+    @FXML
+    private AnchorPane transparentPane;
+    @FXML
+    private AnchorPane loginPane;
+
 
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
@@ -43,6 +48,9 @@ public class LoginLightBox extends AnchorPane {
         this.mainController = mainController;
         register.addEventHandler(ActionEvent.ACTION, event -> mainController.openRegister());
         login.addEventHandler(ActionEvent.ACTION, event -> login());
+        transparentPane.onMouseClickedProperty().set(event -> mainController.closeLoginLightBox());
+        loginPane.onMouseClickedProperty().set(event -> mainController.mouseTrap(event));
+
     }
 
      @FXML

@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
@@ -89,8 +90,8 @@ public class IMatController implements Initializable {
         }
     }
 
-    public void mouseTrap(MouseEvent mouseEvent) {
-        //att göra
+    public void mouseTrap(Event event) {
+        event.consume();
     }
 
 
