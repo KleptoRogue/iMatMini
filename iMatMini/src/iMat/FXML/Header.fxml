@@ -2,8 +2,6 @@
 
 <?import java.lang.String?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,12 +11,12 @@
    <children>
       <AnchorPane fx:id="cartAnchorPane" layoutX="951.0" layoutY="2.0" prefHeight="120.0" prefWidth="130.0" AnchorPane.leftAnchor="951.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="2.0">
          <children>
-            <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="43.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="58.0" fitWidth="55.0" layoutX="33.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../resources/cart_icon.png" />
                </image>
             </ImageView>
-            <Label alignment="CENTER" layoutX="11.0" layoutY="70.0" prefHeight="31.0" prefWidth="110.0" text="Varukorg">
+            <Label alignment="CENTER" layoutX="11.0" layoutY="77.0" prefHeight="31.0" prefWidth="110.0" text="Se varukorg">
                <styleClass>
                   <String fx:value="text-icon" />
                   <String fx:value="text-border" />
@@ -26,37 +24,31 @@
             </Label>
          </children>
       </AnchorPane>
-      <StackPane layoutX="791.0" layoutY="1.0" prefHeight="120.0" prefWidth="160.0" AnchorPane.topAnchor="1.0">
+      <StackPane layoutX="768.0" layoutY="2.0" prefHeight="120.0" prefWidth="160.0" AnchorPane.topAnchor="2.0">
          <children>
-            <AnchorPane fx:id="profileAnchorPane" prefHeight="107.0" prefWidth="116.0" styleClass="set-background-color">
+            <AnchorPane fx:id="profileAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="115.0" styleClass="set-background-color">
                <children>
                   <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="43.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../resources/profile_loggedin_icon.png" />
                      </image>
                   </ImageView>
-                  <MenuButton fx:id="profileMenuButton" alignment="CENTER" layoutX="6.0" layoutY="77.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="130.0" text="Ditt konto" textFill="WHITE">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="Användaruppgifter" />
-                        <MenuItem mnemonicParsing="false" text="Orderhistorik" />
-                        <MenuItem mnemonicParsing="false" text="Favoriter" />
-                        <MenuItem mnemonicParsing="false" text="Logga ut" />
-                     </items>
+                  <Label alignment="CENTER" layoutX="6.0" layoutY="77.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="130.0" text="Gå till konto">
                      <styleClass>
+                        <String fx:value="text-border" />
                         <String fx:value="text-icon" />
-                        <String fx:value="menu-item" />
                      </styleClass>
-                  </MenuButton>
+                  </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="loginAnchorPane" prefHeight="120.0" prefWidth="115.0" styleClass="set-background-color">
+            <AnchorPane fx:id="loginAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="115.0" styleClass="set-background-color">
                <children>
-                  <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="58.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="45.0" fitWidth="60.0" layoutX="43.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../resources/profile_login_icon.png" />
                      </image>
                   </ImageView>
-                  <Label alignment="CENTER" layoutX="18.0" layoutY="70.0" prefHeight="31.0" prefWidth="130.0" text="Logga in">
+                  <Label alignment="CENTER" layoutX="6.0" layoutY="77.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="31.0" prefWidth="130.0" text="Logga in">
                      <styleClass>
                         <String fx:value="text-border" />
                         <String fx:value="text-icon" />

@@ -34,7 +34,6 @@ public class LoginLightBox extends AnchorPane {
     private IMatController mainController;
 
     public LoginLightBox(IMatController mainController) {
-
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/LoginLightBox.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -50,12 +49,10 @@ public class LoginLightBox extends AnchorPane {
         login.addEventHandler(ActionEvent.ACTION, event -> login());
         transparentPane.onMouseClickedProperty().set(event -> mainController.closeLoginLightBox());
         loginPane.onMouseClickedProperty().set(event -> mainController.mouseTrap(event));
-
     }
 
      @FXML
    private void login(){
-
         if(checkCredentials(wrapper.getUser())){
             wrapper.setIsLoogedIn(true);
             mainController.updateLogin();
@@ -71,7 +68,6 @@ public class LoginLightBox extends AnchorPane {
         else if(!wrapper.getUser().getUserName().equals(mail.getText())) return "Fel mail!";
         else if(!wrapper.getUser().getPassword().equals(password.getText())) return "Fel lösenord!";
         else return "något oväntat gick fel :(";
-
     }
 
     private boolean checkCredentials(User user){
@@ -79,5 +75,4 @@ public class LoginLightBox extends AnchorPane {
                 password.getText().equals(user.getPassword()) &&
                 !wrapper.getUser().getUserName().equals("");
     }
-
 }
