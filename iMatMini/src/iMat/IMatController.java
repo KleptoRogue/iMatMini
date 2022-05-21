@@ -38,6 +38,10 @@ public class IMatController implements Initializable {
     public void openLoginLightBox(){
         loginLightBoxFXML.toFront();
     }
+    public void closeLoginLightBox() {
+        loginLightBoxFXML.toBack();
+    }
+
 
     public void openShop() {
         startPaneFXML.toFront();

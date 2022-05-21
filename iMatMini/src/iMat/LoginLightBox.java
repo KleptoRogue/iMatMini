@@ -51,6 +51,7 @@ public class LoginLightBox extends AnchorPane {
         if(checkCredentials(wrapper.getUser())){
             wrapper.setIsLoogedIn(true);
             mainController.updateLogin();
+            mainController.closeLoginLightBox();
             return;
         }
 
@@ -59,7 +60,10 @@ public class LoginLightBox extends AnchorPane {
 
     private String generateErrorMessage(){
         if(wrapper.getUser().getUserName().equals("")) return "Ingen användare är registrerad!";
-        else return "Fel mail eller lösenord";
+        else if(!wrapper.getUser().getUserName().equals(mail.getText())) return "Fel mail!";
+        else if(!wrapper.getUser().getPassword().equals(password.getText())) return "Fel lösenord!";
+        else return "något oväntat gick fel :(";
+
     }
 
     private boolean checkCredentials(User user){
