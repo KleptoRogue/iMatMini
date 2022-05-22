@@ -14,7 +14,7 @@ import java.util.ResourceBundle;
  * FXML Controller class
  *
  */
-public class FXMLController implements Initializable {
+public class categoryController implements Initializable {
 
     /**
      * Initializes the controller class.
