@@ -10,84 +10,196 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #ffffff;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="1463.0" prefWidth="1096.0" style="-fx-background-color: #ffffff;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Accordion layoutY="58.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
-         <panes>
-            <TitledPane animated="false" text="Basvaror">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </TitledPane>
-            <TitledPane animated="false" text="Mejeri">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </TitledPane>
-            <TitledPane animated="false" text="Grönsaker">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </TitledPane>
-            <TitledPane animated="false" text="Frukt">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </TitledPane>
-            <TitledPane animated="false" text="Fisk">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </TitledPane>
-            <TitledPane animated="false" text="Basvaror">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-               </content>
-            </TitledPane>
-         </panes>
-      </Accordion>
-      <Pane prefHeight="58.0" prefWidth="202.0" style="-fx-background-color: #EAEAE9;">
-         <children>
-            <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorier" textAlignment="CENTER" wrappingWidth="202.39999999999998">
-               <font>
-                  <Font size="29.0" />
-               </font>
-            </Text>
-         </children>
-      </Pane>
-      <ScrollPane layoutX="202.0" layoutY="22.0" prefHeight="519.0" prefWidth="893.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="202.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <content>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="11500.0" prefWidth="874.0">
+      <ScrollPane prefHeight="1096.0" prefWidth="1096.0" AnchorPane.bottomAnchor="701.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1800.0" prefWidth="1134.0">
                <children>
-                  <Pane layoutX="1.0" layoutY="213.0" prefHeight="94.0" prefWidth="879.0" style="-fx-background-color: #b2ccb2;" AnchorPane.topAnchor="0.0">
+                  <TextField fx:id="searchTextField" prefHeight="39.0" prefWidth="462.0" promptText="Skriv in vara eller kategori du vill söka efter" styleClass="searchBoxLabelIcon" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="30.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="40.0" right="2.0" />
+                     </padding>
+                  </TextField>
+                  <Button fx:id="searchButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" text="SÖK" AnchorPane.leftAnchor="732.0" AnchorPane.rightAnchor="309.0" AnchorPane.topAnchor="36.0" />
+                  <StackPane layoutX="258.0" layoutY="83.0" maxHeight="1160.0" prefHeight="1160.0" prefWidth="825.0">
                      <children>
-                        <Pane layoutX="520.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF;">
+                        <AnchorPane fx:id="shopCategoryPane" prefHeight="1058.0" prefWidth="800.0">
                            <children>
-                              <Label alignment="CENTER" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="300.0" text="Populära varor" textAlignment="CENTER">
+                              <Pane fx:id="categoryHeader" prefHeight="94.0" prefWidth="822.0" style="-fx-background-color: #b2ccb2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Pane fx:id="categoryPane" layoutX="250.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="330.0" style="-fx-background-color: #FFFFFF;">
+                                       <children>
+                                          <Label fx:id="categoryLabel" alignment="CENTER" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="300.0" text="Kategori" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="36.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                              <FlowPane fx:id="categoryFlowPane" layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1061.0" prefWidth="825.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="96.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="shopStartPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1161.0" prefWidth="823.0">
+                           <children>
+                              <Pane prefHeight="94.0" prefWidth="822.0" style="-fx-background-color: #b2ccb2;" />
+                              <Pane fx:id="startPane" layoutX="250.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="332.0" style="-fx-background-color: #FFFFFF;" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <Label fx:id="startLabel" alignment="CENTER" layoutX="2.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="326.0" text="Populära varor" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="30.0" left="30.0" right="500.0" top="500.0" />
+                                 </padding>
+                              </Pane>
+                              <FlowPane fx:id="productFlowPane" layoutX="-3.0" layoutY="96.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="951.0" prefWidth="825.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="96.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+                  <FlowPane prefHeight="200.0" prefWidth="260.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="81.0">
+                     <children>
+                        <Pane prefHeight="58.0" prefWidth="260.0" style="-fx-background-color: #EAEAE9;">
+                           <children>
+                              <Text layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorier" textAlignment="CENTER" wrappingWidth="202.39999999999998">
                                  <font>
-                                    <Font size="36.0" />
+                                    <Font size="29.0" />
                                  </font>
-                              </Label>
+                              </Text>
                            </children>
                         </Pane>
-                        <TextField layoutX="18.0" layoutY="29.0" prefHeight="39.0" prefWidth="462.0" promptText="Skriv in vara eller kategori du vill söka efter" styleClass="searchBoxLabelIcon">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                           <padding>
-                              <Insets left="40.0" right="2.0" />
-                           </padding>
-                        </TextField>
-                        <Button layoutX="417.0" layoutY="35.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" text="SÖK" />
+                        <Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="260.0">
+                           <panes>
+                              <TitledPane minHeight="100.0" prefHeight="341.0" prefWidth="257.0" text="Basvaror">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="260.0">
+                                       <children>
+                                          <VBox layoutX="-1.0" prefHeight="181.0" prefWidth="260.0">
+                                             <children>
+                                                <Button fx:id="breadButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Bröd" />
+                                                <Button fx:id="dairyButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Mejeri" />
+                                                <Button fx:id="pastaButton" mnemonicParsing="false" prefHeight="61.0" prefWidth="260.0" text="Pasta" />
+                                                <Button fx:id="potatoAndRiceButton" mnemonicParsing="false" prefHeight="61.0" prefWidth="260.0" text="Potatis och Ris" />
+                                                <Button fx:id="flourSugarSaltButton" mnemonicParsing="false" prefHeight="61.0" prefWidth="260.0" text="Mjöl, socker och salt" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </TitledPane>
+                              <TitledPane minHeight="100.0" prefHeight="130.0" prefWidth="260.0" text="Kött &amp; Fisk">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="260.0">
+                                       <children>
+                                          <VBox prefHeight="102.0" prefWidth="260.0">
+                                             <children>
+                                                <Button fx:id="meatButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Nötkött" />
+                                                <Button fx:id="fishButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Fisk" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </TitledPane>
+                              <TitledPane minHeight="100.0" prefHeight="328.0" prefWidth="260.0" text="Grönsaker">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="274.0" prefWidth="258.0">
+                                       <children>
+                                          <VBox prefHeight="252.0" prefWidth="260.0">
+                                             <children>
+                                                <Button fx:id="rootVegButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Rotfrukter" />
+                                                <Button fx:id="beanButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Bönor" />
+                                                <Button fx:id="herbButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Örter" />
+                                                <Button fx:id="nutsAndSeedsButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Nötter och frön" />
+                                                <Button fx:id="cabbageButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Kål" />
+                                                <Button fx:id="vegFruitButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Grönsaksfrukt" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </TitledPane>
+                              <TitledPane animated="false" minHeight="100.0" prefWidth="260.0" text="Frukt">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="203.0" prefWidth="252.0">
+                                       <children>
+                                          <VBox prefHeight="181.0" prefWidth="260.0">
+                                             <children>
+                                                <Button fx:id="citrusButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Citrusfrukter" />
+                                                <Button fx:id="berryButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Bär" />
+                                                <Button fx:id="exoticFruitButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Exotisk frukt" />
+                                                <Button fx:id="fruitButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Övrig frukt" />
+                                                <Button fx:id="melonButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Meloner" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </TitledPane>
+                              <TitledPane minHeight="100.0" prefWidth="260.0" text="Dryck">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="110.0" prefWidth="260.0">
+                                       <children>
+                                          <VBox prefHeight="71.0" prefWidth="260.0">
+                                             <children>
+                                                <Button fx:id="hotDrinkButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Varma drycker" />
+                                                <Button fx:id="coldDrinkButton" mnemonicParsing="false" prefHeight="50.0" prefWidth="260.0" text="Kalla drycker" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </TitledPane>
+                              <TitledPane fx:id="sweetsPane" minHeight="100.0" prefHeight="204.0" prefWidth="260.0" text="Sötsaker">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="260.0">
+                                       <children>
+                                          <VBox prefHeight="181.0" prefWidth="260.0">
+                                             <children>
+                                                <Button fx:id="sweetButton" mnemonicParsing="false" prefHeight="61.0" prefWidth="260.0" text="Sötsaker" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                                 <font>
+                                    <Font size="27.0" />
+                                 </font>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
                      </children>
-                  </Pane>
-                  <FlowPane fx:id="productFlowPane" layoutX="1.0" layoutY="307.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="874.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="95.0" />
-               </children>
-            </AnchorPane>
-         </content>
+                  </FlowPane>
+               </children></AnchorPane>
+        </content>
       </ScrollPane>
    </children>
 </fx:root>
