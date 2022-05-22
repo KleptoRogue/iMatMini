@@ -15,7 +15,17 @@ public class AccountPage extends AnchorPane implements ChangedOnLogin{
     @FXML
     private Button orderhistorik;
     @FXML
+    private Button favoriterButton;
+    @FXML
+    private Button användaruppgifter;
+    @FXML
+    private Button loggaUtButton;
+    @FXML
     private AnchorPane orderhistorikPane;
+    @FXML
+    private AnchorPane favoriterPane;
+    @FXML
+    private AnchorPane startPaneFXML;
 
     @FXML
     private TextField firstname;
@@ -52,11 +62,29 @@ public class AccountPage extends AnchorPane implements ChangedOnLogin{
 
         mainController.addChangedOnLogin(this);
         orderhistorik.addEventHandler(ActionEvent.ACTION, event -> openOrderhistorik());
+        favoriterButton.addEventHandler(ActionEvent.ACTION, event -> openFavoriter());
+        användaruppgifter.addEventHandler(ActionEvent.ACTION, event -> openAnvändaruppgifter());
+        loggaUtButton.addEventHandler(ActionEvent.ACTION, event -> loggaUt());
 
     }
 
     public void openOrderhistorik() {
         orderhistorikPane.toFront();
+    }
+
+    public  void openFavoriter(){
+        favoriterPane.toFront();
+    }
+
+    public void openAnvändaruppgifter() {
+        orderhistorikPane.toBack();
+        favoriterPane.toBack();
+    }
+
+    private void loggaUt() {
+        wrapper.setIsLoogedIn(false);
+        mainController.updateLogin();
+        //open home page
     }
 
     @Override
