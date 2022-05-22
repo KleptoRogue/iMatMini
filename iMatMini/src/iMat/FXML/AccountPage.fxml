@@ -11,6 +11,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
@@ -32,17 +33,17 @@
                                     <Image url="@../resources/ditt_konto_knapp.png" />
                                  </image>
                               </ImageView>
-                              <Button layoutX="9.0" layoutY="60.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Användaruppgifter" AnchorPane.leftAnchor="5.0">
+                              <Button fx:id="användaruppgifter" layoutX="9.0" layoutY="60.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Användaruppgifter" AnchorPane.leftAnchor="5.0">
                                  <font>
                                     <Font size="15.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="9.0" layoutY="195.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Logga ut" AnchorPane.leftAnchor="5.0">
+                              <Button fx:id="loggaUtButton" layoutX="9.0" layoutY="195.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Logga ut" AnchorPane.leftAnchor="5.0">
                                  <font>
                                     <Font name="Arial" size="15.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="9.0" layoutY="150.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Favoriter" AnchorPane.leftAnchor="5.0">
+                              <Button fx:id="favoriterButton" layoutX="9.0" layoutY="150.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Favoriter" AnchorPane.leftAnchor="5.0">
                                  <font>
                                     <Font name="Arial" size="15.0" />
                                  </font>
@@ -56,7 +57,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="439.0" prefWidth="805.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <AnchorPane fx:id="orderhistorikPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <AnchorPane fx:id="orderhistorikPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
                                     <ImageView fitHeight="100.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.666666666666629" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
                                        <image>
@@ -69,13 +70,13 @@
                                        </font>
                                     </Label>
                                     <ScrollPane layoutY="112.0" prefHeight="605.0" prefWidth="531.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
-                                      <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-                                      </content>
+                                       <content>
+                                          <FlowPane prefHeight="1500.0" prefWidth="905.0" />
+                                       </content>
                                     </ScrollPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane fx:id="favoriterPane" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <AnchorPane fx:id="favoriterPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <children>
                                     <ImageView fitHeight="100.0" fitWidth="500.0" layoutX="6.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.666666666666629" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
                                        <image>
@@ -93,9 +94,9 @@
                                        </image>
                                     </ImageView>
                                     <ScrollPane prefHeight="606.0" prefWidth="531.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
-                                      <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-                                      </content>
+                                       <content>
+                                          <FlowPane prefHeight="1500.0" prefWidth="905.0" />
+                                       </content>
                                     </ScrollPane>
                                  </children>
                               </AnchorPane>
