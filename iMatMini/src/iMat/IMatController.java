@@ -76,6 +76,7 @@ public class IMatController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+       // model.reset();
         startPaneFXML.getChildren().add(new ShopPage(this));
 
         loginLightBoxFXML.getChildren().add(new LoginLightBox(this));
