@@ -1,14 +1,17 @@
 package iMat;
 
 
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
@@ -50,6 +53,11 @@ public class ProductItem extends AnchorPane {
     @FXML
     private TextField productCounterTextField;
 
+    @FXML
+    private Button addButton;
+
+
+
     // Count products added to cart
     private int productCounter = 0;
 
@@ -59,8 +67,6 @@ public class ProductItem extends AnchorPane {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/ProductItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
-
-
 
         try {
             fxmlLoader.load();
@@ -73,12 +79,11 @@ public class ProductItem extends AnchorPane {
         this.parentcontroller = controller;
 
         productNameLabel.setText(product.getName());
-
         priceLabel.setText(product.getPrice() + " kr / " + product.getUnitSuffix());
 
         productImageView.setImage(model.getFXImage(product,
-                                                             productImageView.getFitWidth(),
-                                                             productImageView.getFitHeight()));
+                productImageView.getFitWidth(),
+                productImageView.getFitHeight()));
 
 
         if (model.isFavorite(this.product)) {
@@ -91,6 +96,9 @@ public class ProductItem extends AnchorPane {
             //ecoFriendlyImageView.setImage(ecoImage);
             ecoLabel.setText("Ekologisk");
         }
+
+        addButton.addEventHandler(ActionEvent.ACTION, event -> addToCart());
+
     }
 
     @FXML
@@ -108,13 +116,17 @@ public class ProductItem extends AnchorPane {
     }
 
     @FXML
-    public void onAddClickEvent(Event event) {
+    public void addToCart() {
         //TODO Connect to backend to update cart
         addRemoveProductAnchorPane.toFront();
+        model.getShoppingCart().addProduct(product);
+        for (ShoppingItem shoppingItem: model.getShoppingCart().getItems()){
+            System.out.println(shoppingItem.getProduct().getName());
+        }
     }
 
     @FXML
-    public void onRemoveClickEvent(Event event) {
+    public void removeFromCart(Event event) {
         // TODO Connect to backend to update cart
         addProductAnchorPane.toFront();
     }
