@@ -94,27 +94,27 @@ public class ProductItem extends AnchorPane {
     }
 
     @FXML
-    public void onAddFavoriteEvent(Event event) {
+    public void addFavoriteEvent(Event event) {
         model.addFavorite(product);
         System.out.println("Favorited: " + product);
         favoritedAnchorPane.toFront();
     }
 
     @FXML
-    public void onRemoveFavoriteEvent(Event event) {
+    public void removeFavoriteEvent(Event event) {
         model.removeFavorite(product);
         System.out.println("Unfavorited: " + product);
         unFavoritedAnchorPane.toFront();
     }
 
     @FXML
-    public void onAddClickEvent(Event event) {
+    public void addProductClickEvent(Event event) {
         //TODO Connect to backend to update cart
         addRemoveProductAnchorPane.toFront();
     }
 
     @FXML
-    public void onRemoveClickEvent(Event event) {
+    public void removeProductClickEvent(Event event) {
         // TODO Connect to backend to update cart
         addProductAnchorPane.toFront();
     }
