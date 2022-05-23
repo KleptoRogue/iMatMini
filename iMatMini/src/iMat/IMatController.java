@@ -55,6 +55,13 @@ public class IMatController implements Initializable {
     public void openRegister() {
         loginLightBoxFXML.toBack();
         registerPaneFXML.toFront();
+
+        //Nollställ registreringsprocessen när man öppnar den
+        //Detta för att förhindra desyncs ifall följande:
+        //register user --> account page --> logout --> homepage --> register --> accountpage
+        //användaren når då accountpage utloggad
+        registerPaneFXML.getChildren().clear();
+        registerPaneFXML.getChildren().add(new RegisterPage(this));
     }
 
     public void openAccount() {
