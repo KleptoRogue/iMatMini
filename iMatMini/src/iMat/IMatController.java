@@ -84,6 +84,7 @@ public class IMatController implements Initializable {
         cartPaneFXML.getChildren().add(new CartPage(this));
         registerPaneFXML.getChildren().add(new RegisterPage(this));
         accountPaneFXML.getChildren().add(new AccountPage(this));
+        productDescriptionLightBoxFXML.getChildren().add(new ProductDescriptionLightBox());
     }
 
 

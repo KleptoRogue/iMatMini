@@ -21,6 +21,7 @@ public class ProductItem extends AnchorPane {
 
 
     private IMatController parentcontroller;
+    private ProductDescriptionLightBox PDLB = new ProductDescriptionLightBox();
 
     private IMatDataHandlerWrapper model = IMatDataHandlerWrapper.getInstance();
     private Product product;
@@ -45,6 +46,12 @@ public class ProductItem extends AnchorPane {
     @FXML
     private AnchorPane addProductAnchorPane;
 
+
+    @FXML
+    private AnchorPane productDesciption;
+
+    @FXML
+    private AnchorPane productItemAnchorPane;
 
     @FXML
     private AnchorPane unFavoritedAnchorPane;
@@ -90,7 +97,16 @@ public class ProductItem extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+
+        //productItemAnchorPane.onMouseClickedProperty().set(event -> openProductDescription(product,parentcontroller));
+
     }
+
+    private void openProductDescription(Product product,IMatController parentcontroller) {
+        PDLB.ProductDescriptionItem(product,parentcontroller);
+        productDesciption.toFront();
+    }
+
     private void initializeProductInformation() {
         productNameLabel.setText(product.getName());
 

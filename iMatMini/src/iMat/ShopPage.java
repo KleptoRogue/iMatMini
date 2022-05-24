@@ -137,8 +137,6 @@ public class ShopPage extends AnchorPane implements Initializable {
            
             }
 
-    
-
 
     private void doSearch(){
         String search = searchTextField.getText();
