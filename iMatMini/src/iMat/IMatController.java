@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.User;
 
@@ -43,6 +44,10 @@ public class IMatController implements Initializable {
         loginLightBoxFXML.toBack();
     }
 
+    public void openProductDescriptionLB(){
+        productDescriptionLightBoxFXML.toFront();
+    }
+
 
     public void openShop() {
         startPaneFXML.toFront();
@@ -73,6 +78,10 @@ public class IMatController implements Initializable {
         productDescriptionLightBoxFXML.toFront();
     }
 
+    public void setPD (ProductDescriptionLightBox pd) {
+        productDescriptionLightBoxFXML.getChildren().clear();
+        productDescriptionLightBoxFXML.getChildren().add(pd);
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -84,7 +93,6 @@ public class IMatController implements Initializable {
         cartPaneFXML.getChildren().add(new CartPage(this));
         registerPaneFXML.getChildren().add(new RegisterPage(this));
         accountPaneFXML.getChildren().add(new AccountPage(this));
-        productDescriptionLightBoxFXML.getChildren().add(new ProductDescriptionLightBox());
     }
 
 

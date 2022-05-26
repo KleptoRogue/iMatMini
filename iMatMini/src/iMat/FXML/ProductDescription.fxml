@@ -13,13 +13,13 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="iMat.IMatController">
+<fx:root id="AnchorPane" prefHeight="640.0" prefWidth="1095.0" type="AnchorPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane prefHeight="560.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane fx:id="productDescriptionPanel" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
                <children>
-                  <AnchorPane layoutX="19.0" layoutY="104.0" prefHeight="456.0" prefWidth="749.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                  <AnchorPane layoutX="19.0" layoutY="104.0" prefHeight="456.0" prefWidth="749.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
                      <children>
                         <AnchorPane layoutX="1.0" layoutY="327.0" prefHeight="213.0" prefWidth="749.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                            <children>
@@ -62,7 +62,7 @@
                               <Font size="20.0" />
                            </font>
                         </Button>
-                        <Separator layoutX="337.0" layoutY="35.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="265.0" AnchorPane.topAnchor="0.0" />
+                        <Separator layoutX="337.0" layoutY="35.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="230.0" AnchorPane.topAnchor="0.0" />
                         <Label fx:id="sliderMinuter" alignment="CENTER" layoutX="500.0" layoutY="165.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff;" text="0" textAlignment="CENTER">
                            <font>
                               <Font name="Arial" size="30.0" />
@@ -93,7 +93,7 @@
                         </Label>
                         <Separator layoutX="50.0" layoutY="370.0" prefWidth="600.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="52.0" />
                         <Separator layoutX="50.0" layoutY="500.0" prefWidth="600.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="52.0" />
-                        <Label layoutX="205.0" layoutY="330.0" prefHeight="36.0" prefWidth="302.0" text="Relaterade Produkter" AnchorPane.bottomAnchor="174.0">
+                        <Label layoutX="205.0" layoutY="330.0" prefHeight="36.0" prefWidth="302.0" text="Relaterade Produkter">
                            <font>
                               <Font name="Arial" size="30.0" />
                            </font>
@@ -103,9 +103,9 @@
                               <Image url="@../resources/icon_close.png" />
                            </image>
                         </ImageView>
-                        <StackPane layoutX="286.0" layoutY="227.0" prefHeight="37.0" prefWidth="34.0" AnchorPane.bottomAnchor="275.6666666666667" AnchorPane.rightAnchor="378.6666666666667">
+                        <StackPane layoutX="283.0" layoutY="231.0" prefHeight="37.0" prefWidth="34.0">
                            <children>
-                              <AnchorPane fx:id="favoritedAnchorPane" onMouseClicked="#removeFavoriteEvent" prefHeight="200.0" prefWidth="200.0">
+                              <AnchorPane fx:id="favoritedAnchorPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0">
                                  <children>
                                     <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -114,7 +114,7 @@
                                     </ImageView>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane fx:id="unFavoritedAnchorPane" onMouseClicked="#addFavoriteEvent" prefHeight="200.0" prefWidth="200.0">
+                              <AnchorPane fx:id="unFavoritedAnchorPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0">
                                  <children>
                                     <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -125,7 +125,7 @@
                               </AnchorPane>
                            </children>
                         </StackPane>
-                        <Label fx:id="ecoLabel" alignment="TOP_LEFT" layoutX="149.0" layoutY="233.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true" AnchorPane.bottomAnchor="281.6666666666667">
+                        <Label fx:id="ecoLabel" alignment="TOP_LEFT" layoutX="138.0" layoutY="234.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true" AnchorPane.bottomAnchor="244.00000000000006">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -144,4 +144,4 @@
          </children>
       </StackPane>
    </children>
-</AnchorPane>
+</fx:root>

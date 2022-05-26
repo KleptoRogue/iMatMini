@@ -36,7 +36,6 @@ public class ProductDescriptionLightBox extends AnchorPane {
 
 
 
-
     private Product product;
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
@@ -44,28 +43,12 @@ public class ProductDescriptionLightBox extends AnchorPane {
 
 
     public void ProductDescriptionItem(Product product, IMatController controller) {
-        this.product = product;
         this.mainController = controller;
-        initializeProductDescriptionInformation();
+        this.product = product;
 
-    }
-
-    private void ProductDescriptionLightBox() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/ProductDescription.fxml"));
-        fxmlLoader.setRoot(this);
-        fxmlLoader.setController(this);
-
-        try {
-            fxmlLoader.load();
-        } catch (IOException exception) {
-            throw new RuntimeException(exception);
-        }
-
-    }
-
-
-    private void initializeProductDescriptionInformation() {
         titleLabel.setText(product.getName());
+
+        System.out.println(titleLabel + "TEST");
 
         priceLabel.setText(product.getPrice() + " kr / " + product.getUnitSuffix());
 
@@ -82,6 +65,18 @@ public class ProductDescriptionLightBox extends AnchorPane {
             //Image ecoImage = new Image("ecological_icon.png");
             //ecoFriendlyImageView.setImage(ecoImage);
             ecoLabel.setText("Ekologisk");
+        }
+    }
+
+    public ProductDescriptionLightBox(Product product, IMatController controller) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/ProductDescription.fxml"));
+        fxmlLoader.setRoot(this);
+        fxmlLoader.setController(this);
+
+        try {
+            fxmlLoader.load();
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
         }
 
     }

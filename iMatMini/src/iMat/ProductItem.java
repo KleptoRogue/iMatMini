@@ -3,6 +3,7 @@ package iMat;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,10 +22,11 @@ public class ProductItem extends AnchorPane {
 
 
     private IMatController parentcontroller;
-    private ProductDescriptionLightBox PDLB = new ProductDescriptionLightBox();
+    private Product product;
 
     private IMatDataHandlerWrapper model = IMatDataHandlerWrapper.getInstance();
-    private Product product;
+    ProductDescriptionLightBox PD = new ProductDescriptionLightBox(product, parentcontroller);
+
     @FXML
     private ImageView productImageView;
 
@@ -68,6 +70,10 @@ public class ProductItem extends AnchorPane {
     // Count products added to cart
     private int productCounter = 0;
 
+    @FXML
+    protected void onClick(Event event){
+        openProductDescription(product,parentcontroller);
+    }
 
     public ProductItem(Product product, IMatController controller) {
         initializeFXML();
@@ -78,9 +84,6 @@ public class ProductItem extends AnchorPane {
         initializeProductCounterListener();
     }
 
-    public ProductItem(Product product, IMatController controller, ShoppingItem item) {
-
-    }
 
     private void initializeNewShoppingItem(Product product) {
         this.shoppingItem = new ShoppingItem(product);
@@ -98,14 +101,21 @@ public class ProductItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        //productItemAnchorPane.onMouseClickedProperty().set(event -> openProductDescription(product,parentcontroller));
+        productItemAnchorPane.onMouseClickedProperty().set(event -> openProductDescription(product,parentcontroller));
 
     }
 
     private void openProductDescription(Product product,IMatController parentcontroller) {
-        PDLB.ProductDescriptionItem(product,parentcontroller);
+        parentcontroller.setPD(PD);
+        PD.ProductDescriptionItem(product,parentcontroller);
+        parentcontroller.openProductDescriptionLB();
+
+        /*
+        productDesciption = new ProductDescriptionLightBox(product,parentcontroller);
         productDesciption.toFront();
+    */
     }
+
 
     private void initializeProductInformation() {
         productNameLabel.setText(product.getName());
@@ -217,4 +227,5 @@ public class ProductItem extends AnchorPane {
         productCounterTextField.clear();
         productCounterTextField.setText( ((int) shoppingItem.getAmount()) + "");
     }
+
 }
