@@ -70,11 +70,6 @@ public class ProductItem extends AnchorPane {
     // Count products added to cart
     private int productCounter = 0;
 
-    @FXML
-    protected void onClick(Event event){
-        openProductDescription(product,parentcontroller);
-    }
-
     public ProductItem(Product product, IMatController controller) {
         initializeFXML();
         this.product = product;
@@ -101,7 +96,7 @@ public class ProductItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        productItemAnchorPane.onMouseClickedProperty().set(event -> openProductDescription(product,parentcontroller));
+        productImageView.onMouseClickedProperty().set(event -> openProductDescription(product,parentcontroller));
 
     }
 
@@ -109,11 +104,6 @@ public class ProductItem extends AnchorPane {
         parentcontroller.setPD(PD);
         PD.ProductDescriptionItem(product,parentcontroller);
         parentcontroller.openProductDescriptionLB();
-
-        /*
-        productDesciption = new ProductDescriptionLightBox(product,parentcontroller);
-        productDesciption.toFront();
-    */
     }
 
 

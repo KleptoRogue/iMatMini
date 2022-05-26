@@ -86,7 +86,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label fx:id="priceLabel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="460.0" layoutY="100.0" prefHeight="53.0" prefWidth="120.0" text="Pris">
+                        <Label fx:id="priceLabel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="438.0" layoutY="104.0" prefHeight="53.0" prefWidth="165.0" text="Pris">
                            <font>
                               <Font name="Arial" size="25.0" />
                            </font>
@@ -103,7 +103,7 @@
                               <Image url="@../resources/icon_close.png" />
                            </image>
                         </ImageView>
-                        <StackPane layoutX="283.0" layoutY="231.0" prefHeight="37.0" prefWidth="34.0">
+                        <StackPane layoutX="25.0" layoutY="25.0" prefHeight="37.0" prefWidth="34.0">
                            <children>
                               <AnchorPane fx:id="favoritedAnchorPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0">
                                  <children>
