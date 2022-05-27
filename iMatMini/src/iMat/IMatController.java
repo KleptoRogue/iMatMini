@@ -58,18 +58,19 @@ public class IMatController implements Initializable {
         loginLightBoxFXML.toBack();
     }
 
-    public void openProductDescriptionLB(){
-        productDescriptionLightBoxFXML.toFront();
+    public void setPD (ProductDescriptionLightBox pd) {
+        productDescriptionLightBoxFXML.getChildren().clear();
+        productDescriptionLightBoxFXML.getChildren().add(pd);
     }
 
+    public void openProductDescriptionLB(){ productDescriptionLightBoxFXML.toFront();}
+    public void closeProductDescriptionLB(){ productDescriptionLightBoxFXML.toBack();}
 
-    public void openShop() {
-        startPaneFXML.toFront();
-    }
-
+    public void openShop() { startPaneFXML.toFront();}
     public void openCart() {
         cartPaneFXML.toFront();
     }
+    public void openAccount() { accountPaneFXML.toFront();}
 
     public void openRegister() {
         loginLightBoxFXML.toBack();
@@ -86,11 +87,6 @@ public class IMatController implements Initializable {
     public void openCheckout() {  // added for checkoutWizard
         checkoutWizardPane.toFront();}// added for checkoutWizard
 
-
-    public void openAccount() {
-        accountPaneFXML.toFront();
-    }
-
     public void openOrderPage(){
         openAccount();
         accountPage.openOrderhistorik();
@@ -100,14 +96,6 @@ public class IMatController implements Initializable {
     }
 
 
-    public void openProductDescription() {
-        productDescriptionLightBoxFXML.toFront();
-    }
-
-    public void setPD (ProductDescriptionLightBox pd) {
-        productDescriptionLightBoxFXML.getChildren().clear();
-        productDescriptionLightBoxFXML.getChildren().add(pd);
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -119,7 +107,6 @@ public class IMatController implements Initializable {
         startPaneFXML.getChildren().add(shopPage);
         checkoutWizardPane.getChildren().add(new checkoutWizard(this));
 
-        loginLightBoxFXML.getChildren().add(new LoginLightBox(this));
         headerPaneFXML.getChildren().add(new Header(this));
         cartPaneFXML.getChildren().add(new CartPage(this));
         registerPaneFXML.getChildren().add(registerPage);
