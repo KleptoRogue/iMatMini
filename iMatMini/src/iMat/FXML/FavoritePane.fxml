@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root fx:id="favoritePane" prefHeight="56.0" prefWidth="255.0" style="-fx-background-color: #EAEAE9 #EAEAE9;" type="Pane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="favoriteButton" layoutX="-3.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="262.0" />
+      <Text disable="true" layoutX="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Favoriter" y="40.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <ImageView disable="true" fitHeight="42.0" fitWidth="51.0" layoutX="203.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/star_marked.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</fx:root>
