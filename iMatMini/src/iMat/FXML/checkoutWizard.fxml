@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root prefHeight="817.0" prefWidth="1136.0" style="-fx-background-color: #ffffff;" stylesheets="@../../../../../iMatMini%203/iMatMini/src/iMat/css/registerwizard.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+      <StackPane prefHeight="500.0" prefWidth="1136.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="popUpPane" prefHeight="622.0" prefWidth="1136.0">
+               <children>
+                  <Rectangle fx:id="lightBoxPopUp" arcHeight="5.0" arcWidth="5.0" height="621.0" opacity="0.54" stroke="BLACK" strokeType="INSIDE" width="1135.0" AnchorPane.bottomAnchor="267.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0" />
+                  <Pane layoutX="254.0" layoutY="187.0" prefHeight="480.0" prefWidth="592.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="480.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="593.0">
+                           <fill>
+                              <LinearGradient endX="1.0" endY="1.0" startY="0.22802850356294538">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.8289473652839661" green="0.8289473652839661" blue="0.8289473652839661" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Rectangle>
+                        <Button fx:id="popUpConfirmationButton" layoutX="401.0" layoutY="371.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="165.0" style="-fx-background-color: #52fc65#52fc65;" textFill="#52fc65">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Text disable="true" layoutX="409.0" layoutY="408.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ja! Färdigställ köp" wrappingWidth="152.0800303467039">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="popUpCancelButton" layoutX="17.0" layoutY="393.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="139.0" style="-fx-background-color: #81bcb0#81bcb0;" textFill="#81bcb0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Text disable="true" layoutX="45.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avbryt" wrappingWidth="152.0800303467039">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="139.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Är du säker på att du vill färdigställa ditt köp?" wrappingWidth="287.18267822265625">
+                           <font>
+                              <Font size="39.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="popUpExitButton" layoutX="509.0" layoutY="13.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="71.0">
+                           <graphic>
+                              <ImageView fitHeight="52.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/icon_close.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="908.0" prefWidth="934.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#175740" height="888.0" opacity="0.39" stroke="BLACK" strokeType="INSIDE" width="1136.0" />
+                    <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="952.0" prefWidth="1095.0" AnchorPane.bottomAnchor="-76.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <children>
+                        <AnchorPane fx:id="checkupStep" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
+                           <children>
+                              <Pane layoutX="6.0" layoutY="277.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="1087.0" style="-fx-background-color: #FBFBF8;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="277.0">
+                                 <children>
+                                    <ImageView fx:id="controlBackImageView" fitHeight="89.0" fitWidth="230.0" layoutX="16.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                                       <image>
+                                          <Image url="@../resources/btn_prev_step.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="controlFinishOrderImageView" fitHeight="89.0" fitWidth="238.0" layoutX="807.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                                       <image>
+                                          <Image url="@../resources/btn_confirm_reg.png" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox layoutX="254.0" layoutY="27.0" prefHeight="351.0" prefWidth="549.0">
+                                       <children>
+                                          <Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="262.0" prefWidth="549.0">
+                                             <panes>
+                                                <TitledPane minHeight="100.0" prefHeight="270.0" prefWidth="549.0" text="Adress">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="547.0">
+                                                         <children>
+                                                            <Text fx:id="controlAdressText" layoutX="50.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress: xxxxxxxxxxxxx" wrappingWidth="330.4608154296875" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="10.0">
+                                                               <font>
+                                                                  <Font size="19.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text fx:id="controlPostcodeText" layoutX="60.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postkod: 123 45" wrappingWidth="330.4608154296875" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="40.0">
+                                                               <font>
+                                                                  <Font size="19.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text fx:id="controlCityText" layoutX="70.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postort: xxxxxxxxxxx" wrappingWidth="330.4608154296875" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="70.0">
+                                                               <font>
+                                                                  <Font size="19.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text fx:id="controlChangeAdressText" fill="#2200ff" layoutX="421.0" layoutY="340.0" stroke="#332fff" strokeType="OUTSIDE" strokeWidth="0.0" text="Ändra" textAlignment="RIGHT" underline="true" wrappingWidth="86.159423828125" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                               <font>
+                                                                  <Font size="21.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text fx:id="controlApartmentNumberText" layoutX="282.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apartment Number:" wrappingWidth="330.4608154296875">
+                                                               <font>
+                                                                  <Font size="19.0" />
+                                                               </font>
+                                                            </Text>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                   <font>
+                                                      <Font size="17.0" />
+                                                   </font>
+                                                </TitledPane>
+                                                <TitledPane minHeight="100.0" prefHeight="484.0" prefWidth="549.0" text="Leverans">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="547.0">
+                                                         <children>
+                                                            <Text fx:id="controlDeliveryInText" layoutX="66.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fredagen den 15 maj " wrappingWidth="330.4608154296875" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="10.0">
+                                                               <font>
+                                                                  <Font size="19.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text fx:id="controlDeliveryDateText" layoutX="66.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15/5 2022" wrappingWidth="330.4608154296875" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0">
+                                                               <font>
+                                                                  <Font size="19.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text fx:id="controlDeliveryTimeText" layoutX="66.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Klockan 10:30" wrappingWidth="330.4608154296875" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                                               <font>
+                                                                  <Font size="19.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text layoutX="80.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="330.4608154296875" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="170.0">
+                                                               <font>
+                                                                  <Font size="30.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text fx:id="controlChangeDeliveryText" fill="#2200ff" layoutX="431.0" layoutY="350.0" stroke="#332fff" strokeType="OUTSIDE" strokeWidth="0.0" text="Ändra" textAlignment="RIGHT" underline="true" wrappingWidth="98.0812891279702" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                               <font>
+                                                                  <Font size="21.0" />
+                                                               </font>
+                                                            </Text>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                   <font>
+                                                      <Font size="17.0" />
+                                                   </font>
+                                                </TitledPane>
+                                                <TitledPane minHeight="100.0" prefHeight="338.0" prefWidth="549.0" text="Betalning">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="224.0" prefWidth="547.0">
+                                                         <children>
+                                                            <Text fx:id="paymentMethodText" layoutX="15.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betalningsmetod: Kort" wrappingWidth="330.4608154296875" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="10.0">
+                                                               <font>
+                                                                  <Font size="19.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text fx:id="controlCardNumberText" layoutX="15.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortnummer: 1234123412341234" wrappingWidth="478.65423583984375" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="40.0">
+                                                               <font>
+                                                                  <Font size="19.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text fx:id="controlCardName" layoutX="15.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Namn på kort: Sven Svensson" wrappingWidth="388.17828369140625" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="70.0">
+                                                               <font>
+                                                                  <Font size="19.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text layoutX="80.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="330.4608154296875" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="170.0">
+                                                               <font>
+                                                                  <Font size="30.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text fx:id="controlChangePaymentText" fill="#2200ff" layoutX="386.0" layoutY="142.0" stroke="#332fff" strokeType="OUTSIDE" strokeWidth="0.0" text="Ändra" textAlignment="RIGHT" underline="true" wrappingWidth="98.0812891279702" AnchorPane.rightAnchor="0.0">
+                                                               <font>
+                                                                  <Font size="21.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text fx:id="controlExpirationDateText" layoutX="344.4000000000001" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="utgår: xx/xx 2022" wrappingWidth="161.42770881669844" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="10.0">
+                                                               <font>
+                                                                  <Font size="19.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Text fx:id="controlCvcCode" layoutX="45.6" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cvc-kod: 123" wrappingWidth="146.92443810269822" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="40.0">
+                                                               <font>
+                                                                  <Font size="19.0" />
+                                                               </font>
+                                                            </Text>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                   <font>
+                                                      <Font size="17.0" />
+                                                   </font>
+                                                </TitledPane>
+                                             </panes>
+                                          </Accordion>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="confirmationStep" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
+                           <children>
+                              <Pane layoutX="4.0" layoutY="275.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="1087.0" style="-fx-background-color: #FBFBF8;" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="275.0">
+                                 <children>
+                                    <ImageView fx:id="seeOrderImageView" fitHeight="67.0" fitWidth="289.0" layoutX="231.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                                       <image>
+                                          <Image url="@../resources/Se_beställning.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="67.0" fitWidth="325.0" layoutX="532.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                                       <image>
+                                          <Image url="@../resources/Ladda_ner_kvitto.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="449.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ditt köp har genomförts" wrappingWidth="205.93716430664062">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="131.0" fitWidth="175.0" layoutX="458.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/checkmark.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="338.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ett kvitto har skickats till din mail-adress" wrappingWidth="392.6394604510383">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="paymentStep" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
+                           <children>
+                              <Pane layoutX="3.0" layoutY="277.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="1088.0" style="-fx-background-color: #FBFBF8;" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="277.0">
+                                 <children>
+                                    <ImageView fx:id="paymentBackImageView" fitHeight="89.0" fitWidth="230.0" layoutX="16.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                                       <image>
+                                          <Image url="@../resources/btn_prev_step.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="paymentNextImageView" fitHeight="89.0" fitWidth="230.0" layoutX="811.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                                       <image>
+                                          <Image url="@../resources/btn_next_step.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Pane layoutX="268.0" layoutY="-16.0" prefHeight="119.0" prefWidth="550.0">
+                                       <children>
+                                          <Label contentDisplay="RIGHT" layoutX="20.0" layoutY="35.0" text="Kort">
+                                             <font>
+                                                <Font name="Arial" size="24.0" />
+                                             </font>
+                                             <graphic>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../../../iMatMini%203/iMatMini/src/iMat/resources/kortBetalningLogo.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Label>
+                                          <Label contentDisplay="RIGHT" layoutX="255.0" layoutY="35.0" text="Swish">
+                                             <font>
+                                                <Font name="Arial" size="24.0" />
+                                             </font>
+                                             <graphic>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../../../iMatMini%203/iMatMini/src/iMat/resources/swishLogo.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Label>
+                                          <Label layoutX="140.0" layoutY="35.0" text="E-faktura">
+                                             <font>
+                                                <Font name="Arial" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="360.0" layoutY="35.0" text="Pappersfaktura">
+                                             <font>
+                                                <Font name="Arial" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <RadioButton fx:id="paymentOptionCardRadioButton" layoutX="45.0" layoutY="75.0" mnemonicParsing="false" selected="true" />
+                                          <RadioButton fx:id="eInvoiceRadioButton" layoutX="175.0" layoutY="75.0" mnemonicParsing="false" />
+                                          <RadioButton fx:id="swishRadioButton" layoutX="285.0" layoutY="75.0" mnemonicParsing="false" />
+                                          <RadioButton fx:id="invoiceRadioButton" graphicTextGap="10.0" layoutX="430.0" layoutY="75.0" mnemonicParsing="false" />
+                                       </children>
+                                    </Pane>
+                                    <StackPane layoutX="220.0" layoutY="102.0" prefHeight="317.0" prefWidth="545.0">
+                                       <children>
+                                          <AnchorPane prefHeight="323.0" prefWidth="443.0" />
+                                          <AnchorPane prefHeight="323.0" prefWidth="443.0" />
+                                          <AnchorPane prefHeight="323.0" prefWidth="443.0" />
+                                          <AnchorPane prefHeight="323.0" prefWidth="443.0">
+                                             <children>
+                                                <Label layoutX="45.0" layoutY="1.0" prefHeight="30.0" prefWidth="175.0" text="Kortnummer">
+                                                   <font>
+                                                      <Font size="21.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="cardNumberTextField" layoutX="42.0" layoutY="33.0" prefHeight="40.0" prefWidth="325.0" promptText="t.ex 1234 2345 3456 4567 ">
+                                                   <font>
+                                                      <Font size="19.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label layoutX="386.0" prefHeight="30.0" prefWidth="206.0" text="Gitligt till och med">
+                                                   <font>
+                                                      <Font size="21.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="expirationDateTextField" layoutX="386.0" layoutY="31.0" prefHeight="40.0" prefWidth="197.0" promptText="t.ex 19/12 2022">
+                                                   <font>
+                                                      <Font size="19.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label layoutX="45.0" layoutY="82.0" prefHeight="30.0" prefWidth="272.0" text="Namn på kortinnehavare">
+                                                   <font>
+                                                      <Font size="21.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="cardNameTextField" layoutX="43.0" layoutY="114.0" prefHeight="40.0" prefWidth="325.0" promptText="t.ex Sven svensson">
+                                                   <font>
+                                                      <Font size="19.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label layoutX="387.0" layoutY="82.0" prefHeight="30.0" prefWidth="100.0" text="cvc-kod">
+                                                   <font>
+                                                      <Font size="21.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="cvcTextField" layoutX="387.0" layoutY="114.0" prefHeight="40.0" prefWidth="96.0" promptText="t.ex 123">
+                                                   <font>
+                                                      <Font size="19.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                            <AnchorPane fx:id="deliveryStep" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
+                                <children>
+                                    <Pane layoutX="4.0" layoutY="276.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="1085.0" style="-fx-background-color: #FBFBF8;" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="276.0">
+                                        <children>
+                                              <ImageView fx:id="deliveryNextImageView" fitHeight="89.0" fitWidth="230.0" layoutX="810.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                                                  <image>
+                                                      <Image url="@../resources/btn_next_step.png" />
+                                                  </image>
+                                              </ImageView>
+                                    <FlowPane layoutX="296.0" layoutY="28.0" prefHeight="370.0" prefWidth="231.0">
+                                       <children>
+                                          <Pane prefHeight="49.0" prefWidth="262.0">
+                                             <children>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1a6763" height="40.0" opacity="0.41" stroke="#1a6763" strokeType="INSIDE" width="212.0" />
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="34.0" layoutX="38.0" layoutY="3.0" strokeType="INSIDE" width="126.0">
+                                                   <stroke>
+                                                      <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </RadialGradient>
+                                                   </stroke>
+                                                </Rectangle>
+                                                <Text layoutX="45.0" layoutY="28.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Datum" wrappingWidth="176.22550845317915">
+                                                   <font>
+                                                      <Font size="23.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <VBox prefHeight="321.0" prefWidth="211.0">
+                                             <children>
+                                                <Pane prefHeight="35.0" prefWidth="258.0">
+                                                   <children>
+                                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="#dac9c9" strokeType="INSIDE" width="210.0" />
+                                                      <RadioButton fx:id="deliveryDateRadioButton1" layoutX="11.0" layoutY="-9.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="199.0" text="RadioButton">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </RadioButton>
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="35.0" prefWidth="258.0">
+                                                   <children>
+                                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="#dac9c9" strokeType="INSIDE" width="210.0" />
+                                                      <RadioButton fx:id="deliveryDateRadioButton2" layoutX="11.0" layoutY="-9.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="200.0" text="RadioButton">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </RadioButton>
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="35.0" prefWidth="258.0">
+                                                   <children>
+                                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="#dac9c9" strokeType="INSIDE" width="210.0" />
+                                                      <RadioButton fx:id="deliveryDateRadioButton3" layoutX="11.0" layoutY="-9.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="200.0" text="RadioButton">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </RadioButton>
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="35.0" prefWidth="258.0">
+                                                   <children>
+                                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="#dac9c9" strokeType="INSIDE" width="210.0" />
+                                                      <RadioButton fx:id="deliveryDateRadioButton4" layoutX="11.0" layoutY="-9.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="200.0" text="RadioButton">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </RadioButton>
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="35.0" prefWidth="258.0">
+                                                   <children>
+                                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="#dac9c9" strokeType="INSIDE" width="210.0" />
+                                                      <RadioButton fx:id="deliveryDateRadioButton5" layoutX="11.0" layoutY="-9.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="200.0" text="RadioButton">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </RadioButton>
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="35.0" prefWidth="258.0">
+                                                   <children>
+                                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="#dac9c9" strokeType="INSIDE" width="210.0" />
+                                                      <RadioButton fx:id="deliveryDateRadioButton6" layoutX="11.0" layoutY="-9.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="200.0" text="RadioButton">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </RadioButton>
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="35.0" prefWidth="258.0">
+                                                   <children>
+                                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="#dac9c9" strokeType="INSIDE" width="210.0" />
+                                                      <RadioButton fx:id="deliveryDateRadioButton7" layoutX="11.0" layoutY="-9.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="200.0" text="RadioButton">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </RadioButton>
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="518.0" layoutY="28.0" prefHeight="306.0" prefWidth="262.0">
+                                       <children>
+                                          <Pane prefHeight="49.0" prefWidth="262.0">
+                                             <children>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1a6763" height="40.0" opacity="0.43" strokeType="INSIDE" strokeWidth="4.0" width="210.0">
+                                                   <stroke>
+                                                      <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="0.10196078568696976" green="0.40392157435417175" blue="0.38823530077934265" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </RadialGradient>
+                                                   </stroke>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="34.0" layoutX="43.0" layoutY="3.0" strokeType="INSIDE" width="126.0">
+                                                   <stroke>
+                                                      <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </RadialGradient>
+                                                   </stroke>
+                                                </Rectangle>
+                                                <Text layoutX="52.0" layoutY="28.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Tid" wrappingWidth="161.69916043329624">
+                                                   <font>
+                                                      <Font size="23.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </Pane>
+                                          <VBox prefHeight="323.0" prefWidth="258.0">
+                                             <children>
+                                                <Pane prefHeight="35.0" prefWidth="258.0">
+                                                   <children>
+                                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="#dac9c9" strokeType="INSIDE" width="210.0" />
+                                                      <RadioButton fx:id="deliveryTimeRadioButton1" layoutX="11.0" layoutY="-9.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="200.0" text="RadioButton">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </RadioButton>
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="35.0" prefWidth="258.0">
+                                                   <children>
+                                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="#dac9c9" strokeType="INSIDE" width="210.0" />
+                                                      <RadioButton fx:id="deliveryTimeRadioButton2" layoutX="11.0" layoutY="-9.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="200.0" text="RadioButton">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </RadioButton>
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="35.0" prefWidth="258.0">
+                                                   <children>
+                                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="#dac9c9" strokeType="INSIDE" width="210.0" />
+                                                      <RadioButton fx:id="deliveryTimeRadioButton3" layoutX="11.0" layoutY="-9.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="200.0" text="RadioButton">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </RadioButton>
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="35.0" prefWidth="258.0">
+                                                   <children>
+                                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="#dac9c9" strokeType="INSIDE" width="210.0" />
+                                                      <RadioButton fx:id="deliveryTimeRadioButton4" layoutX="11.0" layoutY="-9.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="200.0" text="RadioButton">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </RadioButton>
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="35.0" prefWidth="258.0">
+                                                   <children>
+                                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="#dac9c9" strokeType="INSIDE" width="210.0" />
+                                                      <RadioButton fx:id="deliveryTimeRadioButton5" layoutX="11.0" layoutY="-9.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="200.0" text="RadioButton">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </RadioButton>
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="35.0" prefWidth="258.0">
+                                                   <children>
+                                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="#dac9c9" strokeType="INSIDE" width="210.0" />
+                                                      <RadioButton fx:id="deliveryTimeRadioButton6" layoutX="11.0" layoutY="-9.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="200.0" text="RadioButton">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </RadioButton>
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="35.0" prefWidth="258.0">
+                                                   <children>
+                                                      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="35.0" stroke="#dac9c9" strokeType="INSIDE" width="210.0" />
+                                                      <RadioButton fx:id="deliveryTimeRadioButton7" layoutX="11.0" layoutY="-9.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="200.0" text="RadioButton">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </RadioButton>
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </FlowPane>
+                                    <ImageView fx:id="deliveryBackImageView" fitHeight="89.0" fitWidth="230.0" layoutX="15.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                                       <image>
+                                          <Image url="@../resources/btn_prev_step.png" />
+                                       </image>
+                                    </ImageView>
+                                        </children>
+                                    </Pane>
+                                </children>
+                            </AnchorPane>
+                            <AnchorPane fx:id="adressStep" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
+                                <children>
+                                    <Pane layoutX="1.0" layoutY="276.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="1090.0" style="-fx-background-color: #FBFBF8;" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="276.0">
+                                        <children>
+                                            <Label layoutX="274.0" layoutY="23.0" prefHeight="25.0" prefWidth="100.0" text="Address">
+                                                <font>
+                                                    <Font size="22.0" />
+                                                </font>
+                                            </Label>
+                                            <TextField fx:id="addressTextField" layoutX="262.0" layoutY="55.0" prefHeight="49.0" prefWidth="256.0" promptText="Skriv din address här!">
+                                                <font>
+                                                    <Font size="21.0" />
+                                                </font>
+                                            </TextField>
+                                            <Label layoutX="577.0" layoutY="206.0" prefHeight="42.0" prefWidth="233.0" text="Bor du inte i lägenhet kan du hoppa över det här steget!" wrapText="true">
+                                                <font>
+                                                    <Font size="14.0" />
+                                                </font>
+                                            </Label>
+                                    <ImageView fx:id="adressNextImageView" fitHeight="92.0" fitWidth="191.0" layoutX="852.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                                       <image>
+                                          <Image url="@../resources/btn_next_step.png" />
+                                       </image>
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </ImageView>
+                                    <Label layoutX="273.0" layoutY="113.0" prefHeight="28.0" prefWidth="156.0" text="Postnummer">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="postcodeTextField" layoutX="262.0" layoutY="146.0" prefHeight="53.0" prefWidth="262.0" promptText="Skriv ditt postnummer här">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label layoutX="571.0" layoutY="20.0" prefHeight="25.0" prefWidth="100.0" text="Postort">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="cityTextField" layoutX="566.0" layoutY="54.0" prefHeight="49.0" prefWidth="283.0" promptText="Skriv din postort här!">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label layoutX="575.0" layoutY="112.0" prefHeight="28.0" prefWidth="214.0" text="Lägenhetsnummer">
+                                       <font>
+                                          <Font size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="apartmentNumberTextField" layoutX="569.0" layoutY="146.0" prefHeight="50.0" prefWidth="280.0" promptText="Skriv in Lägenhetsnummer">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </TextField>
+                                        </children>
+                                    </Pane>
+                                </children>
+                            </AnchorPane>
+                        </children>
+                    </StackPane>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff80" height="55.0" stroke="WHITE" strokeType="INSIDE" width="1091.0" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="302.0" />
+                  <Text fx:id="stepNameText" layoutX="126.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Steg this" AnchorPane.leftAnchor="126.0" AnchorPane.topAnchor="307.228515625">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="stepCounterText" layoutX="749.0" layoutY="342.771484375" strokeType="OUTSIDE" strokeWidth="0.0" text="steg n av n" textAlignment="RIGHT" wrappingWidth="193.89827534025005" AnchorPane.leftAnchor="749.0" AnchorPane.topAnchor="307.0">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Text>
+                        <Pane layoutX="20.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="1090.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="155.0">
+                            <children>
+                                <Line endX="52.0" fill="#868686" layoutX="341.0" layoutY="62.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
+                                <Line endX="52.0" fill="#868686" layoutX="458.0" layoutY="62.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
+                                <Line endX="52.0" fill="#868686" layoutX="582.0" layoutY="62.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
+                                <Circle fx:id="adressCircle" fill="#17ee17" layoutX="301.0" layoutY="62.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
+                                <Rectangle fx:id="adressRectangle" arcHeight="5.0" arcWidth="5.0" fill="#17ee17" height="52.0" layoutX="255.0" layoutY="92.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                                <Text disable="true" layoutX="248.0" layoutY="123.0" stroke="#87e85d" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress" textAlignment="CENTER" wrappingWidth="100.0">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Text>
+                                <Circle fx:id="deliveryCircle" fill="#c7c7c7" layoutX="421.0" layoutY="62.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
+                                <Rectangle fx:id="deliveryRectangle" arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="49.0" layoutX="371.0" layoutY="92.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                                <Circle fx:id="paymentCircle" fill="#c7c7c7" layoutX="541.0" layoutY="62.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
+                                <Rectangle fx:id="paymentRectangle" arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="49.0" layoutX="491.0" layoutY="92.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                                <Circle fx:id="lastCheckCircle" fill="#c7c7c7" layoutX="661.0" layoutY="62.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
+                                <Rectangle fx:id="lastCheckRectangle" arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="49.0" layoutX="611.0" layoutY="92.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                                <Text disable="true" layoutX="383.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leverans" textAlignment="CENTER" wrappingWidth="75.79479897472015">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Text>
+                                <Text disable="true" layoutX="495.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betalningsmetod" textAlignment="CENTER" wrappingWidth="87.06020846214415">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Text>
+                                <Text disable="true" layoutX="624.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sista Kontroll" textAlignment="CENTER" wrappingWidth="75.79479897472015">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Text>
+                        <Line endX="52.0" fill="#868686" layoutX="699.0" layoutY="61.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
+                        <Circle fx:id="affirmationCircle" fill="#c7c7c7" layoutX="782.0" layoutY="61.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Rectangle fx:id="affirmationRectangle" arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="49.0" layoutX="732.0" layoutY="92.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                        <Text disable="true" layoutX="731.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bekräftelse" textAlignment="CENTER" wrappingWidth="100.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                                  <ImageView fx:id="keepShoppingImageView" fitHeight="101.0" fitWidth="165.0" layoutX="6.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                                      <image>
+                                          <Image url="@../resources/btn_keep_shopping.png" />
+                                      </image>
+                                  </ImageView>
+                            </children>
+                        </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+    </children>
+</fx:root>

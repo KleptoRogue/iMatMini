@@ -84,8 +84,7 @@ public class AccountPage extends AnchorPane implements ChangedOnLogin{
     private void loggaUt() {
         wrapper.setIsLoogedIn(false);
         mainController.updateLogin();
-        mainController.openShop();
-        mainController.openShop();
+        //open home page
     }
 
     @Override

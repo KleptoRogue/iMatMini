@@ -58,7 +58,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button layoutX="15.0" layoutY="284.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #81D762;" text="Gå till kassan">
+            <Button fx:id="goToCheckoutButton" layoutX="15.0" layoutY="284.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="170.0" style="-fx-background-color: #81D762;" text="Gå till kassan">
                <font>
                   <Font size="24.0" />
                </font>
