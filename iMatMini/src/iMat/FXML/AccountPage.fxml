@@ -57,25 +57,6 @@
                                 </AnchorPane>
                                 <AnchorPane prefHeight="439.0" prefWidth="805.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <children>
-                                        <AnchorPane fx:id="orderhistorikPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                            <children>
-                                                <ImageView fitHeight="100.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.666666666666629" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
-                                                    <image>
-                                                        <Image url="@../resources/dina_favoriter.png" />
-                                                    </image>
-                                                </ImageView>
-                                                <Label layoutX="131.0" layoutY="40.0" text="Din Orderhistorik">
-                                                    <font>
-                                                        <Font name="Arial" size="36.0" />
-                                                    </font>
-                                                </Label>
-                                                <ScrollPane layoutY="112.0" prefHeight="605.0" prefWidth="531.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
-                                                    <content>
-                                                        <FlowPane prefHeight="1500.0" prefWidth="905.0" />
-                                                    </content>
-                                                </ScrollPane>
-                                            </children>
-                                        </AnchorPane>
                                         <AnchorPane fx:id="favoriterPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                             <children>
                                                 <ImageView fitHeight="100.0" fitWidth="500.0" layoutX="6.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.666666666666629" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
@@ -346,6 +327,25 @@
                                                 </Accordion>
                                             </content>
                                         </ScrollPane>
+                                        <AnchorPane fx:id="orderhistorikPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <ImageView fitHeight="100.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.666666666666629" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                                    <image>
+                                                        <Image url="@../resources/dina_favoriter.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <Label layoutX="131.0" layoutY="40.0" text="Din Orderhistorik">
+                                                    <font>
+                                                        <Font name="Arial" size="36.0" />
+                                                    </font>
+                                                </Label>
+                                                <ScrollPane layoutY="112.0" prefHeight="605.0" prefWidth="531.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+                                                    <content>
+                                                        <FlowPane fx:id="orderHistoryFlowPane" prefHeight="429.0" prefWidth="905.0" />
+                                                    </content>
+                                                </ScrollPane>
+                                            </children>
+                                        </AnchorPane>
                                     </children>
                                 </AnchorPane>
                             </children>

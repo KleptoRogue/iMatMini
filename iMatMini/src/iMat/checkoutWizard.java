@@ -17,6 +17,8 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import org.w3c.dom.css.RGBColor;
+import se.chalmers.cse.dat216.project.Order;
+
 import java.time.LocalDate;
 
 import java.io.IOException;
@@ -291,6 +293,8 @@ public class checkoutWizard extends AnchorPane implements Initializable {
        deliveryTimeRadioButton7.onMouseClickedProperty().set(event ->
                setTextField(controlDeliveryTimeText, "Tid", "17:00"));
 
+
+
        cardNumberTextField.textProperty().addListener((observable, oldValue, newValue) ->
        {setTextField(controlCardNumberText, "Kortnummer", newValue);});
        cardNameTextField.textProperty().addListener((observable, oldValue, newValue) ->
@@ -366,7 +370,8 @@ public class checkoutWizard extends AnchorPane implements Initializable {
         swishRadioButton.setToggleGroup(paymentMethodToggleGroup);
         eInvoiceRadioButton.setToggleGroup(paymentMethodToggleGroup);
         invoiceRadioButton.setToggleGroup(paymentMethodToggleGroup);
-        setLastRectangleAndCircle(adressRectangle, adressCircle);
+        setLastRectangleAndCircle(deliveryRectangle, deliveryCircle);
+        goToAdressStep();
 
 
 

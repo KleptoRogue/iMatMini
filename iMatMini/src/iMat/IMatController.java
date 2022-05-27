@@ -122,8 +122,8 @@ public class IMatController implements Initializable {
         loginLightBoxFXML.getChildren().add(new LoginLightBox(this));
         headerPaneFXML.getChildren().add(new Header(this));
         cartPaneFXML.getChildren().add(new CartPage(this));
-        registerPaneFXML.getChildren().add(new RegisterPage(this));
-        accountPaneFXML.getChildren().add(new AccountPage(this));
+        registerPaneFXML.getChildren().add(registerPage);
+        accountPaneFXML.getChildren().add(accountPage);
         addChangedOnLogin(favoritePane);
     }
 
