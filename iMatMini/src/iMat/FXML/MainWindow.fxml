@@ -15,6 +15,8 @@
                      <children>
                         <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0">
                            <children>
+                              <AnchorPane fx:id="checkoutWizardPane" layoutX="10.0" layoutY="10.0" prefHeight="876.0" prefWidth="1095.0" />
+                              <AnchorPane fx:id="productDescriptionLightBoxFXML" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" />
                               <AnchorPane fx:id="accountPaneFXML" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" />
                               <AnchorPane fx:id="registerPaneFXML" prefHeight="200.0" prefWidth="200.0" />
                               <AnchorPane fx:id="cartPaneFXML" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" />

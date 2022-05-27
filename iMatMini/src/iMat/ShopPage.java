@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class ShopPage extends AnchorPane implements Initializable {
+public class ShopPage extends AnchorPane{
 
     @FXML
     private FlowPane productFlowPane;
@@ -73,7 +73,8 @@ public class ShopPage extends AnchorPane implements Initializable {
     @FXML Button fruitButton;
     @FXML Button sweetButton;
     @FXML Button herbButton;
-
+    @FXML
+    FlowPane categoryListFlowPane;
 
 
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
@@ -93,6 +94,7 @@ public class ShopPage extends AnchorPane implements Initializable {
 
 
         this.mainController = mainController;
+
         //productItemAnchorPane.onMouseClickedProperty().set(event -> mainController.openProductDescription());
 
        sweetsPane.onMouseClickedProperty().set(event -> openCategory("Sötsaker", ProductCategory.SWEET));
@@ -120,6 +122,10 @@ public class ShopPage extends AnchorPane implements Initializable {
        updateProductList(productFlowPane, wrapper.getProducts());
 
        searchButton.onMouseClickedProperty().set((event -> doSearch()));
+
+
+
+       searchButton.onMouseClickedProperty().set((event -> doSearch()));
     }
 
     public void resizeCategoryLabel(String string){
@@ -136,8 +142,6 @@ public class ShopPage extends AnchorPane implements Initializable {
            categoryPane.setLayoutX(paneX);
            
             }
-
-    
 
 
     private void doSearch(){
@@ -185,12 +189,17 @@ public class ShopPage extends AnchorPane implements Initializable {
     public void openSweets() {
         productFlowPane.getChildren().clear();
         updateProductList(categoryFlowPane, wrapper.getProducts(ProductCategory.SWEET));
-        categoryLabel.setText("Sweets");
+        categoryLabel.setText("Sötsaker");
+        shopCategoryPane.toFront();
+    }
+
+    public void openFavorites() {
+        productFlowPane.getChildren().clear();
+        updateProductList(categoryFlowPane, wrapper.getFavorites());
+        categoryLabel.setText("Favoriter");
         shopCategoryPane.toFront();
     }
 
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-    }
+
 }

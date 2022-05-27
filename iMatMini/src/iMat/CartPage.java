@@ -11,6 +11,8 @@ import java.io.IOException;
 
 public class CartPage extends AnchorPane {
 
+    @FXML Button goToCheckoutButton; // added for checkoutWizard
+
     @FXML
     private Button keepShop;
 
@@ -30,6 +32,7 @@ public class CartPage extends AnchorPane {
         }
         this.mainController = mainController;
         keepShop.addEventHandler(ActionEvent.ACTION, event -> mainController.openShop());
+        goToCheckoutButton.addEventHandler(ActionEvent.ACTION, event -> mainController.openCheckout()); // added for checkoutWizard
     }
 
 }

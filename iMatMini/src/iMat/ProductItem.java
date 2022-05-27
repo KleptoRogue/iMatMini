@@ -1,6 +1,9 @@
 package iMat;
 
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,16 +12,21 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingCart;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.util.List;
 
 public class ProductItem extends AnchorPane {
 
 
     private IMatController parentcontroller;
+    private Product product;
 
     private IMatDataHandlerWrapper model = IMatDataHandlerWrapper.getInstance();
-    private Product product;
+    ProductDescriptionLightBox PD = new ProductDescriptionLightBox(product, parentcontroller);
+
     @FXML
     private ImageView productImageView;
 
@@ -42,6 +50,12 @@ public class ProductItem extends AnchorPane {
 
 
     @FXML
+    private AnchorPane productDesciption;
+
+    @FXML
+    private AnchorPane productItemAnchorPane;
+
+    @FXML
     private AnchorPane unFavoritedAnchorPane;
 
     @FXML
@@ -50,16 +64,30 @@ public class ProductItem extends AnchorPane {
     @FXML
     private TextField productCounterTextField;
 
+    ShoppingItem shoppingItem;
+
+
     // Count products added to cart
     private int productCounter = 0;
 
-
     public ProductItem(Product product, IMatController controller) {
+        initializeFXML();
+        this.product = product;
+        this.parentcontroller = controller;
+        initializeNewShoppingItem(product);
+        initializeProductInformation();
+        initializeProductCounterListener();
+    }
 
+
+    private void initializeNewShoppingItem(Product product) {
+        this.shoppingItem = new ShoppingItem(product);
+        this.shoppingItem.setAmount(0);
+    }
+    private void initializeFXML() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/ProductItem.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
-
 
 
         try {
@@ -68,66 +96,126 @@ public class ProductItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        // Add information about product.
-        this.product = product;
-        this.parentcontroller = controller;
+        productImageView.onMouseClickedProperty().set(event -> openProductDescription(product,parentcontroller));
 
+    }
+
+    private void openProductDescription(Product product,IMatController parentcontroller) {
+        parentcontroller.setPD(PD);
+        PD.ProductDescriptionItem(product,parentcontroller);
+        parentcontroller.openProductDescriptionLB();
+    }
+
+
+    private void initializeProductInformation() {
         productNameLabel.setText(product.getName());
 
         priceLabel.setText(product.getPrice() + " kr / " + product.getUnitSuffix());
 
         productImageView.setImage(model.getFXImage(product,
-                                                             productImageView.getFitWidth(),
-                                                             productImageView.getFitHeight()));
+                productImageView.getFitWidth(),
+                productImageView.getFitHeight()));
 
 
         if (model.isFavorite(this.product)) {
             favoritedAnchorPane.toFront();
         }
 
-
         if (product.isEcological()) {
             //Image ecoImage = new Image("ecological_icon.png");
             //ecoFriendlyImageView.setImage(ecoImage);
             ecoLabel.setText("Ekologisk");
         }
-    }
 
+    }
     @FXML
-    public void onAddFavoriteEvent(Event event) {
+    public void addFavoriteEvent(Event event) {
         model.addFavorite(product);
         System.out.println("Favorited: " + product);
         favoritedAnchorPane.toFront();
     }
 
     @FXML
-    public void onRemoveFavoriteEvent(Event event) {
+    public void removeFavoriteEvent(Event event) {
         model.removeFavorite(product);
         System.out.println("Unfavorited: " + product);
         unFavoritedAnchorPane.toFront();
     }
 
     @FXML
-    public void onAddClickEvent(Event event) {
+    public void addProductClickEvent(Event event) {
         //TODO Connect to backend to update cart
-        addRemoveProductAnchorPane.toFront();
+
+        ShoppingCart cart = model.getShoppingCart();
+
+        if (shoppingItem.getAmount() == 0) {
+            addRemoveProductAnchorPane.toFront();
+            cart.addItem(shoppingItem);
+        }
+
+        shoppingItem.setAmount(shoppingItem.getAmount() + 1);
+        updateCounterTextField();
+        System.out.println("product: " + shoppingItem.getProduct());
+        System.out.println("Amount: " + shoppingItem.getAmount());
+
     }
 
     @FXML
-    public void onRemoveClickEvent(Event event) {
+    public void removeProductClickEvent(Event event) {
         // TODO Connect to backend to update cart
-        addProductAnchorPane.toFront();
-    }
-    public Product getProduct() {
-        return product;
+        ShoppingCart cart = model.getShoppingCart();
+        shoppingItem.setAmount(shoppingItem.getAmount() - 1);
+
+        if (shoppingItem.getAmount() == 0) {
+            addProductAnchorPane.toFront();
+            cart.removeItem(this.shoppingItem);
+            System.out.println("Cart: " + cart.getItems());
+
+        }
+        updateCounterTextField();
+        System.out.println("product: " + shoppingItem.getProduct());
+        System.out.println("Amount: " + shoppingItem.getAmount());
     }
 
+    public void initializeProductCounterListener() {
+        productCounterTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
 
-    public int getProductCounter() {
-        return productCounter;
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+
+                if(newValue){
+                    //focusgained - do nothing
+                }
+                else{
+                    System.out.println(productCounterTextField.getText());
+                    try {
+                        int intValue = Integer.parseInt(productCounterTextField.getText());
+                        if (intValue < 0) {
+                            updateCounterTextField(); // Revert to old value.
+                        } else {
+                            if (intValue == 0) {
+                                addProductAnchorPane.toFront();
+                                shoppingItem.setAmount(0);
+                                model.getShoppingCart().removeItem(shoppingItem);
+                                System.out.println(model.getShoppingCart().getItems());
+                            } else {
+                                shoppingItem.setAmount(intValue);
+                                updateCounterTextField();
+                                System.out.println(shoppingItem.getAmount());
+                            }
+
+                        }
+
+                    } catch (NumberFormatException error) {
+                        updateCounterTextField(); // Revert to old value
+                    }
+                }
+            }
+        });
+    }
+    private void updateCounterTextField() {
+        productCounterTextField.clear();
+        productCounterTextField.setText( ((int) shoppingItem.getAmount()) + "");
     }
 
-    public void setProductCounter(int productCounter) {
-        this.productCounter = productCounter;
-    }
 }

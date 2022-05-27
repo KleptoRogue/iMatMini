@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
+import se.chalmers.cse.dat216.project.Order;
 
 
 import java.io.IOException;
@@ -44,6 +46,9 @@ public class AccountPage extends AnchorPane implements ChangedOnLogin{
     @FXML
     private TextField postcode;
 
+    @FXML
+    public FlowPane orderHistoryFlowPane;
+
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
 
@@ -69,8 +74,24 @@ public class AccountPage extends AnchorPane implements ChangedOnLogin{
     }
 
     public void openOrderhistorik() {
+        orderHistoryFlowPane.getChildren().clear();
         orderhistorikPane.toFront();
-    }
+        System.out.println("hellooooo");
+        populateFlowPane();
+        }
+
+      private void populateFlowPane() {
+          orderHistoryFlowPane.getChildren().clear();
+        for (Order order : wrapper.getOrders()){
+            orderHistoryFlowPane.getChildren().add(new OrderHistoryItem(order));
+        }
+      }
+
+
+
+
+
+
 
     public  void openFavoriter(){
         favoriterPane.toFront();

@@ -95,105 +95,7 @@
                               <Font size="24.0" />
                            </font>
                            <graphic>
-                              <ImageView pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../resources/btn_keep_shopping.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </Pane>
-               </children>
-            </AnchorPane>
-            <AnchorPane fx:id="confirmPassword" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
-               <children>
-                  <Pane layoutX="7.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="1079.0" style="-fx-background-color: #FBFBF8;">
-                     <children>
-                        <Label layoutX="415.0" layoutY="70.0" prefHeight="25.0" prefWidth="100.0" text="Lösenord">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="415.0" layoutY="160.0" prefHeight="27.0" prefWidth="194.0" text="Bekräfta lösenord">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="password" layoutX="415.0" layoutY="97.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv ditt lösenord här!">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="passwordConfirm" layoutX="415.0" layoutY="183.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv ditt lösenord igen här!">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </TextField>
-                        <Button fx:id="p3NextStep" layoutX="818.0" layoutY="240.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
-                           <graphic>
-                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
-                                 <image>
-                                    <Image url="@../resources/btn_confirm_reg.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                        <Button fx:id="p3GoBack" layoutX="34.0" layoutY="240.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
-                           <graphic>
-                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
-                                 <image>
-                                    <Image url="@../resources/btn_prev_step.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                        <Label fx:id="error" layoutX="795.0" layoutY="92.0" prefHeight="148.0" prefWidth="262.0" wrapText="true">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </Pane>
-                  <Pane layoutX="8.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="1079.0" style="-fx-background-color: #FFFFFF;">
-                     <children>
-                        <Line endX="52.0" fill="#868686" layoutX="386.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
-                        <Line endX="52.0" fill="#868686" layoutX="503.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
-                        <Line endX="52.0" fill="#868686" layoutX="627.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
-                        <Circle fill="#c7c7c7" layoutX="346.0" layoutY="42.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="42.0" layoutX="296.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
-                        <Text layoutX="293.0" layoutY="100.0" stroke="#87e85d" strokeType="OUTSIDE" strokeWidth="0.0" text="Person" textAlignment="CENTER" wrappingWidth="100.0">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Text>
-                        <Circle fill="#c7c7c7" layoutX="466.0" layoutY="42.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="42.0" layoutX="416.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
-                        <Circle fill="#17ee17" layoutX="586.0" layoutY="42.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#17ee17" height="42.0" layoutX="536.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
-                        <Circle fill="#c7c7c7" layoutX="706.0" layoutY="42.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="42.0" layoutX="656.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
-                        <Text layoutX="413.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" textAlignment="CENTER" wrappingWidth="100.0">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="533.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lösenord" textAlignment="CENTER" wrappingWidth="100.0">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="653.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Slutför" textAlignment="CENTER" wrappingWidth="100.0">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Text>
-                        <Button fx:id="p3KeepShop" layoutX="5.0" layoutY="5.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0" prefWidth="140.0" textAlignment="CENTER" wrapText="true">
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                           <graphic>
-                              <ImageView pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="92.0" fitWidth="143.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../resources/btn_keep_shopping.png" />
                                  </image>
@@ -311,7 +213,7 @@
                               <Font size="24.0" />
                            </font>
                            <graphic>
-                              <ImageView pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="89.0" fitWidth="286.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../resources/btn_keep_shopping.png" />
                                  </image>
@@ -415,7 +317,105 @@
                               <Font size="24.0" />
                            </font>
                            <graphic>
-                              <ImageView pickOnBounds="true" preserveRatio="true" styleClass="button">
+                              <ImageView fitHeight="92.0" fitWidth="159.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                                 <image>
+                                    <Image url="@../resources/btn_keep_shopping.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="confirmPassword" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
+               <children>
+                  <Pane layoutX="7.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="1079.0" style="-fx-background-color: #FBFBF8;">
+                     <children>
+                        <Label layoutX="415.0" layoutY="70.0" prefHeight="25.0" prefWidth="100.0" text="Lösenord">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="415.0" layoutY="160.0" prefHeight="27.0" prefWidth="194.0" text="Bekräfta lösenord">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="password" layoutX="415.0" layoutY="97.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv ditt lösenord här!">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="passwordConfirm" layoutX="415.0" layoutY="183.0" prefHeight="42.0" prefWidth="250.0" promptText="Skriv ditt lösenord igen här!">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="p3NextStep" layoutX="818.0" layoutY="240.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
+                           <graphic>
+                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                                 <image>
+                                    <Image url="@../resources/btn_confirm_reg.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="p3GoBack" layoutX="34.0" layoutY="240.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="215.0" style="-fx-background-color: #00000000;">
+                           <graphic>
+                              <ImageView fitHeight="77.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                                 <image>
+                                    <Image url="@../resources/btn_prev_step.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label fx:id="error" layoutX="795.0" layoutY="92.0" prefHeight="148.0" prefWidth="262.0" wrapText="true">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="8.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="1079.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <Line endX="52.0" fill="#868686" layoutX="386.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
+                        <Line endX="52.0" fill="#868686" layoutX="503.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
+                        <Line endX="52.0" fill="#868686" layoutX="627.0" layoutY="42.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
+                        <Circle fill="#c7c7c7" layoutX="346.0" layoutY="42.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="42.0" layoutX="296.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                        <Text layoutX="293.0" layoutY="100.0" stroke="#87e85d" strokeType="OUTSIDE" strokeWidth="0.0" text="Person" textAlignment="CENTER" wrappingWidth="100.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Circle fill="#c7c7c7" layoutX="466.0" layoutY="42.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="42.0" layoutX="416.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                        <Circle fill="#17ee17" layoutX="586.0" layoutY="42.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#17ee17" height="42.0" layoutX="536.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                        <Circle fill="#c7c7c7" layoutX="706.0" layoutY="42.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="42.0" layoutX="656.0" layoutY="72.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
+                        <Text layoutX="413.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" textAlignment="CENTER" wrappingWidth="100.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="533.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lösenord" textAlignment="CENTER" wrappingWidth="100.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="653.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Slutför" textAlignment="CENTER" wrappingWidth="100.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="p3KeepShop" layoutX="5.0" layoutY="5.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="85.0" prefWidth="140.0" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="91.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../resources/btn_keep_shopping.png" />
                                  </image>

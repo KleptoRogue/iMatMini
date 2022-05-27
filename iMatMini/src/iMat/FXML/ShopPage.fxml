@@ -70,7 +70,7 @@
                         </AnchorPane>
                      </children>
                   </StackPane>
-                  <FlowPane prefHeight="200.0" prefWidth="260.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="81.0">
+                  <FlowPane fx:id="categoryListFlowPane" prefHeight="710.0" prefWidth="260.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="81.0">
                      <children>
                         <Pane prefHeight="58.0" prefWidth="260.0" style="-fx-background-color: #EAEAE9;">
                            <children>
@@ -81,7 +81,7 @@
                               </Text>
                            </children>
                         </Pane>
-                        <Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="260.0">
+                        <Accordion maxHeight="600.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="260.0">
                            <panes>
                               <TitledPane minHeight="100.0" prefHeight="341.0" prefWidth="257.0" text="Basvaror">
                                  <content>
@@ -120,7 +120,7 @@
                                     <Font size="27.0" />
                                  </font>
                               </TitledPane>
-                              <TitledPane minHeight="100.0" prefHeight="328.0" prefWidth="260.0" text="Grönsaker">
+                              <TitledPane minHeight="100.0" prefHeight="303.0" prefWidth="260.0" text="Grönsaker">
                                  <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="274.0" prefWidth="258.0">
                                        <children>
