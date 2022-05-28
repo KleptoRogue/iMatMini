@@ -1,5 +1,6 @@
 package iMat;
 
+import java.util.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,13 +15,12 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
+import se.chalmers.cse.dat216.project.ShoppingCart;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
 
 public class ShopPage extends AnchorPane{
 
@@ -80,6 +80,10 @@ public class ShopPage extends AnchorPane{
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
 
+    private Map<Integer, ProductItem> productItemHashMap;
+    private Map<Integer, ShoppingItem> cartShoppingItemHashMap;
+
+
     public ShopPage(IMatController mainController) {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/ShopPage.fxml"));
@@ -94,6 +98,8 @@ public class ShopPage extends AnchorPane{
 
 
         this.mainController = mainController;
+        this.productItemHashMap = initializeProductItemMap();
+        this.cartShoppingItemHashMap = initializeCartShoppingItemMap();
 
         //productItemAnchorPane.onMouseClickedProperty().set(event -> mainController.openProductDescription());
 
@@ -168,10 +174,15 @@ public class ShopPage extends AnchorPane{
     private void updateProductList(FlowPane flowPane, List<Product> products) {
         flowPane.getChildren().clear();
         for (Product product : products) {
-            flowPane.getChildren().add(new ProductItem(product, mainController));
+
+            if (cartShoppingItemHashMap.containsKey(product.getProductId())) {
+                ShoppingItem item = cartShoppingItemHashMap.get(product.getProductId());
+                flowPane.getChildren().add(new ProductItem(item, mainController));
+            } else {
+                flowPane.getChildren().add(productItemHashMap.get(product.getProductId()));
+            }
         }
     }
-
 
 
 
@@ -201,5 +212,24 @@ public class ShopPage extends AnchorPane{
     }
 
 
+    private Map<Integer, ProductItem> initializeProductItemMap() {
+        Map<Integer, ProductItem> hashmap = new HashMap<>();
+        List<Product> products = wrapper.getProducts();
+        for (Product product: products) {
+            hashmap.put(product.getProductId(), new ProductItem(product, mainController));
+        }
+        return hashmap;
+    }
+
+    private Map<Integer, ShoppingItem> initializeCartShoppingItemMap() {
+        Map<Integer, ShoppingItem> hashMap = new HashMap<>();
+        ShoppingCart cart = wrapper.getShoppingCart();
+        List<ShoppingItem> items = cart.getItems();
+
+        for (ShoppingItem item : items ) {
+            hashMap.put(item.getProduct().getProductId(), item);
+        }
+        return  hashMap;
+    }
 
 }

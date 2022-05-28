@@ -16,7 +16,9 @@ import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ProductItem extends AnchorPane {
 
@@ -79,6 +81,15 @@ public class ProductItem extends AnchorPane {
         initializeProductCounterListener();
     }
 
+    public ProductItem(ShoppingItem item, IMatController controller) {
+        initializeFXML();
+        this.product = item.getProduct();
+        this.shoppingItem = item;
+        this.parentcontroller = controller;
+        initializeProductInformation();
+        initializeProductCounterListener();
+    }
+
 
     private void initializeNewShoppingItem(Product product) {
         this.shoppingItem = new ShoppingItem(product);
@@ -125,6 +136,11 @@ public class ProductItem extends AnchorPane {
             //Image ecoImage = new Image("ecological_icon.png");
             //ecoFriendlyImageView.setImage(ecoImage);
             ecoLabel.setText("Ekologisk");
+        }
+
+        if (shoppingItem.getAmount() > 0) {
+            addRemoveProductAnchorPane.toFront();
+            updateCounterTextField();
         }
 
     }
@@ -177,7 +193,7 @@ public class ProductItem extends AnchorPane {
         System.out.println("Amount: " + shoppingItem.getAmount());
     }
 
-    public void initializeProductCounterListener() {
+    private void initializeProductCounterListener() {
         productCounterTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
 
             @Override
@@ -213,6 +229,11 @@ public class ProductItem extends AnchorPane {
             }
         });
     }
+
+    public int getProductID() {
+        return product.getProductId();
+    }
+
     private void updateCounterTextField() {
         productCounterTextField.clear();
         productCounterTextField.setText( ((int) shoppingItem.getAmount()) + "");

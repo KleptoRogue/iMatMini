@@ -1,9 +1,8 @@
 package iMat;
 
 import java.net.URL;
-import java.util.ArrayList;
+import java.util.*;
 import java.time.LocalDate;
-import java.util.ResourceBundle;
 
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -13,7 +12,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.User;
 
 
@@ -22,7 +20,6 @@ public class IMatController implements Initializable {
     private final IMatDataHandlerWrapper model = IMatDataHandlerWrapper.getInstance();
 
     private ArrayList<ChangedOnLogin> changedOnLogin = new ArrayList<>();
-
 
 
     @FXML
@@ -99,7 +96,7 @@ public class IMatController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       // model.reset();
+        // model.reset();
         accountPage = new AccountPage(this); // för checkOutWizard
         shopPage = new ShopPage(this); //favorite
         registerPage = new RegisterPage(this); //favorite
@@ -133,6 +130,5 @@ public class IMatController implements Initializable {
     public AnchorPane getAccountPaneFXML() {  // för checkOutWizard
         return accountPaneFXML;
     }
-
 
 }
