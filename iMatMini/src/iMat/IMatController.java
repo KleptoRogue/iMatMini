@@ -12,7 +12,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.User;
 
 
@@ -21,9 +20,6 @@ public class IMatController implements Initializable {
     private final IMatDataHandlerWrapper model = IMatDataHandlerWrapper.getInstance();
 
     private ArrayList<ChangedOnLogin> changedOnLogin = new ArrayList<>();
-
-    // Hashmap: Key: ProductID. Note product item contains shoppingItem.
-    private final Map<Integer, ProductItem> productItemMap = initializeProductItemMap();
 
 
     @FXML
@@ -100,7 +96,7 @@ public class IMatController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       // model.reset();
+        // model.reset();
         accountPage = new AccountPage(this); // för checkOutWizard
         shopPage = new ShopPage(this); //favorite
         registerPage = new RegisterPage(this); //favorite
@@ -134,19 +130,5 @@ public class IMatController implements Initializable {
     public AnchorPane getAccountPaneFXML() {  // för checkOutWizard
         return accountPaneFXML;
     }
-
-    public Map<Integer, ProductItem> getProductItemMap() {
-        return productItemMap;
-    }
-
-    private Map<Integer, ProductItem> initializeProductItemMap() {
-        Map<Integer, ProductItem> hashmap = new HashMap<>();
-        List<Product> products = model.getProducts();
-        for (Product product: products) {
-            hashmap.put(product.getProductId(), new ProductItem(product, this));
-        }
-        return hashmap;
-    }
-
 
 }
