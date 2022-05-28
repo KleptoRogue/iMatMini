@@ -1,9 +1,8 @@
 package iMat;
 
 import java.net.URL;
-import java.util.ArrayList;
+import java.util.*;
 import java.time.LocalDate;
-import java.util.ResourceBundle;
 
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -23,6 +22,8 @@ public class IMatController implements Initializable {
 
     private ArrayList<ChangedOnLogin> changedOnLogin = new ArrayList<>();
 
+    // Hashmap: Key: ProductID. Note product item contains shoppingItem.
+    private final Map<Integer, ProductItem> productItemMap = initializeProductItemMap();
 
 
     @FXML
@@ -132,6 +133,19 @@ public class IMatController implements Initializable {
 
     public AnchorPane getAccountPaneFXML() {  // för checkOutWizard
         return accountPaneFXML;
+    }
+
+    public Map<Integer, ProductItem> getProductItemMap() {
+        return productItemMap;
+    }
+
+    private Map<Integer, ProductItem> initializeProductItemMap() {
+        Map<Integer, ProductItem> hashmap = new HashMap<>();
+        List<Product> products = model.getProducts();
+        for (Product product: products) {
+            hashmap.put(product.getProductId(), new ProductItem(product, this));
+        }
+        return hashmap;
     }
 
 

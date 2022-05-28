@@ -213,6 +213,11 @@ public class ProductItem extends AnchorPane {
             }
         });
     }
+
+    public int getProductID() {
+        return product.getProductId();
+    }
+
     private void updateCounterTextField() {
         productCounterTextField.clear();
         productCounterTextField.setText( ((int) shoppingItem.getAmount()) + "");

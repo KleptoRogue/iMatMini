@@ -1,5 +1,6 @@
 package iMat;
 
+import java.util.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -18,9 +19,6 @@ import se.chalmers.cse.dat216.project.ProductCategory;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
 
 public class ShopPage extends AnchorPane{
 
@@ -79,6 +77,9 @@ public class ShopPage extends AnchorPane{
 
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
+
+    Map<Integer, ProductItem> productItemHashMap = mainController.getProductItemMap();
+
 
     public ShopPage(IMatController mainController) {
 
@@ -168,10 +169,9 @@ public class ShopPage extends AnchorPane{
     private void updateProductList(FlowPane flowPane, List<Product> products) {
         flowPane.getChildren().clear();
         for (Product product : products) {
-            flowPane.getChildren().add(new ProductItem(product, mainController));
+            flowPane.getChildren().add(productItemHashMap.get(product.getProductId()));
         }
     }
-
 
 
 
