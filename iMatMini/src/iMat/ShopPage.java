@@ -78,7 +78,7 @@ public class ShopPage extends AnchorPane{
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
 
-    Map<Integer, ProductItem> productItemHashMap = mainController.getProductItemMap();
+    Map<Integer, ProductItem> productItemHashMap;
 
 
     public ShopPage(IMatController mainController) {
@@ -95,6 +95,7 @@ public class ShopPage extends AnchorPane{
 
 
         this.mainController = mainController;
+        this.productItemHashMap = mainController.getProductItemMap();
 
         //productItemAnchorPane.onMouseClickedProperty().set(event -> mainController.openProductDescription());
 
