@@ -64,13 +64,12 @@ public class ProductItem extends AnchorPane {
     private AnchorPane favoritedAnchorPane;
 
     @FXML
+    private AnchorPane hideFavoriteIconAnchorPane;
+
+    @FXML
     private TextField productCounterTextField;
 
     ShoppingItem shoppingItem;
-
-
-    // Count products added to cart
-    private int productCounter = 0;
 
     public ProductItem(Product product, IMatController controller) {
         initializeFXML();
@@ -138,9 +137,13 @@ public class ProductItem extends AnchorPane {
                 productImageView.getFitWidth(),
                 productImageView.getFitHeight()));
 
-
-        if (model.isFavorite(this.product)) {
+        
+        if (model.getIsLoggedIn() && model.isFavorite(this.product)) {
             favoritedAnchorPane.toFront();
+        } else if (model.getIsLoggedIn() && !model.isFavorite(this.product)) {
+            unFavoritedAnchorPane.toFront();
+        } else {
+            hideFavoriteIconAnchorPane.toFront();
         }
 
         if (product.isEcological()) {
