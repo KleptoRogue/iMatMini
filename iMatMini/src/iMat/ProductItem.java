@@ -27,7 +27,7 @@ public class ProductItem extends AnchorPane {
     private Product product;
 
     private IMatDataHandlerWrapper model = IMatDataHandlerWrapper.getInstance();
-    ProductDescriptionLightBox PD = new ProductDescriptionLightBox(product, parentcontroller);
+    ProductDescriptionLightBox PD;
 
     @FXML
     private ImageView productImageView;
@@ -78,6 +78,7 @@ public class ProductItem extends AnchorPane {
         initializeNewShoppingItem(product);
         initializeProductInformation();
         initializeProductCounterListener();
+        PD = new ProductDescriptionLightBox(this, controller);
     }
 
     public ProductItem(ShoppingItem item, IMatController controller) {
@@ -87,6 +88,7 @@ public class ProductItem extends AnchorPane {
         this.parentcontroller = controller;
         initializeProductInformation();
         initializeProductCounterListener();
+        PD = new ProductDescriptionLightBox(this, controller);
     }
 
 
@@ -117,13 +119,13 @@ public class ProductItem extends AnchorPane {
             throw new RuntimeException(exception);
         }
 
-        productImageView.onMouseClickedProperty().set(event -> openProductDescription(product,parentcontroller));
+        productImageView.onMouseClickedProperty().set(event -> openProductDescription(this,parentcontroller));
 
     }
 
-    private void openProductDescription(Product product,IMatController parentcontroller) {
+    private void openProductDescription(ProductItem productItem,IMatController parentcontroller) {
         parentcontroller.setPD(PD);
-        PD.ProductDescriptionItem(product,parentcontroller);
+      //  PD.ProductDescriptionItem(productItem ,parentcontroller);
         parentcontroller.openProductDescriptionLB();
     }
 
@@ -140,8 +142,10 @@ public class ProductItem extends AnchorPane {
         
         if (model.getIsLoggedIn() && model.isFavorite(this.product)) {
             favoritedAnchorPane.toFront();
+            PD.toFrontPDFavoritedAnchorPane();
         } else if (model.getIsLoggedIn() && !model.isFavorite(this.product)) {
             unFavoritedAnchorPane.toFront();
+            PD.toFrontPDUnFavoritedAnchorPane();
         } else {
             hideFavoriteIconAnchorPane.toFront();
         }
@@ -163,6 +167,7 @@ public class ProductItem extends AnchorPane {
         model.addFavorite(product);
         System.out.println("Favorited: " + product);
         favoritedAnchorPane.toFront();
+        PD.toFrontPDFavoritedAnchorPane();
     }
 
     @FXML
@@ -170,17 +175,20 @@ public class ProductItem extends AnchorPane {
         model.removeFavorite(product);
         System.out.println("Unfavorited: " + product);
         unFavoritedAnchorPane.toFront();
+        PD.toFrontPDUnFavoritedAnchorPane();
     }
 
     @FXML
     public void addProductClickEvent(Event event) {
         if (shoppingItem.getAmount() == 0) {
             addRemoveProductAnchorPane.toFront();
+            PD.toFrontAddRemoveAnchorPane();
             model.getShoppingCart().addItem(shoppingItem);
         }
 
         shoppingItem.setAmount(shoppingItem.getAmount() + 1);
         updateCounterTextField();
+        PD.updatePDCounterTF();
         System.out.println("product: " + shoppingItem.getProduct());
         System.out.println("Amount: " + shoppingItem.getAmount());
 
@@ -192,9 +200,11 @@ public class ProductItem extends AnchorPane {
 
         if (shoppingItem.getAmount() == 0) {
             addProductAnchorPane.toFront();
+            PD.toFrontAddAnchorPane();
             model.getShoppingCart().removeItem(shoppingItem);
         }
         updateCounterTextField();
+        PD.updatePDCounterTF();
         System.out.println("product: " + shoppingItem.getProduct());
         System.out.println("Amount: " + shoppingItem.getAmount());
     }
@@ -217,12 +227,14 @@ public class ProductItem extends AnchorPane {
                         } else {
                             if (intValue == 0) {
                                 addProductAnchorPane.toFront();
+                                PD.toFrontAddAnchorPane();
                                 shoppingItem.setAmount(0);
                                 model.getShoppingCart().removeItem(shoppingItem);
                                 System.out.println(model.getShoppingCart().getItems());
                             } else {
                                 shoppingItem.setAmount(intValue);
                                 updateCounterTextField();
+                                PD.updatePDCounterTF();
                                 System.out.println(shoppingItem.getAmount());
                             }
 
@@ -240,9 +252,37 @@ public class ProductItem extends AnchorPane {
         return product.getProductId();
     }
 
+    protected Product getProduct() {
+        return product;
+    }
+
+    protected ShoppingItem getShoppingItem() {
+        return shoppingItem;
+    }
+
     private void updateCounterTextField() {
         productCounterTextField.clear();
         productCounterTextField.setText( ((int) shoppingItem.getAmount()) + "");
+    }
+
+    protected void toFrontProductItemFavoritedAnchorPane() {
+        favoritedAnchorPane.toFront();
+    }
+
+    protected void toFrontProductItemUnFavoritedAnchorPane() {
+        unFavoritedAnchorPane.toFront();
+    }
+
+
+    protected void toFrontAddRemoveAnchorPane() {
+        addRemoveProductAnchorPane.toFront();
+    }
+
+    protected void toFrontAddAnchorPane() {
+        addProductAnchorPane.toFront();
+    }
+    protected void updateProductItemCounterTF() {
+        updateCounterTextField();
     }
 
 }
