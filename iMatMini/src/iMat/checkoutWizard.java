@@ -1,5 +1,6 @@
 package iMat;
 
+import com.sun.javafx.collections.MappingChange;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,6 +19,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import org.w3c.dom.css.RGBColor;
 import se.chalmers.cse.dat216.project.Order;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.time.LocalDate;
 
@@ -25,6 +27,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class checkoutWizard extends AnchorPane implements Initializable {
@@ -360,11 +363,18 @@ public class checkoutWizard extends AnchorPane implements Initializable {
 
     public void goToConfirmationStep() {
         changeStepText("Betalning genomförd", 5);
-       popUpPane.toBack();
-       confirmationStep.toFront();
-       wrapper.getOrders().add(wrapper.placeOrder());
+        popUpPane.toBack();
+        confirmationStep.toFront();
+        wrapper.getOrders().add(wrapper.placeOrder());
         changeCircleAndRec(affirmationRectangle, affirmationCircle);
         System.out.println();
+        Map<Integer, ProductItem>  productItemMap = mainController.getProductItemHashMap();
+
+        for (ProductItem item : productItemMap.values()) {
+            ShoppingItem shopItem = item.getShoppingItem();
+            shopItem.setAmount(0);
+            item.toFrontAddAnchorPane();
+        }
 
    }
 
