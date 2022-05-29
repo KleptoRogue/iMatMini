@@ -222,7 +222,8 @@ public class checkoutWizard extends AnchorPane implements Initializable {
            throw new RuntimeException(exception);
        }
 
-       keepShoppingImageView.onMouseReleasedProperty().set(event -> mainController.openShop());
+       keepShoppingImageView.onMouseReleasedProperty().set(event -> {mainController.openShop();
+       if(onConfirmStep){mainController.resetCheckout();}});
        adressNextImageView.onMouseClickedProperty().set(event -> goToDeliveryStep());
        deliveryNextImageView.onMouseClickedProperty().set(event -> goToPaymentStep());
        deliveryBackImageView.onMouseClickedProperty().set(event -> goToAdressStep());
@@ -244,7 +245,7 @@ public class checkoutWizard extends AnchorPane implements Initializable {
        paymentRectangle.onMouseClickedProperty().set(event -> goToPaymentStep());
        lastCheckCircle.onMouseClickedProperty().set(event -> goToCheckStep());
        lastCheckRectangle.onMouseClickedProperty().set(event -> goToCheckStep());
-       seeOrderImageView.onMouseClickedProperty().set(event -> goSeeOrder());
+       seeOrderImageView.onMouseClickedProperty().set(event -> {goSeeOrder(); mainController.resetCheckout();});
 
        controlChangeAdressText.onMouseClickedProperty().set(event -> goToAdressStep());
        controlChangeDeliveryText.onMouseClickedProperty().set(event -> goToDeliveryStep());
@@ -362,7 +363,7 @@ public class checkoutWizard extends AnchorPane implements Initializable {
         changeStepText("Betalning genomförd", 5);
        popUpPane.toBack();
        confirmationStep.toFront();
-       wrapper.getOrders().add(wrapper.placeOrder());
+       wrapper.placeOrder();
         changeCircleAndRec(affirmationRectangle, affirmationCircle);
         System.out.println();
 

@@ -10,6 +10,7 @@ import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.util.List;
 
 public class OrderHistoryItem extends AnchorPane {
 
@@ -53,8 +54,10 @@ public class OrderHistoryItem extends AnchorPane {
        return Math.round(tmp);}
 
     private void populateFlowPane() {
-        for(ShoppingItem item : order.getItems()){
-           orderedItemsFlowPane.getChildren().add(new Text(item.getProduct().toString().split(" - ", 2)[1]
+      List<ShoppingItem> items = order.getItems();
+        for(int i = items.size() -1; i >= 0; i--){
+            ShoppingItem item = items.get(i);
+           orderedItemsFlowPane.getChildren().add(0,new Text(item.getProduct().toString().split(" - ", 2)[1]
                    + ".    " + item.getAmount() + " st.    " + Math.round( item.getTotal()) + " kr."));
         }
     }

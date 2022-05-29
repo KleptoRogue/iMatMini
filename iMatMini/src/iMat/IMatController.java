@@ -201,4 +201,10 @@ public class IMatController implements Initializable {
     public void addToHoverList(Node node) {
      colorOnHoverList.add(node);
     }
+
+    public void resetCheckout() {
+        checkoutWizardPane.getChildren().clear();
+        checkoutWizardPane.getChildren().add(new checkoutWizard(this));
+        onHover();
+    }
 }
