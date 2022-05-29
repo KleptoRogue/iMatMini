@@ -18,8 +18,8 @@
 <fx:root prefHeight="1463.0" prefWidth="1096.0" style="-fx-background-color: #ffffff;" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ScrollPane prefHeight="1096.0" prefWidth="1096.0" AnchorPane.bottomAnchor="701.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1800.0" prefWidth="1134.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1800.0" prefWidth="1134.0">
                <children>
                   <TextField fx:id="searchTextField" prefHeight="39.0" prefWidth="462.0" promptText="Skriv in vara eller kategori du vill söka efter" styleClass="searchBoxLabelIcon" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="30.0">
                      <font>
@@ -30,15 +30,15 @@
                      </padding>
                   </TextField>
                   <Button fx:id="searchButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="55.0" text="SÖK" AnchorPane.leftAnchor="732.0" AnchorPane.rightAnchor="309.0" AnchorPane.topAnchor="36.0" />
-                  <StackPane layoutX="258.0" layoutY="83.0" maxHeight="1160.0" prefHeight="1160.0" prefWidth="825.0">
+                  <AnchorPane fx:id="shopStartPane" layoutX="258.0" layoutY="83.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1160.0" prefWidth="825.0">
                      <children>
-                        <AnchorPane fx:id="shopCategoryPane" prefHeight="1058.0" prefWidth="800.0">
+                        <StackPane prefHeight="94.0" prefWidth="822.0">
                            <children>
-                              <Pane fx:id="categoryHeader" prefHeight="94.0" prefWidth="822.0" style="-fx-background-color: #b2ccb2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <Pane fx:id="categoryHeader" prefHeight="94.0" prefWidth="332.0" style="-fx-background-color: #b2ccb2;">
                                  <children>
-                                    <Pane fx:id="categoryPane" layoutX="250.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="330.0" style="-fx-background-color: #FFFFFF;">
+                                    <Pane fx:id="categoryPane" layoutX="245.0" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="332.0" style="-fx-background-color: #FFFFFF;">
                                        <children>
-                                          <Label fx:id="categoryLabel" alignment="CENTER" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="300.0" text="Kategori" textAlignment="CENTER">
+                                          <Label fx:id="categoryLabel" alignment="CENTER" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="333.0" text="Kategori" textAlignment="CENTER">
                                              <font>
                                                 <Font size="36.0" />
                                              </font>
@@ -47,15 +47,9 @@
                                     </Pane>
                                  </children>
                               </Pane>
-                              <FlowPane fx:id="categoryFlowPane" layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1061.0" prefWidth="825.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="96.0" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane fx:id="shopStartPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1161.0" prefWidth="823.0">
-                           <children>
-                              <Pane prefHeight="94.0" prefWidth="822.0" style="-fx-background-color: #b2ccb2;" />
-                              <Pane fx:id="startPane" layoutX="250.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="332.0" style="-fx-background-color: #FFFFFF;" AnchorPane.topAnchor="10.0">
+                              <Pane fx:id="startPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="332.0" style="-fx-background-color: #FFFFFF;">
                                  <children>
-                                    <Label fx:id="startLabel" alignment="CENTER" layoutX="2.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="326.0" text="Populära varor" textAlignment="CENTER">
+                                    <Label fx:id="startLabel" alignment="CENTER" layoutX="2.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="326.0" text="Varor" textAlignment="CENTER">
                                        <font>
                                           <Font size="36.0" />
                                        </font>
@@ -65,12 +59,32 @@
                                     <Insets bottom="30.0" left="30.0" right="500.0" top="500.0" />
                                  </padding>
                               </Pane>
-                              <FlowPane fx:id="productFlowPane" layoutX="-3.0" layoutY="96.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="951.0" prefWidth="825.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="96.0" />
                            </children>
-                        </AnchorPane>
+                        </StackPane>
+                        <FlowPane fx:id="productFlowPane" layoutX="-3.0" layoutY="96.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="512.0" prefWidth="826.0" AnchorPane.leftAnchor="0.0" />
+                        <Pane fx:id="sidepane" layoutY="574.0" prefHeight="94.0" prefWidth="752.0" style="-fx-background-color: #b2ccb2;">
+                           <children>
+                              <Label fx:id="currentPageLabel" layoutX="291.0" prefHeight="53.0" prefWidth="184.0" text="Sida: 1/10">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="next" layoutX="689.0" layoutY="22.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="35.0" style="-fx-background-color: #1A676355;" text="&gt;">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="prev" alignment="BOTTOM_LEFT" layoutX="14.0" layoutY="22.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="35.0" style="-fx-background-color: #1A676355;" text="&lt;">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Button>
+                              <FlowPane fx:id="buttonsPane" alignment="CENTER" layoutX="195.0" layoutY="50.0" prefHeight="47.0" prefWidth="376.0" style="-fx-hgap: 10;" />
+                           </children>
+                        </Pane>
                      </children>
-                  </StackPane>
-                  <FlowPane fx:id="categoryListFlowPane" prefHeight="710.0" prefWidth="260.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="81.0">
+                  </AnchorPane>
+                  <FlowPane prefHeight="200.0" prefWidth="260.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="81.0">
                      <children>
                         <Pane prefHeight="58.0" prefWidth="260.0" style="-fx-background-color: #EAEAE9;">
                            <children>
@@ -81,7 +95,7 @@
                               </Text>
                            </children>
                         </Pane>
-                        <Accordion maxHeight="600.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="260.0">
+                        <Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="260.0">
                            <panes>
                               <TitledPane minHeight="100.0" prefHeight="341.0" prefWidth="257.0" text="Basvaror">
                                  <content>
@@ -120,7 +134,7 @@
                                     <Font size="27.0" />
                                  </font>
                               </TitledPane>
-                              <TitledPane minHeight="100.0" prefHeight="303.0" prefWidth="260.0" text="Grönsaker">
+                              <TitledPane minHeight="100.0" prefHeight="328.0" prefWidth="260.0" text="Grönsaker">
                                  <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="274.0" prefWidth="258.0">
                                        <children>
@@ -199,7 +213,7 @@
                      </children>
                   </FlowPane>
                </children></AnchorPane>
-        </content>
+         </content>
       </ScrollPane>
    </children>
 </fx:root>

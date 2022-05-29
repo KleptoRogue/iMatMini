@@ -63,9 +63,17 @@ public class IMatController implements Initializable {
     public void openProductDescriptionLB(){ productDescriptionLightBoxFXML.toFront();}
     public void closeProductDescriptionLB(){ productDescriptionLightBoxFXML.toBack();}
 
-    public void openShop() { startPaneFXML.toFront();}
+    public void openShop() {
+        startPaneFXML.toFront();
+
+        startPaneFXML.getChildren().clear();
+        startPaneFXML.getChildren().add(new ShopPage(this));
+    }
     public void openCart() {
         cartPaneFXML.toFront();
+
+        cartPaneFXML.getChildren().clear();
+        cartPaneFXML.getChildren().add(new CartPage(this));
     }
     public void openAccount() { accountPaneFXML.toFront();}
 
@@ -73,10 +81,6 @@ public class IMatController implements Initializable {
         loginLightBoxFXML.toBack();
         registerPaneFXML.toFront();
 
-        //Nollställ registreringsprocessen när man öppnar den
-        //Detta för att förhindra desyncs ifall följande:
-        //register user --> account page --> logout --> homepage --> register --> accountpage
-        //användaren når då accountpage utloggad
         registerPaneFXML.getChildren().clear();
         registerPaneFXML.getChildren().add(new RegisterPage(this));
     }
