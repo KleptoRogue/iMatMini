@@ -112,6 +112,8 @@ public class ShopPage extends AnchorPane{
 
 
         this.mainController = mainController;
+        mainController.addToHoverList(next);
+        mainController.addToHoverList(prev);
         this.productItemHashMap = mainController.getProductItemHashMap();
 
         //productItemAnchorPane.onMouseClickedProperty().set(event -> mainController.openProductDescription());
@@ -251,6 +253,7 @@ public class ShopPage extends AnchorPane{
         buttonsPane.getChildren().clear();
         for (int i = 1; i < pages+1; i++){
             Button newButton = new Button(""+i);
+            mainController.addToHoverList(newButton);
             buttonsPane.getChildren().add(newButton);
             int finalI = i;
             newButton.onMouseClickedProperty().set((event -> goToPage(products, finalI)));

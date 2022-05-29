@@ -13,7 +13,7 @@
    <children>
       <Button fx:id="keepShop" layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="84.0" prefWidth="138.0" style="-fx-background-color: #00000000;">
          <graphic>
-            <ImageView fitHeight="97.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+            <ImageView fx:id="keepShoppingImage" fitHeight="97.0" fitWidth="142.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
                <image>
                   <Image url="@../resources/btn_keep_shopping.png" />
                </image>

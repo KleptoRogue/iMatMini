@@ -93,6 +93,8 @@ public class ProductDescriptionLightBox extends AnchorPane {
         productDescriptionTransparentPane.onMouseClickedProperty().set(event -> mainController.closeProductDescriptionLB());
         mainPane.onMouseClickedProperty().set(event -> mainController.mouseTrap(event));
         this.mainController = controller;
+
+
         this.product = productItem.getProduct();
         this.productItem = productItem;
         this.shoppingItem = productItem.getShoppingItem();
@@ -262,6 +264,22 @@ public class ProductDescriptionLightBox extends AnchorPane {
 
     protected void toFrontHideFavoriteIcon() {
         hideFavoriteIconAP.toFront();
+    }
+
+    public Button getLäggTillButton() {
+        return LäggTillButton;
+    }
+
+    public ImageView getCloseImageView() {
+        return closeImageView;
+    }
+
+    public AnchorPane getAddRemoveProductAnchorPane() {
+        return addRemoveProductAnchorPane;
+    }
+
+    public AnchorPane getAddProductAnchorPane() {
+        return addProductAnchorPane;
     }
 }
 

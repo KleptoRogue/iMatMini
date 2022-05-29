@@ -7,6 +7,9 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -16,11 +19,10 @@ import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.net.URL;
+import java.util.*;
 
-public class ProductItem extends AnchorPane {
+public class ProductItem extends AnchorPane  {
 
 
     private IMatController parentcontroller;
@@ -69,12 +71,18 @@ public class ProductItem extends AnchorPane {
     @FXML
     private TextField productCounterTextField;
 
+    @FXML
+    Button addButton;
+    @FXML ImageView addImage;
+    @FXML ImageView removeImage;
+
     ShoppingItem shoppingItem;
 
     public ProductItem(Product product, IMatController controller) {
         initializeFXML();
         this.product = product;
         this.parentcontroller = controller;
+
         initializeNewShoppingItem(product);
         PD = new ProductDescriptionLightBox(this, controller);
         initializeProductInformation();
@@ -295,5 +303,6 @@ public class ProductItem extends AnchorPane {
             PD.toFrontHideFavoriteIcon();
         }
     }
+
 
 }

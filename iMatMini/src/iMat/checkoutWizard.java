@@ -250,6 +250,29 @@ public class checkoutWizard extends AnchorPane implements Initializable {
        controlChangeDeliveryText.onMouseClickedProperty().set(event -> goToDeliveryStep());
        controlChangePaymentText.onMouseClickedProperty().set(event -> goToPaymentStep());
        this.mainController = mainController;
+       mainController.addToHoverList(adressCircle);
+       mainController.addToHoverList(adressRectangle);
+       mainController.addToHoverList(deliveryCircle);
+       mainController.addToHoverList(deliveryRectangle);
+       mainController.addToHoverList(paymentCircle);
+       mainController.addToHoverList(paymentRectangle);
+       mainController.addToHoverList(lastCheckCircle);
+       mainController.addToHoverList(lastCheckRectangle);
+       mainController.addToHoverList(controlChangeAdressText);
+       mainController.addToHoverList(controlChangeDeliveryText);
+       mainController.addToHoverList(controlChangePaymentText);
+       mainController.addToHoverList(adressNextImageView);
+       mainController.addToHoverList(deliveryBackImageView);
+       mainController.addToHoverList(deliveryNextImageView);
+       mainController.addToHoverList(controlBackImageView);
+       mainController.addToHoverList(controlFinishOrderImageView);
+       mainController.addToHoverList(paymentNextImageView);
+       mainController.addToHoverList(paymentBackImageView);
+       mainController.addToHoverList(popUpConfirmationButton);
+       mainController.addToHoverList(popUpExitButton);
+       mainController.addToHoverList(popUpCancelButton);
+       mainController.addToHoverList(keepShoppingImageView);
+       mainController.addToHoverList(seeOrderImageView);
 
        addressTextField.textProperty().addListener((observable, oldValue, newValue) ->
        {setTextField(controlAdressText, "Adress", newValue);});
@@ -372,6 +395,8 @@ public class checkoutWizard extends AnchorPane implements Initializable {
         invoiceRadioButton.setToggleGroup(paymentMethodToggleGroup);
         setLastRectangleAndCircle(deliveryRectangle, deliveryCircle);
         goToAdressStep();
+
+
 
 
 

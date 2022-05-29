@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="productItemAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css" type="AnchorPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="productItemAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css" type="AnchorPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
          <children>
@@ -68,12 +68,12 @@
                         <Font size="13.0" />
                      </font>
                   </TextField>
-                  <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" onMouseClicked="#removeProductClickEvent" pickOnBounds="true" styleClass="button">
+                  <ImageView fx:id="removeImage" fitHeight="34.0" fitWidth="34.0" layoutX="17.0" layoutY="8.0" onMouseClicked="#removeProductClickEvent" pickOnBounds="true" styleClass="button">
                      <image>
                         <Image url="@../resources/MinusButton.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="129.0" layoutY="8.0" onMouseClicked="#addProductClickEvent" pickOnBounds="true">
+                  <ImageView fx:id="addImage" fitHeight="34.0" fitWidth="34.0" layoutX="129.0" layoutY="8.0" onMouseClicked="#addProductClickEvent" pickOnBounds="true">
                      <image>
                         <Image url="@../resources/PlusButton.png" />
                      </image>
@@ -82,7 +82,7 @@
             </AnchorPane>
             <AnchorPane fx:id="addProductAnchorPane" prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
                <children>
-                  <Button layoutX="13.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#addProductClickEvent" prefHeight="34.0" prefWidth="148.0" styleClass="addButton" text="Lägg till" />
+                  <Button fx:id="addButton" layoutX="13.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#addProductClickEvent" prefHeight="34.0" prefWidth="148.0" styleClass="addButton" text="Lägg till" />
                </children>
             </AnchorPane>
          </children>

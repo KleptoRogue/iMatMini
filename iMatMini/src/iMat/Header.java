@@ -35,6 +35,7 @@ public class Header extends AnchorPane implements ChangedOnLogin {
         }
         this.mainController = mainController;
 
+
         mainController.addChangedOnLogin(this);
         homeAnchorPane.onMouseClickedProperty().set(event -> mainController.openShop());
         cartAnchorPane.onMouseClickedProperty().set(event -> mainController.openCart());

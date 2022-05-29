@@ -7,6 +7,8 @@ import java.time.LocalDate;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.effect.ColorAdjust;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -39,7 +41,7 @@ public class IMatController implements Initializable {
     @FXML
     private AnchorPane productDescriptionLightBoxFXML;
 
-    private Map<Integer, ProductItem> productItemHashMap = initializeProductItemMap();
+    private Map<Integer, ProductItem> productItemHashMap= initializeProductItemMap();
 
     @FXML AnchorPane checkoutWizardPane;// added for checkoutWizard
 
@@ -64,7 +66,12 @@ public class IMatController implements Initializable {
         productDescriptionLightBoxFXML.getChildren().add(pd);
     }
 
-    public void openProductDescriptionLB(){ productDescriptionLightBoxFXML.toFront();}
+    public void openProductDescriptionLB(){
+        productDescriptionLightBoxFXML.toFront();
+
+    }
+
+
     public void closeProductDescriptionLB(){ productDescriptionLightBoxFXML.toBack();}
 
     public void openShop() {
@@ -72,6 +79,7 @@ public class IMatController implements Initializable {
 
         startPaneFXML.getChildren().clear();
         startPaneFXML.getChildren().add(new ShopPage(this));
+        onHover();
     }
     public void openCart() {
         cartPaneFXML.toFront();
@@ -87,6 +95,7 @@ public class IMatController implements Initializable {
 
         registerPaneFXML.getChildren().clear();
         registerPaneFXML.getChildren().add(new RegisterPage(this));
+        onHover();
     }
 
     public void openCheckout() {  // added for checkoutWizard
@@ -100,6 +109,19 @@ public class IMatController implements Initializable {
 
     }
 
+    List<Node>colorOnHoverList = new ArrayList<>();
+    public ColorAdjust brighterColor = new ColorAdjust(0, 0, 0.3,0);
+    public ColorAdjust normalColor = new ColorAdjust(0, 0, 0,0);
+    public ColorAdjust darkerColor = new ColorAdjust(0, 0, -0.3,0);
+
+    void onHover(){
+        for (Node node : colorOnHoverList){
+            node.onMouseEnteredProperty().set(event -> node.setEffect(brighterColor));
+            node.onMouseExitedProperty().set(event -> node.setEffect(normalColor));
+            node.onMousePressedProperty().set(event -> node.setEffect(darkerColor));
+            node.onMouseReleasedProperty().set(event -> node.setEffect(normalColor));
+        }
+    }
 
 
     @Override
@@ -117,6 +139,9 @@ public class IMatController implements Initializable {
         registerPaneFXML.getChildren().add(registerPage);
         accountPaneFXML.getChildren().add(accountPage);
         addChangedOnLogin(favoritePane);
+
+        onHover();
+
     }
 
 
@@ -173,4 +198,7 @@ public class IMatController implements Initializable {
         return  hashMap;
     }
 
+    public void addToHoverList(Node node) {
+     colorOnHoverList.add(node);
+    }
 }

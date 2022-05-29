@@ -89,6 +89,19 @@ public class RegisterPage extends AnchorPane {
         }
 
         this.mainController = mainController;
+        mainController.addToHoverList(p1KeepShop);
+        mainController.addToHoverList(p1NextStep);
+        mainController.addToHoverList(p2GoBack);
+        mainController.addToHoverList(p2KeepShop);
+        mainController.addToHoverList(p2NextStep);
+        mainController.addToHoverList(p3GoBack);
+        mainController.addToHoverList(p3KeepShop);
+        mainController.addToHoverList(p3NextStep);
+        mainController.addToHoverList(p4KeepShop);
+
+
+
+
 
         p1KeepShop.addEventHandler(ActionEvent.ACTION, event -> mainController.openShop());
         p1NextStep.addEventHandler(ActionEvent.ACTION, event -> openWizard2());

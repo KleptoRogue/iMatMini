@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.User;
 
@@ -29,6 +30,9 @@ public class LoginLightBox extends AnchorPane {
     @FXML
     private AnchorPane loginPane;
 
+    @FXML
+    ImageView closeImageView;
+
 
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
@@ -45,6 +49,13 @@ public class LoginLightBox extends AnchorPane {
         }
 
         this.mainController = mainController;
+        mainController.addToHoverList(register);
+        mainController.addToHoverList(mail);
+        mainController.addToHoverList(password);
+        mainController.addToHoverList(login);
+        closeImageView.onMouseClickedProperty().set(event -> mainController.closeLoginLightBox());
+        mainController.addToHoverList(closeImageView);
+
         register.addEventHandler(ActionEvent.ACTION, event -> mainController.openRegister());
         login.addEventHandler(ActionEvent.ACTION, event -> login());
         transparentPane.onMouseClickedProperty().set(event -> mainController.closeLoginLightBox());
