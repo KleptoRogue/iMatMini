@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #ffffff;" stylesheets="@../css/cart.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root prefHeight="539.0" prefWidth="1095.0" style="-fx-background-color: #ffffff;" stylesheets="@../css/cart.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1095.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -76,7 +76,7 @@
                                                 </ImageView>
                                                 <ScrollPane prefHeight="606.0" prefWidth="531.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
                                                     <content>
-                                                        <FlowPane prefHeight="1500.0" prefWidth="905.0" />
+                                                        <FlowPane fx:id="accountFavoritesFlowPane" prefHeight="1500.0" prefWidth="905.0" />
                                                     </content>
                                                 </ScrollPane>
                                             </children>

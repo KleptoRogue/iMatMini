@@ -8,9 +8,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.Order;
+import se.chalmers.cse.dat216.project.Product;
 
 
 import java.io.IOException;
+import java.util.List;
 
 public class AccountPage extends AnchorPane implements ChangedOnLogin{
 
@@ -48,6 +50,9 @@ public class AccountPage extends AnchorPane implements ChangedOnLogin{
 
     @FXML
     public FlowPane orderHistoryFlowPane;
+
+    @FXML
+    public FlowPane accountFavoritesFlowPane;
 
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
@@ -89,12 +94,13 @@ public class AccountPage extends AnchorPane implements ChangedOnLogin{
 
 
 
-
-
-
-
     public  void openFavoriter(){
         favoriterPane.toFront();
+        accountFavoritesFlowPane.getChildren().clear();
+        List<Product> favorites = wrapper.getFavorites();
+        for (Product favorite : favorites) {
+            accountFavoritesFlowPane.getChildren().add(new ProductItem(favorite, mainController));
+        }
     }
 
     public void openAnvändaruppgifter() {
