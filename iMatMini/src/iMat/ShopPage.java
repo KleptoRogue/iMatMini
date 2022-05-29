@@ -96,7 +96,6 @@ public class ShopPage extends AnchorPane{
     private IMatController mainController;
 
     private Map<Integer, ProductItem> productItemHashMap;
-    private Map<Integer, ShoppingItem> cartShoppingItemHashMap;
 
 
     public ShopPage(IMatController mainController) {
@@ -113,6 +112,7 @@ public class ShopPage extends AnchorPane{
 
 
         this.mainController = mainController;
+        this.productItemHashMap = mainController.getProductItemHashMap();
 
         //productItemAnchorPane.onMouseClickedProperty().set(event -> mainController.openProductDescription());
 
@@ -216,19 +216,19 @@ public class ShopPage extends AnchorPane{
         //only one page
         if(calcPages(products.size(), N_GROCERIES_PER_PAGE) <= 1) {
             for (int i = 0; i < products.size(); i++) {
-                flowPane.getChildren().add(new ProductItem(products.get(i), mainController));
+                addProductItemToFlowPane(flowPane, products.get(i));
             }
             //many pages
         } else{
             //last page
             if(products.size() < N_GROCERIES_PER_PAGE*page) {
                 for (int i = N_GROCERIES_PER_PAGE * (page - 1); i < products.size(); i++) {
-                    flowPane.getChildren().add(new ProductItem(products.get(i), mainController));
+                    addProductItemToFlowPane(flowPane, products.get(i));
                 }
                 //more pages
             } else{
                 for (int i = N_GROCERIES_PER_PAGE * (page - 1); i < N_GROCERIES_PER_PAGE * page; i++) {
-                    flowPane.getChildren().add(new ProductItem(products.get(i), mainController));
+                    addProductItemToFlowPane(flowPane, products.get(i));
                 }
             }
         }
@@ -241,6 +241,10 @@ public class ShopPage extends AnchorPane{
         else prev.setDisable(false);
         if(page >= calcPages(products.size(), N_GROCERIES_PER_PAGE)) next.setDisable(true);
         else next.setDisable(false);
+    }
+
+    private void addProductItemToFlowPane(FlowPane flowPane, Product product) {
+        flowPane.getChildren().add(productItemHashMap.get(product.getProductId()));
     }
 
     private void generateButtons(List<Product> products, int pages){

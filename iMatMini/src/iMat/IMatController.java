@@ -12,6 +12,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingCart;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 import se.chalmers.cse.dat216.project.User;
 
 
@@ -36,6 +38,8 @@ public class IMatController implements Initializable {
     private AnchorPane loginLightBoxFXML;
     @FXML
     private AnchorPane productDescriptionLightBoxFXML;
+
+    private Map<Integer, ProductItem> productItemHashMap = initializeProductItemMap();
 
     @FXML AnchorPane checkoutWizardPane;// added for checkoutWizard
 
@@ -100,7 +104,7 @@ public class IMatController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // model.reset();
+         //model.reset();
         accountPage = new AccountPage(this); // för checkOutWizard
         shopPage = new ShopPage(this); //favorite
         registerPage = new RegisterPage(this); //favorite
@@ -133,6 +137,40 @@ public class IMatController implements Initializable {
 
     public AnchorPane getAccountPaneFXML() {  // för checkOutWizard
         return accountPaneFXML;
+    }
+
+
+
+    public Map<Integer,ProductItem> getProductItemHashMap() {
+        return productItemHashMap;
+    }
+
+
+
+    private Map<Integer, ProductItem> initializeProductItemMap() {
+        Map<Integer, ProductItem> hashmap = new HashMap<>();
+        Map<Integer, ShoppingItem> cartShoppingItemMap = initializeCartShoppingItemMap();
+        List<Product> products = model.getProducts();
+        for (Product product: products) {
+            if (cartShoppingItemMap.containsKey(product.getProductId())) {
+                ShoppingItem item = cartShoppingItemMap.get(product.getProductId());
+                hashmap.put(product.getProductId(), new ProductItem( item, this));
+            } else {
+                hashmap.put(product.getProductId(), new ProductItem(product, this));
+            }
+        }
+        return hashmap;
+    }
+
+    private Map<Integer, ShoppingItem> initializeCartShoppingItemMap() {
+        Map<Integer, ShoppingItem> hashMap = new HashMap<>();
+        ShoppingCart cart = model.getShoppingCart();
+        List<ShoppingItem> items = cart.getItems();
+
+        for (ShoppingItem item : items ) {
+            hashMap.put(item.getProduct().getProductId(), item);
+        }
+        return  hashMap;
     }
 
 }

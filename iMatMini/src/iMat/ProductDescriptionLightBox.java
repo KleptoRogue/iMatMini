@@ -129,6 +129,10 @@ public class ProductDescriptionLightBox extends AnchorPane {
             productItem.toFrontHideFavoriteIcon();
         }
 
+        if (shoppingItem.getAmount() > 0) {
+            addRemoveProductAnchorPane.toFront();
+            updateCounterTextField();
+        }
         initializeProductCounterListener();
     }
 
