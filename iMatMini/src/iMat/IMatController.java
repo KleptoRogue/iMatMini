@@ -153,7 +153,6 @@ public class IMatController implements Initializable {
         List<Product> products = model.getProducts();
         for (Product product: products) {
             if (cartShoppingItemMap.containsKey(product.getProductId())) {
-                System.out.println("YES");
                 ShoppingItem item = cartShoppingItemMap.get(product.getProductId());
                 hashmap.put(product.getProductId(), new ProductItem( item, this));
             } else {
