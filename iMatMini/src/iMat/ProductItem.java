@@ -76,9 +76,9 @@ public class ProductItem extends AnchorPane {
         this.product = product;
         this.parentcontroller = controller;
         initializeNewShoppingItem(product);
+        PD = new ProductDescriptionLightBox(this, controller);
         initializeProductInformation();
         initializeProductCounterListener();
-        PD = new ProductDescriptionLightBox(this, controller);
     }
 
     public ProductItem(ShoppingItem item, IMatController controller) {
@@ -86,9 +86,10 @@ public class ProductItem extends AnchorPane {
         this.product = item.getProduct();
         this.shoppingItem = item;
         this.parentcontroller = controller;
+        PD = new ProductDescriptionLightBox(this, controller);
+
         initializeProductInformation();
         initializeProductCounterListener();
-        PD = new ProductDescriptionLightBox(this, controller);
     }
 
 
@@ -148,6 +149,7 @@ public class ProductItem extends AnchorPane {
             PD.toFrontPDUnFavoritedAnchorPane();
         } else {
             hideFavoriteIconAnchorPane.toFront();
+            PD.toFrontHideFavoriteIcon();
         }
 
         if (product.isEcological()) {
@@ -283,6 +285,10 @@ public class ProductItem extends AnchorPane {
     }
     protected void updateProductItemCounterTF() {
         updateCounterTextField();
+    }
+
+    protected void toFrontHideFavoriteIcon() {
+        hideFavoriteIconAnchorPane.toFront();
     }
 
 }

@@ -49,13 +49,16 @@ public class ProductDescriptionLightBox extends AnchorPane {
     @FXML private AnchorPane addRemoveProductAnchorPane;
     @FXML private AnchorPane addProductAnchorPane;
 
+    @FXML
+    private AnchorPane hideFavoriteIconAP;
+
 
     private ProductItem productItem;
     private Product product;
 
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
-    private ProductItem ProductItemController;
+
     ShoppingItem shoppingItem;
 
 
@@ -112,6 +115,18 @@ public class ProductDescriptionLightBox extends AnchorPane {
             //Image ecoImage = new Image("ecological_icon.png");
             //ecoFriendlyImageView.setImage(ecoImage);
             ecoLabel.setText("Ekologisk");
+        }
+
+
+        if (wrapper.getIsLoggedIn() && wrapper.isFavorite(this.product)) {
+            favoritedAnchorPane.toFront();
+            productItem.toFrontProductItemFavoritedAnchorPane();
+        } else if (wrapper.getIsLoggedIn() && !wrapper.isFavorite(this.product)) {
+            unFavoritedAnchorPane.toFront();
+            productItem.toFrontProductItemUnFavoritedAnchorPane();
+        } else {
+            hideFavoriteIconAP.toFront();
+            productItem.toFrontHideFavoriteIcon();
         }
 
         initializeProductCounterListener();
@@ -239,6 +254,10 @@ public class ProductDescriptionLightBox extends AnchorPane {
     }
     protected void updatePDCounterTF() {
         updateCounterTextField();
+    }
+
+    protected void toFrontHideFavoriteIcon() {
+        hideFavoriteIconAP.toFront();
     }
 }
 
