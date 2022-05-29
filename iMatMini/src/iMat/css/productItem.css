@@ -10,6 +10,18 @@
     -fx-text-fill: #05804f;
 }
 
+
+.text-big-title {
+    -fx-font-size: 36px;
+    -fx-font-family: "Avenir Book";
+    -fx-font-weight: bold;
+}
+
+.text-price-description {
+    -fx-font-size: 25px;
+    -fx-font-family: "Avenir Book";
+}
+
 .text-product-title {
     -fx-font-size: 15px;
     -fx-font-family: "Avenir Book";
@@ -54,6 +66,12 @@
     -fx-border-color: #1A6763;
     -fx-border-width: 3px;
 
+}
+
+
+.product-tab-description-text {
+    -fx-font-size: 22px;
+    -fx-font-family: "Avenir Book";
 }
 
 .buttons:
