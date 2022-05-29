@@ -50,7 +50,9 @@ public class ProductDescriptionLightBox extends AnchorPane {
     @FXML private AnchorPane addProductAnchorPane;
 
 
+    private ProductItem productItem;
     private Product product;
+
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
     private ProductItem ProductItemController;
@@ -73,17 +75,27 @@ public class ProductDescriptionLightBox extends AnchorPane {
         produktbeskrivningAnchor.toFront();
     }
 
-    private void initializeNewShoppingItem(Product product) {
-        this.shoppingItem = new ShoppingItem(product);
-        this.shoppingItem.setAmount(0);
-    }
-    public void ProductDescriptionItem(Product product, IMatController controller) {
+    public ProductDescriptionLightBox(ProductItem productItem, IMatController controller) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/ProductDescription.fxml"));
+        fxmlLoader.setRoot(this);
+        fxmlLoader.setController(this);
+
+        try {
+            fxmlLoader.load();
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
+
+        closeImageView.onMouseClickedProperty().set(event -> onClick(event));
+        productDescriptionTransparentPane.onMouseClickedProperty().set(event -> mainController.closeProductDescriptionLB());
+        mainPane.onMouseClickedProperty().set(event -> mainController.mouseTrap(event));
         this.mainController = controller;
-        this.product = product;
+        this.product = productItem.getProduct();
+        this.productItem = productItem;
+        this.shoppingItem = productItem.getShoppingItem();
 
         titleLabel.setText(product.getName());
 
-        System.out.println(titleLabel + "TEST");
 
         priceLabel.setText(product.getPrice() + " kr / " + product.getUnitSuffix());
 
@@ -101,14 +113,16 @@ public class ProductDescriptionLightBox extends AnchorPane {
             //ecoFriendlyImageView.setImage(ecoImage);
             ecoLabel.setText("Ekologisk");
         }
-        initializeNewShoppingItem(product);
+
         initializeProductCounterListener();
     }
+
     @FXML
     public void addFavoriteEvent(Event event) {
         wrapper.addFavorite(product);
         System.out.println("Favorited: " + product);
         favoritedAnchorPane.toFront();
+        productItem.toFrontProductItemFavoritedAnchorPane();
     }
 
     @FXML
@@ -116,22 +130,24 @@ public class ProductDescriptionLightBox extends AnchorPane {
         wrapper.removeFavorite(product);
         System.out.println("Unfavorited: " + product);
         unFavoritedAnchorPane.toFront();
+        productItem.toFrontProductItemUnFavoritedAnchorPane();
     }
 
 
     @FXML
     public void addProductClickEvent(Event event) {
-        //TODO Connect to backend to update cart
-
         ShoppingCart cart = wrapper.getShoppingCart();
 
         if (shoppingItem.getAmount() == 0) {
             addRemoveProductAnchorPane.toFront();
+            productItem.toFrontAddRemoveAnchorPane();
             cart.addItem(shoppingItem);
         }
 
         shoppingItem.setAmount(shoppingItem.getAmount() + 1);
         updateCounterTextField();
+        productItem.updateProductItemCounterTF();
+
         System.out.println("product: " + shoppingItem.getProduct());
         System.out.println("Amount: " + shoppingItem.getAmount());
 
@@ -145,11 +161,13 @@ public class ProductDescriptionLightBox extends AnchorPane {
 
         if (shoppingItem.getAmount() == 0) {
             addProductAnchorPane.toFront();
+            productItem.toFrontAddAnchorPane();
             cart.removeItem(this.shoppingItem);
             System.out.println("Cart: " + cart.getItems());
 
         }
         updateCounterTextField();
+        productItem.updateProductItemCounterTF();
         System.out.println("product: " + shoppingItem.getProduct());
         System.out.println("Amount: " + shoppingItem.getAmount());
     }
@@ -159,24 +177,7 @@ public class ProductDescriptionLightBox extends AnchorPane {
         productCounterTextField.setText( ((int) shoppingItem.getAmount()) + "");
     }
 
-    public ProductDescriptionLightBox(Product product, IMatController controller) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/ProductDescription.fxml"));
-        fxmlLoader.setRoot(this);
-        fxmlLoader.setController(this);
 
-        try {
-            fxmlLoader.load();
-        } catch (IOException exception) {
-            throw new RuntimeException(exception);
-        }
-
-        closeImageView.onMouseClickedProperty().set(event -> onClick(event));
-        productDescriptionTransparentPane.onMouseClickedProperty().set(event -> mainController.closeProductDescriptionLB());
-        mainPane.onMouseClickedProperty().set(event -> mainController.mouseTrap(event));
-
-
-
-    }
     @FXML
     void onClick(Event event) {
     mainController.closeProductDescriptionLB();
@@ -199,12 +200,14 @@ public class ProductDescriptionLightBox extends AnchorPane {
                         } else {
                             if (intValue == 0) {
                                 addProductAnchorPane.toFront();
+                                productItem.toFrontAddAnchorPane();
                                 shoppingItem.setAmount(0);
                                 wrapper.getShoppingCart().removeItem(shoppingItem);
                                 System.out.println(wrapper.getShoppingCart().getItems());
                             } else {
                                 shoppingItem.setAmount(intValue);
                                 updateCounterTextField();
+                                productItem.updateProductItemCounterTF();
                                 System.out.println(shoppingItem.getAmount());
                             }
 
@@ -216,6 +219,26 @@ public class ProductDescriptionLightBox extends AnchorPane {
                 }
             }
         });
+    }
+
+    protected void toFrontPDFavoritedAnchorPane() {
+        favoritedAnchorPane.toFront();
+    }
+
+    protected void toFrontPDUnFavoritedAnchorPane() {
+        unFavoritedAnchorPane.toFront();
+    }
+
+
+    protected void toFrontAddRemoveAnchorPane() {
+        addRemoveProductAnchorPane.toFront();
+    }
+
+    protected void toFrontAddAnchorPane() {
+        addProductAnchorPane.toFront();
+    }
+    protected void updatePDCounterTF() {
+        updateCounterTextField();
     }
 }
 
