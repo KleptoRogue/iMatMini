@@ -12,6 +12,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 
 
 import java.io.IOException;
+import java.util.Map;
 
 public class CartPage extends AnchorPane {
 //
@@ -56,7 +57,8 @@ public class CartPage extends AnchorPane {
 
     private void setGroceries(){
         for(ShoppingItem grocery : wrapper.getShoppingCart().getItems()){
-            productsPane.getChildren().add(new ProductItem(grocery.getProduct(), mainController));
+            Map<Integer, ProductItem> productMap = mainController.getProductItemHashMap();
+            productsPane.getChildren().add(productMap.get(grocery.getProduct().getProductId()));
         }
 
         xVaror.setText(wrapper.getShoppingCart().getItems().size()+ " st") ;

@@ -13,6 +13,7 @@ import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 public class AccountPage extends AnchorPane implements ChangedOnLogin{
 
@@ -54,8 +55,11 @@ public class AccountPage extends AnchorPane implements ChangedOnLogin{
     @FXML
     public FlowPane accountFavoritesFlowPane;
 
+
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
+
+    private Map<Integer, ProductItem> productItemHashMap;
 
     public AccountPage(IMatController mainController) {
 
@@ -69,6 +73,7 @@ public class AccountPage extends AnchorPane implements ChangedOnLogin{
             throw new RuntimeException(exception);
         }
         this.mainController = mainController;
+        this.productItemHashMap = mainController.getProductItemHashMap();
 
         mainController.addChangedOnLogin(this);
         orderhistorik.addEventHandler(ActionEvent.ACTION, event -> openOrderhistorik());
@@ -98,8 +103,10 @@ public class AccountPage extends AnchorPane implements ChangedOnLogin{
         favoriterPane.toFront();
         accountFavoritesFlowPane.getChildren().clear();
         List<Product> favorites = wrapper.getFavorites();
+        Map<Integer, ProductItem> productItemHashMap = mainController.getProductItemHashMap();
+
         for (Product favorite : favorites) {
-            accountFavoritesFlowPane.getChildren().add(new ProductItem(favorite, mainController));
+            accountFavoritesFlowPane.getChildren().add(productItemHashMap.get(favorite.getProductId()));
         }
     }
 
@@ -111,6 +118,7 @@ public class AccountPage extends AnchorPane implements ChangedOnLogin{
     private void loggaUt() {
         wrapper.setIsLoogedIn(false);
         mainController.updateLogin();
+        updateProductItems();
         //open home page
     }
 
@@ -123,6 +131,12 @@ public class AccountPage extends AnchorPane implements ChangedOnLogin{
         password.setText(wrapper.getUser().getPassword());
         address.setText(wrapper.getCustomer().getAddress());
         postcode.setText(wrapper.getCustomer().getPostCode());
+        updateProductItems();
+    }
 
+    private void updateProductItems() {
+        for (ProductItem item : productItemHashMap.values()) {
+            item.updateProducts();
+        }
     }
 }
