@@ -107,7 +107,7 @@ public class IMatController implements Initializable {
         favoritePane = new FavoritePane(shopPage);  // favorite
         startPaneFXML.getChildren().add(shopPage);
         checkoutWizardPane.getChildren().add(new checkoutWizard(this));
-
+//
         headerPaneFXML.getChildren().add(new Header(this));
         cartPaneFXML.getChildren().add(new CartPage(this));
         registerPaneFXML.getChildren().add(registerPage);

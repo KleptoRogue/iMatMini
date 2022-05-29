@@ -34,8 +34,8 @@ public class FavoritePane extends Pane implements ChangedOnLogin{
 
     @Override
     public void updateOnLogin() {
-        if (!added){shopPage.categoryListFlowPane.getChildren().add(1, this);
-        added = false;}
+       if (!added){shopPage.categoryListFlowPane.getChildren().add(1, this);
+      added = false;}
 
 
 

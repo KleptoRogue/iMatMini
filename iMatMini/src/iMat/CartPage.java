@@ -14,7 +14,7 @@ import se.chalmers.cse.dat216.project.ShoppingItem;
 import java.io.IOException;
 
 public class CartPage extends AnchorPane {
-
+//
     @FXML
     private Button keepShop;
     @FXML
