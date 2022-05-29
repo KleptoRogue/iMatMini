@@ -85,8 +85,17 @@ public class CartPage extends AnchorPane {
             productsPane.getChildren().add(productMap.get(grocery.getProduct().getProductId()));
         }
 
-        xVaror.setText(wrapper.getShoppingCart().getItems().size()+ " st") ;
+        xVaror.setText(getSumOfProductsInCart()+ " st") ;
         xPris.setText(wrapper.getShoppingCart().getTotal()+ " kr") ;
+    }
+
+    private int getSumOfProductsInCart() {
+        int sumOfItems = 0;
+        List<ShoppingItem> shoppingItems = wrapper.getShoppingCart().getItems();
+        for (ShoppingItem item : shoppingItems) {
+            sumOfItems += item.getAmount();
+        }
+        return sumOfItems;
     }
 
     private void removeAllGroceries(){
