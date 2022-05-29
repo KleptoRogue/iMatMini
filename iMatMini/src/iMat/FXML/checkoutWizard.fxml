@@ -707,6 +707,7 @@
                             <children>
                                 <Line endX="52.0" fill="#868686" layoutX="341.0" layoutY="62.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
                                 <Line endX="52.0" fill="#868686" layoutX="458.0" layoutY="62.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
+                        <Line endX="52.0" fill="#868686" layoutX="699.0" layoutY="61.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
                                 <Line endX="52.0" fill="#868686" layoutX="582.0" layoutY="62.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
                                 <Circle fx:id="adressCircle" fill="#17ee17" layoutX="301.0" layoutY="62.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
                                 <Rectangle fx:id="adressRectangle" arcHeight="5.0" arcWidth="5.0" fill="#17ee17" height="52.0" layoutX="255.0" layoutY="92.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
@@ -736,7 +737,6 @@
                                         <Font size="18.0" />
                                     </font>
                                 </Text>
-                        <Line endX="52.0" fill="#868686" layoutX="699.0" layoutY="61.0" startX="-12.0" stroke="#c7c7c7" strokeWidth="10.0" />
                         <Circle fx:id="affirmationCircle" fill="#c7c7c7" layoutX="782.0" layoutY="61.0" radius="28.0" stroke="BLACK" strokeType="INSIDE" />
                         <Rectangle fx:id="affirmationRectangle" arcHeight="5.0" arcWidth="5.0" fill="#c7c7c7" height="49.0" layoutX="732.0" layoutY="92.0" stroke="BLACK" strokeType="INSIDE" width="100.0" />
                         <Text disable="true" layoutX="731.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bekräftelse" textAlignment="CENTER" wrappingWidth="100.0">

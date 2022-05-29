@@ -227,7 +227,7 @@ public class checkoutWizard extends AnchorPane implements Initializable {
        deliveryNextImageView.onMouseClickedProperty().set(event -> goToPaymentStep());
        deliveryBackImageView.onMouseClickedProperty().set(event -> goToAdressStep());
        paymentNextImageView.onMouseClickedProperty().set(event -> goToCheckStep());
-       paymentBackImageView.onMouseClickedProperty().set(event -> goToCheckStep());
+       paymentBackImageView.onMouseClickedProperty().set(event -> goToDeliveryStep());
        controlFinishOrderImageView.onMouseClickedProperty().set(event -> openPopUp());
        controlBackImageView.onMouseClickedProperty().set(event -> goToPaymentStep());
 
