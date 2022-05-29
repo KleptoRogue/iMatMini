@@ -16,7 +16,9 @@ import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ProductItem extends AnchorPane {
 
@@ -79,10 +81,30 @@ public class ProductItem extends AnchorPane {
         initializeProductCounterListener();
     }
 
+    public ProductItem(ShoppingItem item, IMatController controller) {
+        initializeFXML();
+        this.product = item.getProduct();
+        this.shoppingItem = item;
+        this.parentcontroller = controller;
+        initializeProductInformation();
+        initializeProductCounterListener();
+    }
+
 
     private void initializeNewShoppingItem(Product product) {
+        int amount = 0;
+        for (int i = 0; i < model.getShoppingCart().getItems().size(); i++){
+            if(model.getShoppingCart().getItems().get(i).getProduct().getName().equals(this.product.getName()))
+                amount = (int) model.getShoppingCart().getItems().get(i).getAmount();
+        }
+
         this.shoppingItem = new ShoppingItem(product);
-        this.shoppingItem.setAmount(0);
+        this.shoppingItem.setAmount(amount);
+
+        if (this.shoppingItem.getAmount() > 0){
+            addRemoveProductAnchorPane.toFront();
+            updateCounterTextField();
+        }
     }
     private void initializeFXML() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML/ProductItem.fxml"));
@@ -127,6 +149,11 @@ public class ProductItem extends AnchorPane {
             ecoLabel.setText("Ekologisk");
         }
 
+        if (shoppingItem.getAmount() > 0) {
+            addRemoveProductAnchorPane.toFront();
+            updateCounterTextField();
+        }
+
     }
     @FXML
     public void addFavoriteEvent(Event event) {
@@ -144,13 +171,9 @@ public class ProductItem extends AnchorPane {
 
     @FXML
     public void addProductClickEvent(Event event) {
-        //TODO Connect to backend to update cart
-
-        ShoppingCart cart = model.getShoppingCart();
-
         if (shoppingItem.getAmount() == 0) {
             addRemoveProductAnchorPane.toFront();
-            cart.addItem(shoppingItem);
+            model.getShoppingCart().addItem(shoppingItem);
         }
 
         shoppingItem.setAmount(shoppingItem.getAmount() + 1);
@@ -162,22 +185,18 @@ public class ProductItem extends AnchorPane {
 
     @FXML
     public void removeProductClickEvent(Event event) {
-        // TODO Connect to backend to update cart
-        ShoppingCart cart = model.getShoppingCart();
         shoppingItem.setAmount(shoppingItem.getAmount() - 1);
 
         if (shoppingItem.getAmount() == 0) {
             addProductAnchorPane.toFront();
-            cart.removeItem(this.shoppingItem);
-            System.out.println("Cart: " + cart.getItems());
-
+            model.getShoppingCart().removeItem(shoppingItem);
         }
         updateCounterTextField();
         System.out.println("product: " + shoppingItem.getProduct());
         System.out.println("Amount: " + shoppingItem.getAmount());
     }
 
-    public void initializeProductCounterListener() {
+    private void initializeProductCounterListener() {
         productCounterTextField.focusedProperty().addListener(new ChangeListener<Boolean>() {
 
             @Override
@@ -213,6 +232,11 @@ public class ProductItem extends AnchorPane {
             }
         });
     }
+
+    public int getProductID() {
+        return product.getProductId();
+    }
+
     private void updateCounterTextField() {
         productCounterTextField.clear();
         productCounterTextField.setText( ((int) shoppingItem.getAmount()) + "");

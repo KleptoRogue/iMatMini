@@ -1,9 +1,8 @@
 package iMat;
 
 import java.net.URL;
-import java.util.ArrayList;
+import java.util.*;
 import java.time.LocalDate;
-import java.util.ResourceBundle;
 
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -13,7 +12,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.User;
 
 
@@ -22,7 +20,6 @@ public class IMatController implements Initializable {
     private final IMatDataHandlerWrapper model = IMatDataHandlerWrapper.getInstance();
 
     private ArrayList<ChangedOnLogin> changedOnLogin = new ArrayList<>();
-
 
 
     @FXML
@@ -66,9 +63,17 @@ public class IMatController implements Initializable {
     public void openProductDescriptionLB(){ productDescriptionLightBoxFXML.toFront();}
     public void closeProductDescriptionLB(){ productDescriptionLightBoxFXML.toBack();}
 
-    public void openShop() { startPaneFXML.toFront();}
+    public void openShop() {
+        startPaneFXML.toFront();
+
+        startPaneFXML.getChildren().clear();
+        startPaneFXML.getChildren().add(new ShopPage(this));
+    }
     public void openCart() {
         cartPaneFXML.toFront();
+
+        cartPaneFXML.getChildren().clear();
+        cartPaneFXML.getChildren().add(new CartPage(this));
     }
     public void openAccount() { accountPaneFXML.toFront();}
 
@@ -76,10 +81,6 @@ public class IMatController implements Initializable {
         loginLightBoxFXML.toBack();
         registerPaneFXML.toFront();
 
-        //Nollställ registreringsprocessen när man öppnar den
-        //Detta för att förhindra desyncs ifall följande:
-        //register user --> account page --> logout --> homepage --> register --> accountpage
-        //användaren når då accountpage utloggad
         registerPaneFXML.getChildren().clear();
         registerPaneFXML.getChildren().add(new RegisterPage(this));
     }
@@ -99,7 +100,7 @@ public class IMatController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       // model.reset();
+        // model.reset();
         accountPage = new AccountPage(this); // för checkOutWizard
         shopPage = new ShopPage(this); //favorite
         registerPage = new RegisterPage(this); //favorite
@@ -133,6 +134,5 @@ public class IMatController implements Initializable {
     public AnchorPane getAccountPaneFXML() {  // för checkOutWizard
         return accountPaneFXML;
     }
-
 
 }

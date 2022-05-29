@@ -4,17 +4,33 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
+import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 
 import java.io.IOException;
 
 public class CartPage extends AnchorPane {
 
-    @FXML Button goToCheckoutButton; // added for checkoutWizard
-
     @FXML
     private Button keepShop;
+    @FXML
+    private Button emptyCart;
+    @FXML
+    private Button favoriteCart;
+
+
+    @FXML
+    private FlowPane productsPane;
+
+    @FXML
+    private Label xVaror;
+
+    @FXML
+    private Label xPris;
 
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
@@ -32,7 +48,36 @@ public class CartPage extends AnchorPane {
         }
         this.mainController = mainController;
         keepShop.addEventHandler(ActionEvent.ACTION, event -> mainController.openShop());
-        goToCheckoutButton.addEventHandler(ActionEvent.ACTION, event -> mainController.openCheckout()); // added for checkoutWizard
+        emptyCart.addEventHandler(ActionEvent.ACTION, event -> removeAllGroceries());
+        favoriteCart.addEventHandler(ActionEvent.ACTION, event -> favoriteAllGroceries());
+
+        setGroceries();
     }
+
+    private void setGroceries(){
+        for(ShoppingItem grocery : wrapper.getShoppingCart().getItems()){
+            productsPane.getChildren().add(new ProductItem(grocery.getProduct(), mainController));
+        }
+
+        xVaror.setText(wrapper.getShoppingCart().getItems().size()+ " st") ;
+        xPris.setText(wrapper.getShoppingCart().getTotal()+ " kr") ;
+    }
+
+    private void removeAllGroceries(){
+        wrapper.getShoppingCart().clear();
+        productsPane.getChildren().clear();
+        xVaror.setText(wrapper.getShoppingCart().getItems().size()+ " st") ;
+        xPris.setText(wrapper.getShoppingCart().getTotal()+ " kr") ;
+    }
+
+    private void favoriteAllGroceries(){
+        for(ShoppingItem shoppingItem : wrapper.getShoppingCart().getItems()){
+            wrapper.addFavorite(shoppingItem.getProduct());
+        }
+        productsPane.getChildren().clear();
+        setGroceries();
+    }
+
+
 
 }

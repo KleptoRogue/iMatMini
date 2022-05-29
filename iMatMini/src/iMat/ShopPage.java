@@ -1,5 +1,6 @@
 package iMat;
 
+import java.util.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,13 +15,12 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ProductCategory;
+import se.chalmers.cse.dat216.project.ShoppingCart;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
 
 public class ShopPage extends AnchorPane{
 
@@ -76,9 +76,28 @@ public class ShopPage extends AnchorPane{
     @FXML
     FlowPane categoryListFlowPane;
 
+    @FXML
+    private Pane buttonsPane;
+    @FXML
+    private Pane sidepane;
+
+    @FXML
+    private Label currentPageLabel;
+    @FXML
+    private Button next;
+    @FXML
+    private Button prev;
+
+    private int page = 1;
+    private final int N_GROCERIES_PER_PAGE = 16;
+
 
     private IMatDataHandlerWrapper wrapper = IMatDataHandlerWrapper.getInstance();
     private IMatController mainController;
+
+    private Map<Integer, ProductItem> productItemHashMap;
+    private Map<Integer, ShoppingItem> cartShoppingItemHashMap;
+
 
     public ShopPage(IMatController mainController) {
 
@@ -123,34 +142,34 @@ public class ShopPage extends AnchorPane{
 
        searchButton.onMouseClickedProperty().set((event -> doSearch()));
 
-
-
-       searchButton.onMouseClickedProperty().set((event -> doSearch()));
+        next.onMouseClickedProperty().set((event -> goNextPage(wrapper.getProducts())));
+        prev.onMouseClickedProperty().set((event -> goPrevPage(wrapper.getProducts())));
+        generateButtons(wrapper.getProducts(), 10);
     }
 
     public void resizeCategoryLabel(String string){
         int fontSize = 18; //px
         int size = string.length() + 12;
         int sizeComp = size + 9;
-        double tmp =size*fontSize;   
+        double tmp =size*fontSize;
             categoryPane.setPrefWidth(tmp);
         System.out.println((categoryHeader.getWidth()/2) - (tmp/2));
          double paneX = ((categoryHeader.getWidth()/2) - (tmp/2));
-          
+
            categoryLabel.setPrefWidth(size*fontSize);
            //categoryLabel.setTranslateX(-tmp/2);
            categoryPane.setLayoutX(paneX);
-           
-            }
+    }
 
 
     private void doSearch(){
+        page = 1;
+
         String search = searchTextField.getText();
         resizeCategoryLabel(search);
         //ProductCategory searchEnum = ProductCategory.valueOf(search);
         List<Product> categorySearch= new ArrayList<>();//wrapper.getProducts(searchEnum);
         List <Product> productSearch = wrapper.findProducts(search);
-
 
         for(Product p : productSearch) {
             if(!categorySearch.contains(p)) {
@@ -158,48 +177,114 @@ public class ShopPage extends AnchorPane{
             }}
 
         productFlowPane.getChildren().clear();
-        updateProductList(categoryFlowPane, categorySearch);
+        updateProductList(productFlowPane, categorySearch);
         categoryLabel.setText("Sökning: " + search);
-        shopCategoryPane.toFront();
+        categoryHeader.toFront();
+        generateButtons(categorySearch, calcPages(categorySearch.size(), N_GROCERIES_PER_PAGE));
+    }
 
+    private int getSidePaneY(int nProducts){
+        if (nProducts > N_GROCERIES_PER_PAGE) nProducts = N_GROCERIES_PER_PAGE;
+        int itemsPerRow = 4;
+        int rows = nProducts/itemsPerRow;
+        int sidePaneH = 100;
+        int itemH = 290;
+        if(nProducts % itemsPerRow ==  0) return sidePaneH+itemH*(rows);
+        else return sidePaneH+itemH*(rows+1);
+    }
 
+    private int calcPages(int a, int b){
+        if(a == 0){
+            return 0;
+        }
+        else {
+            int times = 0;
+            int copyB = b;
+            while(b < a){
+                b+=copyB;
+                times++;
+            }
+            return times+1;
+        }
     }
 
     private void updateProductList(FlowPane flowPane, List<Product> products) {
         flowPane.getChildren().clear();
-        for (Product product : products) {
-            flowPane.getChildren().add(new ProductItem(product, mainController));
+
+        sidepane.setLayoutY(getSidePaneY(products.size()));
+
+            //only one page
+        if(calcPages(products.size(), N_GROCERIES_PER_PAGE) <= 1) {
+            for (int i = 0; i < products.size(); i++) {
+                flowPane.getChildren().add(new ProductItem(products.get(i), mainController));
+            }
+            //many pages
+        } else{
+                //last page
+            if(products.size() < N_GROCERIES_PER_PAGE*page) {
+                for (int i = N_GROCERIES_PER_PAGE * (page - 1); i < products.size(); i++) {
+                    flowPane.getChildren().add(new ProductItem(products.get(i), mainController));
+                }
+                //more pages
+            } else{
+                for (int i = N_GROCERIES_PER_PAGE * (page - 1); i < N_GROCERIES_PER_PAGE * page; i++) {
+                    flowPane.getChildren().add(new ProductItem(products.get(i), mainController));
+                }
+            }
+        }
+
+        next.onMouseClickedProperty().set((event -> goNextPage(products)));
+        prev.onMouseClickedProperty().set((event -> goPrevPage(products)));
+        currentPageLabel.setText("Sida: "+page+"/"+calcPages(products.size(), N_GROCERIES_PER_PAGE));
+    }
+
+    private void generateButtons(List<Product> products, int pages){
+        buttonsPane.getChildren().clear();
+        for (int i = 1; i < pages+1; i++){
+            Button newButton = new Button(""+i);
+            buttonsPane.getChildren().add(newButton);
+            int finalI = i;
+            newButton.onMouseClickedProperty().set((event -> goToPage(products, finalI)));
+            newButton.getStylesheets().add(getClass().getResource("css/shoppage.css").toExternalForm());
         }
     }
 
-
-
-
-
-
-    public void openCategory(String name, ProductCategory productCategory) {
-        productFlowPane.getChildren().clear();
-        updateProductList(categoryFlowPane, wrapper.getProducts(productCategory));
-        categoryLabel.setText(name);
-        shopCategoryPane.toFront();
+    private void goToPage(List<Product> products, int p){
+        page = p;
+        updateProductList(productFlowPane, products);
     }
 
+    private void goNextPage(List<Product> products){
+        page++;
+        updateProductList(productFlowPane, products);
+    }
+
+    private void goPrevPage(List<Product> products){
+        page--;
+        updateProductList(productFlowPane, products);
+    }
+
+    public void openCategory(String name, ProductCategory productCategory) {
+        page = 1;
+        productFlowPane.getChildren().clear();
+        updateProductList(productFlowPane, wrapper.getProducts(productCategory));
+        categoryLabel.setText(name);
+        categoryHeader.toFront();
+        generateButtons(wrapper.getProducts(productCategory), calcPages(wrapper.getProducts(productCategory).size(), N_GROCERIES_PER_PAGE));
+    }
 
 
     public void openSweets() {
         productFlowPane.getChildren().clear();
-        updateProductList(categoryFlowPane, wrapper.getProducts(ProductCategory.SWEET));
+        updateProductList(productFlowPane, wrapper.getProducts(ProductCategory.SWEET));
         categoryLabel.setText("Sötsaker");
-        shopCategoryPane.toFront();
+        categoryHeader.toFront();
     }
 
     public void openFavorites() {
         productFlowPane.getChildren().clear();
-        updateProductList(categoryFlowPane, wrapper.getFavorites());
+        updateProductList(productFlowPane, wrapper.getFavorites());
         categoryLabel.setText("Favoriter");
-        shopCategoryPane.toFront();
+        categoryHeader.toFront();
     }
-
-
-
 }
