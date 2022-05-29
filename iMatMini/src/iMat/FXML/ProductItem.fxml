@@ -10,12 +10,13 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="productItemAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css" type="AnchorPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="productItemAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="290.0" prefWidth="188.0" stylesheets="@../css/productItem.css" type="AnchorPane" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="10.0" layoutY="8.0" prefHeight="130.0" prefWidth="167.0">
          <children>
             <StackPane prefHeight="37.0" prefWidth="34.0">
                <children>
+                  <AnchorPane fx:id="hideFavoriteIconAnchorPane" onMouseClicked="#removeFavoriteEvent" prefHeight="200.0" prefWidth="200.0" styleClass="whiteBackGround" />
                   <AnchorPane fx:id="favoritedAnchorPane" onMouseClicked="#removeFavoriteEvent" prefHeight="200.0" prefWidth="200.0">
                      <children>
                         <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
