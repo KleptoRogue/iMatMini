@@ -50,12 +50,12 @@ public class OrderHistoryItem extends AnchorPane {
        for(ShoppingItem item : order.getItems()){
            tmp += item.getTotal();
        }
-       return tmp;}
+       return Math.round(tmp);}
 
     private void populateFlowPane() {
         for(ShoppingItem item : order.getItems()){
            orderedItemsFlowPane.getChildren().add(new Text(item.getProduct().toString().split(" - ", 2)[1]
-                   + ".    " + item.getAmount() + " st.    " + item.getTotal() + " kr."));
+                   + ".    " + item.getAmount() + " st.    " + Math.round( item.getTotal()) + " kr."));
         }
     }
 

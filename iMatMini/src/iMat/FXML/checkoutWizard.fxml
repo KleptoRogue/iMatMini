@@ -238,39 +238,6 @@
                               </Pane>
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="confirmationStep" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
-                           <children>
-                              <Pane layoutX="4.0" layoutY="275.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="1087.0" style="-fx-background-color: #FBFBF8;" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="275.0">
-                                 <children>
-                                    <ImageView fx:id="seeOrderImageView" fitHeight="67.0" fitWidth="289.0" layoutX="231.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
-                                       <image>
-                                          <Image url="@../resources/Se_beställning.png" />
-                                       </image>
-                                    </ImageView>
-                                    <ImageView fitHeight="67.0" fitWidth="325.0" layoutX="532.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
-                                       <image>
-                                          <Image url="@../resources/Ladda_ner_kvitto.png" />
-                                       </image>
-                                    </ImageView>
-                                    <Text layoutX="449.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ditt köp har genomförts" wrappingWidth="205.93716430664062">
-                                       <font>
-                                          <Font size="30.0" />
-                                       </font>
-                                    </Text>
-                                    <ImageView fitHeight="131.0" fitWidth="175.0" layoutX="458.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../resources/checkmark.png" />
-                                       </image>
-                                    </ImageView>
-                                    <Text layoutX="338.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ett kvitto har skickats till din mail-adress" wrappingWidth="392.6394604510383">
-                                       <font>
-                                          <Font size="21.0" />
-                                       </font>
-                                    </Text>
-                                 </children>
-                              </Pane>
-                           </children>
-                        </AnchorPane>
                         <AnchorPane fx:id="paymentStep" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
                            <children>
                               <Pane layoutX="3.0" layoutY="277.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="1088.0" style="-fx-background-color: #FBFBF8;" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="277.0">
@@ -690,6 +657,39 @@
                                     </Pane>
                                 </children>
                             </AnchorPane>
+                        <AnchorPane fx:id="confirmationStep" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1095.0" style="-fx-background-color: #1A6763aa;">
+                           <children>
+                              <Pane layoutX="4.0" layoutY="275.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="1087.0" style="-fx-background-color: #FBFBF8;" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="275.0">
+                                 <children>
+                                    <ImageView fx:id="seeOrderImageView" fitHeight="67.0" fitWidth="289.0" layoutX="231.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                                       <image>
+                                          <Image url="@../resources/btn_go_to_account.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="67.0" fitWidth="325.0" layoutX="532.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true" styleClass="button">
+                                       <image>
+                                          <Image url="@../resources/Ladda_ner_kvitto.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="449.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ditt köp har genomförts" wrappingWidth="205.93716430664062">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Text>
+                                    <ImageView fitHeight="131.0" fitWidth="175.0" layoutX="458.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/checkmark.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text layoutX="338.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ett kvitto har skickats till din mail-adress" wrappingWidth="392.6394604510383">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
                         </children>
                     </StackPane>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff80" height="55.0" stroke="WHITE" strokeType="INSIDE" width="1091.0" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="302.0" />

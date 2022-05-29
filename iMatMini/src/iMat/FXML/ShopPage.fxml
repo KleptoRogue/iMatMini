@@ -19,7 +19,7 @@
    <children>
       <ScrollPane prefHeight="1096.0" prefWidth="1096.0" AnchorPane.bottomAnchor="701.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1800.0" prefWidth="1134.0">
+            <AnchorPane fx:id="ff" minHeight="0.0" minWidth="0.0" prefHeight="1800.0" prefWidth="1134.0">
                <children>
                   <TextField fx:id="searchTextField" prefHeight="39.0" prefWidth="462.0" promptText="Skriv in vara eller kategori du vill söka efter" styleClass="searchBoxLabelIcon" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="30.0">
                      <font>
@@ -84,7 +84,7 @@
                         </Pane>
                      </children>
                   </AnchorPane>
-                  <FlowPane prefHeight="200.0" prefWidth="260.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="81.0">
+                  <FlowPane fx:id="categoryListFlowPane" prefHeight="200.0" prefWidth="260.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="81.0">
                      <children>
                         <Pane prefHeight="58.0" prefWidth="260.0" style="-fx-background-color: #EAEAE9;">
                            <children>

@@ -126,9 +126,10 @@ public class RegisterPage extends AnchorPane {
         if(isValid()){
             createUser();
             createCustomer();
+            confirmReg.toFront();
             wrapper.setIsLoogedIn(true);
             mainController.updateLogin();
-            confirmReg.toFront();
+
         } else{
             error.setText(generateErrorMessage());
         }

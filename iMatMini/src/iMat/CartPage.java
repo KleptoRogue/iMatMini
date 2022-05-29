@@ -21,7 +21,7 @@ public class CartPage extends AnchorPane {
     private Button emptyCart;
     @FXML
     private Button favoriteCart;
-
+    @FXML Button goToCheckoutButton;
 
     @FXML
     private FlowPane productsPane;
@@ -50,7 +50,7 @@ public class CartPage extends AnchorPane {
         keepShop.addEventHandler(ActionEvent.ACTION, event -> mainController.openShop());
         emptyCart.addEventHandler(ActionEvent.ACTION, event -> removeAllGroceries());
         favoriteCart.addEventHandler(ActionEvent.ACTION, event -> favoriteAllGroceries());
-
+        goToCheckoutButton.addEventHandler(ActionEvent.ACTION, event -> mainController.openCheckout());
         setGroceries();
     }
 
