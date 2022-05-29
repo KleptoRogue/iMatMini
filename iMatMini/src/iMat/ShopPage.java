@@ -116,31 +116,31 @@ public class ShopPage extends AnchorPane{
 
         //productItemAnchorPane.onMouseClickedProperty().set(event -> mainController.openProductDescription());
 
-       sweetsPane.onMouseClickedProperty().set(event -> openCategory("Sötsaker", ProductCategory.SWEET));
-       breadButton.onMouseClickedProperty().set(event -> openCategory("Bröd", ProductCategory.BREAD));
-       beanButton.onMouseClickedProperty().set(event -> openCategory("Bönor", ProductCategory.POD));
-       berryButton.onMouseClickedProperty().set(event -> openCategory("Bär", ProductCategory.BERRY));
-       citrusButton.onMouseClickedProperty().set(event -> openCategory("Citrusfrukter", ProductCategory.CITRUS_FRUIT));
-       hotDrinkButton.onMouseClickedProperty().set(event -> openCategory("Varma Drycker", ProductCategory.HOT_DRINKS));
-       coldDrinkButton.onMouseClickedProperty().set(event -> openCategory("Kalla Drycker", ProductCategory.COLD_DRINKS));
-       exoticFruitButton.onMouseClickedProperty().set(event -> openCategory("Exotiska frukter", ProductCategory.EXOTIC_FRUIT));
-       fishButton.onMouseClickedProperty().set(event -> openCategory("Fisk", ProductCategory.FISH));
-       vegFruitButton.onMouseClickedProperty().set(event -> openCategory("Grönsaksfrukter", ProductCategory.VEGETABLE_FRUIT));
-       cabbageButton.onMouseClickedProperty().set(event -> openCategory("Kål", ProductCategory.CABBAGE));
-       meatButton.onMouseClickedProperty().set(event -> openCategory("Nötkött", ProductCategory.MEAT));
-       dairyButton.onMouseClickedProperty().set(event -> openCategory("Mejeri", ProductCategory.DAIRIES));
-       melonButton.onMouseClickedProperty().set(event -> openCategory("Melon", ProductCategory.MELONS));
-       flourSugarSaltButton.onMouseClickedProperty().set(event -> openCategory("Mjöl, socker och salt", ProductCategory.FLOUR_SUGAR_SALT));
-       nutsAndSeedsButton.onMouseClickedProperty().set(event -> openCategory("Nötter och frön", ProductCategory.NUTS_AND_SEEDS));
-       pastaButton.onMouseClickedProperty().set(event -> openCategory("Pasta", ProductCategory.PASTA));
-       potatoAndRiceButton.onMouseClickedProperty().set(event -> openCategory("Potatis och ris", ProductCategory.POTATO_RICE));
-       rootVegButton.onMouseClickedProperty().set(event -> openCategory("Rotfrukter", ProductCategory.ROOT_VEGETABLE));
-       fruitButton.onMouseClickedProperty().set(event -> openCategory("Övrig frukt", ProductCategory.FRUIT));
-       sweetButton.onMouseClickedProperty().set(event -> openCategory("Sötsaker", ProductCategory.SWEET));
-       herbButton.onMouseClickedProperty().set(event -> openCategory("Örter", ProductCategory.HERB));
-       updateProductList(productFlowPane, wrapper.getProducts());
+        sweetsPane.onMouseClickedProperty().set(event -> openCategory("Sötsaker", ProductCategory.SWEET));
+        breadButton.onMouseClickedProperty().set(event -> openCategory("Bröd", ProductCategory.BREAD));
+        beanButton.onMouseClickedProperty().set(event -> openCategory("Bönor", ProductCategory.POD));
+        berryButton.onMouseClickedProperty().set(event -> openCategory("Bär", ProductCategory.BERRY));
+        citrusButton.onMouseClickedProperty().set(event -> openCategory("Citrusfrukter", ProductCategory.CITRUS_FRUIT));
+        hotDrinkButton.onMouseClickedProperty().set(event -> openCategory("Varma Drycker", ProductCategory.HOT_DRINKS));
+        coldDrinkButton.onMouseClickedProperty().set(event -> openCategory("Kalla Drycker", ProductCategory.COLD_DRINKS));
+        exoticFruitButton.onMouseClickedProperty().set(event -> openCategory("Exotiska frukter", ProductCategory.EXOTIC_FRUIT));
+        fishButton.onMouseClickedProperty().set(event -> openCategory("Fisk", ProductCategory.FISH));
+        vegFruitButton.onMouseClickedProperty().set(event -> openCategory("Grönsaksfrukter", ProductCategory.VEGETABLE_FRUIT));
+        cabbageButton.onMouseClickedProperty().set(event -> openCategory("Kål", ProductCategory.CABBAGE));
+        meatButton.onMouseClickedProperty().set(event -> openCategory("Nötkött", ProductCategory.MEAT));
+        dairyButton.onMouseClickedProperty().set(event -> openCategory("Mejeri", ProductCategory.DAIRIES));
+        melonButton.onMouseClickedProperty().set(event -> openCategory("Melon", ProductCategory.MELONS));
+        flourSugarSaltButton.onMouseClickedProperty().set(event -> openCategory("Mjöl, socker och salt", ProductCategory.FLOUR_SUGAR_SALT));
+        nutsAndSeedsButton.onMouseClickedProperty().set(event -> openCategory("Nötter och frön", ProductCategory.NUTS_AND_SEEDS));
+        pastaButton.onMouseClickedProperty().set(event -> openCategory("Pasta", ProductCategory.PASTA));
+        potatoAndRiceButton.onMouseClickedProperty().set(event -> openCategory("Potatis och ris", ProductCategory.POTATO_RICE));
+        rootVegButton.onMouseClickedProperty().set(event -> openCategory("Rotfrukter", ProductCategory.ROOT_VEGETABLE));
+        fruitButton.onMouseClickedProperty().set(event -> openCategory("Övrig frukt", ProductCategory.FRUIT));
+        sweetButton.onMouseClickedProperty().set(event -> openCategory("Sötsaker", ProductCategory.SWEET));
+        herbButton.onMouseClickedProperty().set(event -> openCategory("Örter", ProductCategory.HERB));
+        updateProductList(productFlowPane, wrapper.getProducts());
 
-       searchButton.onMouseClickedProperty().set((event -> doSearch()));
+        searchButton.onMouseClickedProperty().set((event -> doSearch()));
 
         next.onMouseClickedProperty().set((event -> goNextPage(wrapper.getProducts())));
         prev.onMouseClickedProperty().set((event -> goPrevPage(wrapper.getProducts())));
@@ -152,13 +152,13 @@ public class ShopPage extends AnchorPane{
         int size = string.length() + 12;
         int sizeComp = size + 9;
         double tmp =size*fontSize;
-            categoryPane.setPrefWidth(tmp);
+        categoryPane.setPrefWidth(tmp);
         System.out.println((categoryHeader.getWidth()/2) - (tmp/2));
-         double paneX = ((categoryHeader.getWidth()/2) - (tmp/2));
+        double paneX = ((categoryHeader.getWidth()/2) - (tmp/2));
 
-           categoryLabel.setPrefWidth(size*fontSize);
-           //categoryLabel.setTranslateX(-tmp/2);
-           categoryPane.setLayoutX(paneX);
+        categoryLabel.setPrefWidth(size*fontSize);
+        //categoryLabel.setTranslateX(-tmp/2);
+        categoryPane.setLayoutX(paneX);
     }
 
 
@@ -213,14 +213,14 @@ public class ShopPage extends AnchorPane{
 
         sidepane.setLayoutY(getSidePaneY(products.size()));
 
-            //only one page
+        //only one page
         if(calcPages(products.size(), N_GROCERIES_PER_PAGE) <= 1) {
             for (int i = 0; i < products.size(); i++) {
                 flowPane.getChildren().add(new ProductItem(products.get(i), mainController));
             }
             //many pages
         } else{
-                //last page
+            //last page
             if(products.size() < N_GROCERIES_PER_PAGE*page) {
                 for (int i = N_GROCERIES_PER_PAGE * (page - 1); i < products.size(); i++) {
                     flowPane.getChildren().add(new ProductItem(products.get(i), mainController));
@@ -236,6 +236,11 @@ public class ShopPage extends AnchorPane{
         next.onMouseClickedProperty().set((event -> goNextPage(products)));
         prev.onMouseClickedProperty().set((event -> goPrevPage(products)));
         currentPageLabel.setText("Sida: "+page+"/"+calcPages(products.size(), N_GROCERIES_PER_PAGE));
+
+        if(page <= 1) prev.setDisable(true);
+        else prev.setDisable(false);
+        if(page >= calcPages(products.size(), N_GROCERIES_PER_PAGE)) next.setDisable(true);
+        else next.setDisable(false);
     }
 
     private void generateButtons(List<Product> products, int pages){
