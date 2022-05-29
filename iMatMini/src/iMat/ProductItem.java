@@ -94,15 +94,8 @@ public class ProductItem extends AnchorPane {
 
 
     private void initializeNewShoppingItem(Product product) {
-        int amount = 0;
-        for (int i = 0; i < model.getShoppingCart().getItems().size(); i++){
-            if(model.getShoppingCart().getItems().get(i).getProduct().getName().equals(this.product.getName()))
-                amount = (int) model.getShoppingCart().getItems().get(i).getAmount();
-        }
-
         this.shoppingItem = new ShoppingItem(product);
-        this.shoppingItem.setAmount(amount);
-
+        shoppingItem.setAmount(0);
         if (this.shoppingItem.getAmount() > 0){
             addRemoveProductAnchorPane.toFront();
             updateCounterTextField();
@@ -126,7 +119,6 @@ public class ProductItem extends AnchorPane {
 
     private void openProductDescription(ProductItem productItem,IMatController parentcontroller) {
         parentcontroller.setPD(PD);
-      //  PD.ProductDescriptionItem(productItem ,parentcontroller);
         parentcontroller.openProductDescriptionLB();
     }
 
@@ -289,6 +281,19 @@ public class ProductItem extends AnchorPane {
 
     protected void toFrontHideFavoriteIcon() {
         hideFavoriteIconAnchorPane.toFront();
+    }
+
+    protected void updateProducts() {
+        if (model.getIsLoggedIn() && model.isFavorite(this.product)) {
+            favoritedAnchorPane.toFront();
+            PD.toFrontPDFavoritedAnchorPane();
+        } else if (model.getIsLoggedIn() && !model.isFavorite(this.product)) {
+            unFavoritedAnchorPane.toFront();
+            PD.toFrontPDUnFavoritedAnchorPane();
+        } else {
+            hideFavoriteIconAnchorPane.toFront();
+            PD.toFrontHideFavoriteIcon();
+        }
     }
 
 }
