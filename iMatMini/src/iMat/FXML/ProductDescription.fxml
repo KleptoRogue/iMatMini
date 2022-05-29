@@ -6,7 +6,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -15,133 +15,122 @@
 
 <fx:root id="AnchorPane" prefHeight="640.0" prefWidth="1095.0" type="AnchorPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <StackPane prefHeight="560.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="productDescriptionTransparentPane" prefHeight="587.0" prefWidth="1100.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane fx:id="productDescriptionPanel" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0, 0, 0, 0.75);">
+            <AnchorPane fx:id="mainPane" layoutX="19.0" layoutY="104.0" prefHeight="456.0" prefWidth="749.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
                <children>
-                  <AnchorPane layoutX="19.0" layoutY="104.0" prefHeight="456.0" prefWidth="749.0" style="-fx-background-color: -fx-background;" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="50.0">
+                  <AnchorPane fx:id="produktbeskrivningAnchor" layoutX="1.0" layoutY="327.0" prefHeight="165.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                      <children>
-                        <AnchorPane layoutX="1.0" layoutY="327.0" prefHeight="213.0" prefWidth="749.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                        <TextArea layoutY="53.0" prefHeight="160.0" prefWidth="700.0" text="&#10;Övrig information här." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="innerhållsföreckningAnchor" layoutX="11.0" layoutY="337.0" prefHeight="165.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <TextArea layoutY="53.0" prefHeight="160.0" prefWidth="700.0" text="&#10;Innerhållsförteckning här." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="övrigInfoAnchor" layoutX="11.0" layoutY="337.0" prefHeight="165.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <TextArea fx:id="övrig_information" layoutY="47.0" prefHeight="166.0" prefWidth="700.0" text="&#10;Produktbeskriving här.&#10;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <ImageView fx:id="detailImage" fitHeight="270.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Label fx:id="titleLabel" layoutX="340.0" layoutY="9.0" prefHeight="53.0" prefWidth="293.0" text="Title" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="Arial" size="36.0" />
+                     </font>
+                  </Label>
+                  <Button accessibleRole="BUTTON" layoutY="275.0" mnemonicParsing="false" onAction="#prodClicked" prefHeight="52.0" prefWidth="234.0" text="Produktbeskrivning" AnchorPane.leftAnchor="0.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="233.0" layoutY="275.0" mnemonicParsing="false" onAction="#innerhållsföreckningAnchor" prefHeight="52.0" prefWidth="234.0" text="Innerhållsförteckning" AnchorPane.leftAnchor="233.0">
+                     <font>
+                        <Font name="Arial" size="22.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="449.0" layoutY="275.0" mnemonicParsing="false" onAction="#övrigInfoClicked" prefHeight="52.0" prefWidth="234.0" text="Övrig Information" AnchorPane.leftAnchor="466.0">
+                     <font>
+                        <Font name="Arial" size="22.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="337.0" layoutY="35.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="230.0" AnchorPane.topAnchor="0.0" />
+                  <Label fx:id="priceLabel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="438.0" layoutY="104.0" prefHeight="53.0" prefWidth="165.0" text="Pris">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="closeImageView" fitHeight="35.0" fitWidth="35.0" layoutX="659.0" layoutY="14.0" onMouseClicked="#onClick" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@../resources/icon_close.png" />
+                     </image>
+                  </ImageView>
+                  <StackPane layoutX="25.0" layoutY="25.0" prefHeight="37.0" prefWidth="34.0">
+                     <children>
+                        <AnchorPane fx:id="favoritedAnchorPane" layoutY="200.0" onMouseClicked="#removeFavoriteEvent" prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <TextArea fx:id="produktbeskrivning" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="11.0" layoutY="337.0" prefHeight="213.0" prefWidth="749.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                           <children>
-                              <TextArea fx:id="innerhållsföreckning" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="11.0" layoutY="337.0" prefHeight="213.0" prefWidth="749.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                           <children>
-                              <TextArea fx:id="övrig_information" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                           </children>
-                        </AnchorPane>
-                        <ImageView fx:id="detailImage" fitHeight="270.0" fitWidth="340.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                        <Label fx:id="titleLabel" layoutX="340.0" layoutY="9.0" prefHeight="53.0" prefWidth="293.0" text="Title" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="10.0">
-                           <font>
-                              <Font name="Arial" size="36.0" />
-                           </font>
-                        </Label>
-                        <ToggleButton fx:id="Produktbeskrivning" layoutY="275.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="234.0" text="Produktbeskrivning" AnchorPane.leftAnchor="0.0">
-                           <font>
-                              <Font size="22.0" />
-                           </font>
-                        </ToggleButton>
-                        <ToggleButton fx:id="Innerhållsförteckning" layoutX="233.0" layoutY="275.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="234.0" text="Innerhållsförteckning" AnchorPane.leftAnchor="233.0">
-                           <font>
-                              <Font name="Arial" size="22.0" />
-                           </font>
-                        </ToggleButton>
-                        <ToggleButton fx:id="Övrig_Information" layoutX="449.0" layoutY="275.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="234.0" text="Övrig Information" AnchorPane.leftAnchor="466.0">
-                           <font>
-                              <Font name="Arial" size="22.0" />
-                           </font>
-                        </ToggleButton>
-                        <Button fx:id="LäggTillButton" layoutX="469.0" layoutY="225.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="101.0" style="-fx-background-color: #81D762;" text="Lägg till">
-                           <font>
-                              <Font size="20.0" />
-                           </font>
-                        </Button>
-                        <Separator layoutX="337.0" layoutY="35.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="230.0" AnchorPane.topAnchor="0.0" />
-                        <Label fx:id="sliderMinuter" alignment="CENTER" layoutX="500.0" layoutY="165.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #ffffff;" text="0" textAlignment="CENTER">
-                           <font>
-                              <Font name="Arial" size="30.0" />
-                           </font>
-                        </Label>
-                        <Button layoutX="545.0" layoutY="165.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #5EF564;">
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../resources/PlusButton.png" />
+                                    <Image url="@../resources/star_marked.jpg" />
                                  </image>
                               </ImageView>
-                           </graphic>
-                        </Button>
-                        <Button layoutX="450.0" layoutY="165.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #F05555;">
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="unFavoritedAnchorPane" layoutY="200.0" onMouseClicked="#addFavoriteEvent" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/star_unmarked.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </StackPane>
+                  <Label fx:id="ecoLabel" alignment="TOP_LEFT" layoutX="250.0" layoutY="240.0" prefHeight="25.0" prefWidth="126.0" textFill="#1aae58" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="text-normal" />
+                        <String fx:value="text-eco" />
+                     </styleClass>
+                  </Label>
+                  <StackPane layoutX="430.0" layoutY="191.0" prefHeight="48.0" prefWidth="174.0" styleClass="whiteGreyBackground">
+                     <children>
+                        <AnchorPane fx:id="addRemoveProductAnchorPane" prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                           <children>
+                              <TextField fx:id="productCounterTextField" alignment="CENTER" layoutX="51.0" layoutY="8.0" prefHeight="34.0" prefWidth="78.0" text="1">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </TextField>
+                              <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="17.0" layoutY="8.0" onMouseClicked="#removeProductClickEvent" pickOnBounds="true" styleClass="button">
                                  <image>
                                     <Image url="@../resources/MinusButton.png" />
                                  </image>
                               </ImageView>
-                           </graphic>
-                        </Button>
-                        <Label fx:id="priceLabel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="438.0" layoutY="104.0" prefHeight="53.0" prefWidth="165.0" text="Pris">
-                           <font>
-                              <Font name="Arial" size="25.0" />
-                           </font>
-                        </Label>
-                        <Separator layoutX="50.0" layoutY="370.0" prefWidth="600.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="52.0" />
-                        <Separator layoutX="50.0" layoutY="500.0" prefWidth="600.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="52.0" />
-                        <Label layoutX="205.0" layoutY="330.0" prefHeight="36.0" prefWidth="302.0" text="Relaterade Produkter">
-                           <font>
-                              <Font name="Arial" size="30.0" />
-                           </font>
-                        </Label>
-                        <ImageView fx:id="closeImageView" fitHeight="35.0" fitWidth="35.0" layoutX="659.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
-                           <image>
-                              <Image url="@../resources/icon_close.png" />
-                           </image>
-                        </ImageView>
-                        <StackPane layoutX="25.0" layoutY="25.0" prefHeight="37.0" prefWidth="34.0">
-                           <children>
-                              <AnchorPane fx:id="favoritedAnchorPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../resources/star_marked.jpg" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane fx:id="unFavoritedAnchorPane" layoutY="200.0" prefHeight="200.0" prefWidth="200.0">
-                                 <children>
-                                    <ImageView fitHeight="34.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../resources/star_unmarked.jpg" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </AnchorPane>
+                              <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="128.0" layoutY="8.0" onMouseClicked="#addProductClickEvent" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../resources/PlusButton.png" />
+                                 </image>
+                              </ImageView>
                            </children>
-                        </StackPane>
-                        <Label fx:id="ecoLabel" alignment="TOP_LEFT" layoutX="138.0" layoutY="234.0" prefHeight="25.0" prefWidth="126.0" textFill="#292c2b" wrapText="true" AnchorPane.bottomAnchor="244.00000000000006">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="text-normal" />
-                              <String fx:value="text-eco" />
-                           </styleClass>
-                        </Label>
+                        </AnchorPane>
+                        <AnchorPane fx:id="addProductAnchorPane" prefHeight="50.0" prefWidth="185.0" styleClass="whiteGreyBackGround">
+                           <children>
+                              <Button layoutX="14.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#addProductClickEvent" prefHeight="34.0" prefWidth="148.0" style="-fx-background-color: #81D762;" styleClass="addButton" text="Lägg till" />
+                           </children>
+                        </AnchorPane>
                      </children>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </AnchorPane>
+                  </StackPane>
                </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </AnchorPane>
          </children>
-      </StackPane>
+      </AnchorPane>
    </children>
 </fx:root>

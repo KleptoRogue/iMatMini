@@ -4,15 +4,12 @@ import javafx.scene.image.Image;
 import se.chalmers.cse.dat216.project.*;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
 
 public class IMatDataHandlerWrapper {
 
-    // Categories
-    private final Map<String, List<Product>> productItemMap = new HashMap<>();
+
 
     private static IMatDataHandlerWrapper instance = null;
 
